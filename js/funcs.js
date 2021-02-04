@@ -28,14 +28,14 @@ const scroll_Top = (button_selector) => {
 
 // Switch Dom (right To left) (left To right)
 const lang_switch = (button_selector) => {
-  let language_button = document.getElementById(button_selector);
+  let language_button = document.querySelector(button_selector);
   language_button.addEventListener("click", function () {
-    if (language_button.textContent == "Arabic") {
+    if (language_button.nextElementSibling.textContent == "Ar") {
       document.documentElement.setAttribute("dir", "rtl");
-      language_button.textContent = "English";
-    } else {
+      language_button.nextElementSibling.textContent = "En";
+    } else if (language_button.nextElementSibling.textContent == "En") {
       document.documentElement.setAttribute("dir", "ltr");
-      language_button.textContent = "Arabic";
+      language_button.nextElementSibling.textContent = "Ar";
     }
   });
 };

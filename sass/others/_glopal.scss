@@ -1,13 +1,29 @@
 html {
   font-size: 62.5%;
+  @media (max: 992px) {
+    font-size: 55%;
+  }
+  @media (max-width: 768px) {
+    font-size: 40%;
+  }
+  @media (max-width: 576px) {
+    font-size: 40%;
+  }
+  @media (max-width: 575.98px) {
+    font-size: 35%;
+  }
 }
 body {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  height: 7000px; /*Temp*/
 }
 *,
 *::after,
 *::before {
   box-sizing: inherit;
+  text-align: start;
 }
 ul {
   padding: 0;

@@ -1,0 +1,22 @@
+.owl-carousel {
+  .owl-stage-outer {
+    .owl-stage {
+      .owl-item {
+        & > div {
+        }
+      }
+    }
+  }
+  .owl-nav {
+    .owl-prev {
+    }
+    .owl-next {
+    }
+  }
+  .owl-dots {
+    .owl-dot {
+      & > span {
+      }
+    }
+  }
+}
