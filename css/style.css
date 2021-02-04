@@ -121,10 +121,13 @@ header.header {
             header.header .header_slices_carousal .owl-stage-outer .owl-stage .owl-item > div .text {
               transition: transform 0.4s ease;
               position: absolute;
-              bottom: 10rem; }
+              bottom: 10rem;
+              padding: 2.5rem; }
               header.header .header_slices_carousal .owl-stage-outer .owl-stage .owl-item > div .text p {
-                font-size: 1.5rem;
-                padding: 2.5rem; }
+                font-size: 2.5rem; }
+              header.header .header_slices_carousal .owl-stage-outer .owl-stage .owl-item > div .text img {
+                font-size: 20px;
+                width: unset; }
     header.header .header_slices_carousal .owl-nav {
       display: none; }
 
@@ -194,7 +197,7 @@ nav.nav {
     width: 100%; }
     @media (max-width: 991.98px) {
       nav.nav .main_nav {
-        padding: 0 5px; }
+        padding: 0 0.5rem; }
       nav.nav .main_nav .row .col:first-of-type {
         order: 3;
         margin: 2rem 0; }

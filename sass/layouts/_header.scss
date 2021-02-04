@@ -64,9 +64,13 @@ header.header {
               transition: transform 0.4s ease;
               position: absolute;
               bottom: 10rem;
+              padding: 2.5rem;
               p {
-                font-size: 1.5rem;
-                padding: 2.5rem;
+                font-size: 2.5rem;
+              }
+              img {
+                font-size: 20px;
+                width: unset;
               }
             }
           }
