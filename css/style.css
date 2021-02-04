@@ -1,0 +1,56 @@
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+/****** Start scrollToTop ******/
+.scrollToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 35px;
+  height: 35px;
+  background: linear-gradient(to right, red, #fff);
+  line-height: 35px;
+  text-align: center;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s linear; }
+  .scrollToTop:hover {
+    background: linear-gradient(to right, #fff, red); }
+  .scrollToTop i {
+    color: #fff;
+    font-size: 20px; }
+
+/****** End scrollToTop ******/
+/************* Start loading /*************/
+@keyframes orbit1 {
+  0% {
+    transform: rotatez(0deg); }
+  100% {
+    transform: rotatez(360deg); } }
+@keyframes orbit2 {
+  0% {
+    transform: rotatez(0deg); }
+  100% {
+    transform: rotatez(-360deg); } }
+/************* End loading /*************/
+
+/*# sourceMappingURL=style.css.map */
