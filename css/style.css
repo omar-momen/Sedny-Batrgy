@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap");
 html {
   scroll-behavior: smooth;
   font-size: 62.5%; }
@@ -19,7 +20,8 @@ body {
   padding: 0;
   margin: 0;
   height: 7000px;
-  /*Temp*/ }
+  /*Temp*/
+  font-family: "Cairo", sans-serif; }
 
 *,
 *::after,
@@ -91,8 +93,9 @@ a {
     opacity: 0.1; } }
 /************* Start Header scrollDown *************/
 .section2 {
-  background: red;
-  height: 600px; }
+  background: #eee;
+  height: 600px;
+  padding: 30px; }
 
 header.header {
   position: relative; }
@@ -386,5 +389,31 @@ nav.nav {
         @media (min-width: 300px) and (max-width: 707px) {
           nav.nav .main_nav .row .col:last-of-type .logo img {
             height: 4rem; } }
+
+.sample-heading {
+  padding: 1em;
+  border: 0.25em solid;
+  position: relative; }
+  .sample-heading::before, .sample-heading::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background: #eee; }
+  .sample-heading::before {
+    top: -0.3em;
+    bottom: -0.3em;
+    left: 1em;
+    right: 1em; }
+  .sample-heading::after {
+    left: -0.3em;
+    right: -0.3em;
+    top: 1em;
+    bottom: 1em; }
+  .sample-heading .heading {
+    position: relative;
+    z-index: 1; }
+
+.sample-heading.explanation::before, .sample-heading.explanation::after {
+  background: rgba(255, 0, 255, 0.5); }
 
 /*# sourceMappingURL=style.css.map */

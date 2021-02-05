@@ -4,10 +4,12 @@ $(".header_fill_carousal").owlCarousel({
   dots: false,
   autoplay: true,
   nav: true,
+  animateOut: "fadeOut",
   slideTransition: "ease",
   loop: true,
-  smartSpeed: 500,
+  smartSpeed: 400,
   autoplayTimeout: 4000,
+  // autoplayHoverPause: true,
 });
 $(".header_slices_carousal").owlCarousel({
   items: 4,

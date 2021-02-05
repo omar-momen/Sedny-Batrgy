@@ -1,0 +1,29 @@
+@mixin underLine {
+  .line {
+    position: relative;
+    width: 51px;
+    height: 3px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    margin-top: -3px;
+    .sub_line {
+      width: 30px;
+      height: 3px;
+      background-color: $colorLight;
+      border-radius: 3px;
+    }
+  }
+}
+
+@mixin buttonHover {
+  &:hover {
+    transform: translateY(-0.3rem);
+  }
+  &:active {
+    transform: translateY(0.3rem);
+    box-shadow: none;
+  }
+}
