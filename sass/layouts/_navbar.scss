@@ -119,10 +119,10 @@ nav.nav {
             transition: all 0.4s ease;
             cursor: pointer;
             &:hover {
-              transform: translateY(-3px);
+              transform: translateY(-0.3rem);
             }
             &:active {
-              transform: translateY(3px);
+              transform: translateY(0.3rem);
               box-shadow: none;
             }
           }

@@ -307,9 +307,9 @@ nav.nav {
           transition: all 0.4s ease;
           cursor: pointer; }
           nav.nav .main_nav .row .col:first-of-type .sign_in a:hover {
-            transform: translateY(-3px); }
+            transform: translateY(-0.3rem); }
           nav.nav .main_nav .row .col:first-of-type .sign_in a:active {
-            transform: translateY(3px);
+            transform: translateY(0.3rem);
             box-shadow: none; }
       nav.nav .main_nav .row .col:nth-child(2) form {
         display: flex;
