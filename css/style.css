@@ -1,4 +1,5 @@
 html {
+  scroll-behavior: smooth;
   font-size: 62.5%; }
   @media (max: 992px) {
     html {
@@ -57,7 +58,7 @@ a {
     font-size: 20px; }
 
 /****** End scrollToTop ******/
-/************* Start loading /*************/
+/************* Start loading *************/
 @keyframes orbit1 {
   0% {
     transform: rotatez(0deg); }
@@ -68,11 +69,36 @@ a {
     transform: rotatez(0deg); }
   100% {
     transform: rotatez(-360deg); } }
-/************* End loading /*************/
+/************* End loading *************/
+/************* Start Header scrollDown *************/
+@keyframes arrow_down {
+  100% {
+    transform: translateY(8px); } }
+@keyframes border_scale_one {
+  100% {
+    transform: scale(2);
+    color: #fff;
+    opacity: 0.1; } }
+@keyframes border_scale_tow {
+  100% {
+    transform: scale(1.5);
+    color: #fff;
+    opacity: 0.1; } }
+@keyframes border_scale_three {
+  100% {
+    transform: scale(1);
+    color: #fff;
+    opacity: 0.1; } }
+/************* Start Header scrollDown *************/
+.section2 {
+  background: red;
+  height: 600px; }
+
 header.header {
   position: relative; }
   header.header .header_fill_carousal {
-    height: inherit; }
+    height: inherit;
+    clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 60%, 100% 100%, 49% 95%, 0 100%, 0 73%, 0 35%, 0 0); }
     header.header .header_fill_carousal .owl-stage-outer {
       height: inherit; }
       header.header .header_fill_carousal .owl-stage-outer .owl-stage {
@@ -99,7 +125,8 @@ header.header {
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%; }
+    height: 100%;
+    clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 60%, 100% 100%, 49% 95%, 0 100%, 0 73%, 0 35%, 0 0); }
     header.header .header_slices_carousal .owl-stage-outer {
       height: inherit; }
       header.header .header_slices_carousal .owl-stage-outer .owl-stage {
@@ -130,6 +157,55 @@ header.header {
                 width: unset; }
     header.header .header_slices_carousal .owl-nav {
       display: none; }
+  header.header .scroll_down {
+    color: #75bee8; }
+    header.header .scroll_down a {
+      color: inherit;
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translate(-50%);
+      width: 5.5rem;
+      height: 5.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fff;
+      border-radius: 50%;
+      z-index: 1;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+      cursor: pointer; }
+      header.header .scroll_down a:hover .icons .fa-chevron-down {
+        animation: arrow_down 1s ease-in-out infinite alternate; }
+      header.header .scroll_down a .icons {
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+        header.header .scroll_down a .icons .fa-mouse {
+          font-size: 1.7rem; }
+        header.header .scroll_down a .icons .fa-chevron-down.one {
+          font-size: 1rem;
+          opacity: 0.5; }
+        header.header .scroll_down a .icons .fa-chevron-down.tow {
+          font-size: 1rem;
+          margin-top: -5px; }
+      header.header .scroll_down a .circle_border {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: transparent;
+        border: 1px solid #75bee8;
+        top: 0;
+        left: 0; }
+        header.header .scroll_down a .circle_border.circle_one {
+          animation: border_scale_one 2s ease-in-out infinite; }
+        header.header .scroll_down a .circle_border.circle_tow {
+          animation: border_scale_tow 2s ease-in-out 0.5s infinite; }
+        header.header .scroll_down a .circle_border.circle_three {
+          animation: border_scale_three 2s ease-in-out 1s infinite; }
 
 nav.nav {
   width: 100%; }
@@ -304,7 +380,7 @@ nav.nav {
         align-items: center; }
         nav.nav .main_nav .row .col:last-of-type .logo img {
           height: 8rem; }
-        @media (min-width: 770px) and (max-width: 922px) {
+        @media (min-width: 770px) and (max-width: 1200px) {
           nav.nav .main_nav .row .col:last-of-type .logo img {
             height: 7rem; } }
         @media (min-width: 300px) and (max-width: 707px) {

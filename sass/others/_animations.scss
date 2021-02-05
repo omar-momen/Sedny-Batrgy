@@ -1,4 +1,4 @@
-/************* Start loading /*************/
+/************* Start loading *************/
 @keyframes orbit1 {
   0% {
     transform: rotatez(0deg);
@@ -15,4 +15,33 @@
     transform: rotatez(-360deg);
   }
 }
-/************* End loading /*************/
+/************* End loading *************/
+
+/************* Start Header scrollDown *************/
+@keyframes arrow_down {
+  100% {
+    transform: translateY(8px);
+  }
+}
+@keyframes border_scale_one {
+  100% {
+    transform: scale(2);
+    color: #fff;
+    opacity: 0.1;
+  }
+}
+@keyframes border_scale_tow {
+  100% {
+    transform: scale(1.5);
+    color: #fff;
+    opacity: 0.1;
+  }
+}
+@keyframes border_scale_three {
+  100% {
+    transform: scale(1);
+    color: #fff;
+    opacity: 0.1;
+  }
+}
+/************* Start Header scrollDown *************/
