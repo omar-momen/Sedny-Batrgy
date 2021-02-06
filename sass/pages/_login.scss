@@ -77,6 +77,30 @@
     width: 42rem;
     max-width: 100%;
     position: relative;
+
+    label {
+      width: 100%;
+      position: relative;
+      i {
+        position: absolute;
+        z-index: 1;
+        top: 2.4rem;
+        left: 2rem; // RTL
+        font-size: 2.5rem;
+        color: $colorLight;
+      }
+    }
+
+    label[for="password"] {
+      i {
+        &:last-child {
+          left: 90%; // RTL
+          cursor: pointer;
+          opacity: 0;
+          transition: all 0.3s ease;
+        }
+      }
+    }
     input {
       position: relative;
       border: 1px solid rgba(0, 0, 0, 0.25);
@@ -96,28 +120,16 @@
         box-shadow: 0 0 6px 3px $colorLight;
       }
     }
-    label {
-      width: 100%;
-      position: relative;
-      i {
-        position: absolute;
-        z-index: 1;
-        top: 2.4rem;
-        left: 2rem; // RTL
-        font-size: 2.5rem;
-        color: $colorLight;
+
+    input[type="email"],
+    input[type="password"] {
+      margin-bottom: 0;
+      &.alert {
+        outline: none;
+        box-shadow: 0 0 6px 3px #e74c3c;
       }
     }
-    label[for="password"] {
-      i {
-        &:last-child {
-          left: 90%; // RTL
-          cursor: pointer;
-          opacity: 0;
-          transition: all 0.3s ease;
-        }
-      }
-    }
+
     input[type="submit"] {
       margin-top: 2rem;
       background: transparent
@@ -133,8 +145,10 @@
       font-size: 1.4rem;
       transition: all 0.3s ease;
       opacity: 0;
+      height: 9rem;
       p {
         transition: all 1s ease;
+        margin-bottom: 0.3rem;
         &.valid {
           color: $colorLight;
           opacity: 0;

@@ -2,6 +2,7 @@ let showPasswordEye = document.querySelector(".fa-eye"),
   emailInput = document.querySelector("input[type='email']"),
   passwordInput = document.querySelector("input[type='password']");
 
+// Toggle Eye
 showPasswordEye.onclick = function () {
   "use strict";
   if (showPasswordEye.classList.contains("fa-eye")) {
@@ -24,6 +25,7 @@ passwordInput.oninput = function () {
   }
 };
 
+// Change Input Placeholder
 let pageDirection = document.documentElement.getAttribute("dir");
 
 if (pageDirection === "ltr") {
@@ -59,6 +61,7 @@ passwordInput.onkeyup = function () {
     lowerCase.classList.remove("valid");
     lowerCase.classList.add("invalid");
     lowerCase.style.display = "block";
+    passwordInput.classList.add("alert");
   }
 
   if (this.value.match(capitalLetters)) {
@@ -71,6 +74,7 @@ passwordInput.onkeyup = function () {
     capital.classList.remove("valid");
     capital.classList.add("invalid");
     capital.style.display = "block";
+    passwordInput.classList.add("alert");
   }
 
   if (this.value.match(numbers)) {
@@ -83,6 +87,7 @@ passwordInput.onkeyup = function () {
     number.classList.remove("valid");
     number.classList.add("invalid");
     number.style.display = "block";
+    passwordInput.classList.add("alert");
   }
 
   if (this.value.length >= 8) {
@@ -94,126 +99,41 @@ passwordInput.onkeyup = function () {
   } else {
     Letterslength.classList.remove("valid");
     Letterslength.classList.add("invalid");
-    Letterslength.classList.add("invalid");
+    Letterslength.style.display = "block";
+    passwordInput.classList.add("alert");
   }
 };
 
-// Length
-// passwordInput.onkeyup = function () {
-//   "use strict";
-//   if (this.value.length >= 8) {
-//     validationElement.style.opacity = "0";
-//   } else {
-//     validationElement.style.opacity = "1";
-//     validationElement.innerHTML = `<p>Password must be 8 characters at least</p>`;
-//   }
-// };
+// Add red Color on input if input is empty
+submitButton.onclick = function (e) {
+  if (
+    !passwordInput.value.match(lowerCaseLetters) ||
+    !passwordInput.value.match(capitalLetters) ||
+    !passwordInput.value.match(numbers) ||
+    !passwordInput.value >= 8 ||
+    emailInput.value === ""
+  ) {
+    e.preventDefault();
+    validationElement.style.opacity = "1";
+    emailInput.classList.add("alert");
+    passwordInput.classList.add("alert");
+  }
+};
 
-// (function () {
-//   "use strict";
-//   $(
-//     ".login-page .login .left-box .box-content .form-one .toggle-password span"
-//   ).click(function () {
-//     $(this).toggleClass("eye eye-slash");
-//     let input = $($(this).attr("toggle"));
-//     if (input.attr("type") == "password") {
-//       input.attr("type", "text");
-//     } else {
-//       input.attr("type", "password");
-//     }
-//   });
+let loginInputs = document.querySelectorAll(".login_form input");
 
-//   // ****** Start Validation ******
-//   var PasswordError = true,
-//     EmailError = true;
-
-//   $('.login-page.ltr .box-content form input[name="email"]').keyup(function () {
-//     if ($(this).val().length == 0) {
-//       $(this).next().find("#errorMessage").text("Email Requierd");
-//       $(this).next().fadeIn();
-//       $(this).addClass("error").removeClass("validate");
-//       EmailError = true;
-//     } else {
-//       $(this).next().fadeOut();
-//       $(this).removeClass("error").addClass("validate");
-//       EmailError = false;
-//     }
-//   });
-//   $('.login-page.ltr .box-content form input[name="password"]').keyup(
-//     function () {
-//       if ($(this).val().length == 0) {
-//         $(this).next().find("#errorMessage").text("Password Requierd");
-//         $(this).next().fadeIn();
-//         $(this).addClass("error").removeClass("validate");
-//         PasswordError = true;
-//       } else if ($(this).val().length < 6) {
-//         $(this)
-//           .next()
-//           .find("#errorMessage")
-//           .html("password Must Be at least 6 chars");
-//         $(this).next().fadeIn();
-//         $(this).addClass("error").removeClass("validate");
-//         PasswordError = true;
-//       } else {
-//         $(this).next().fadeOut();
-//         $(this).removeClass("error").addClass("validate");
-//         PasswordError = false;
-//       }
-//     }
-//   );
-//   $(".login-page.ltr .box-content form input[type='submit']").click(function (
-//     e
-//   ) {
-//     $(".forms form input").keyup();
-//     if (
-//       userNameError == true ||
-//       EmailError == true ||
-//       PasswordError == true ||
-//       confirmPassword == true
-//     ) {
-//       e.preventDefault();
-//     }
-//   });
-
-//   $('.login-page.rtl .box-content form input[name="email"]').keyup(function () {
-//     if ($(this).val().length == 0) {
-//       $(this).next().find("#errorMessage").text("الايميل مطلوب");
-//       $(this).next().fadeIn();
-//       $(this).addClass("error").removeClass("validate");
-//       EmailError = true;
-//     } else {
-//       $(this).next().fadeOut();
-//       $(this).removeClass("error").addClass("validate");
-//       EmailError = false;
-//     }
-//   });
-//   $('.login-page.rtl .box-content form input[name="password"]').keyup(
-//     function () {
-//       if ($(this).val().length == 0) {
-//         $(this).next().find("#errorMessage").text("كلمة السر مطلوبة");
-//         $(this).next().fadeIn();
-//         $(this).addClass("error").removeClass("validate");
-//         PasswordError = true;
-//       } else if ($(this).val().length < 6) {
-//         $(this)
-//           .next()
-//           .find("#errorMessage")
-//           .html("كلمة السر يجب ان تكون اكثر من ستة احرف");
-//         $(this).next().fadeIn();
-//         $(this).addClass("error").removeClass("validate");
-//         PasswordError = true;
-//       } else {
-//         $(this).next().fadeOut();
-//         $(this).removeClass("error").addClass("validate");
-//         PasswordError = false;
-//       }
-//     }
-//   );
-//   $("#signIn").click(function (e) {
-//     $(".login-page.rtl .box-content form input").keyup();
-//     if (EmailError == true || PasswordError == true) {
-//       e.preventDefault();
-//     }
-//   });
-//   // ****** End Validation ******
-// })();
+document.addEventListener("keyup", function (e) {
+  if (e.target.getAttribute("type") == "email") {
+    e.target.classList.remove("alert");
+  }
+  if (e.target.getAttribute("type") == "password") {
+    if (
+      e.target.value.length >= 8 &&
+      e.target.value.match(lowerCaseLetters) &&
+      e.target.value.match(capitalLetters) &&
+      e.target.value.match(numbers)
+    ) {
+      e.target.classList.remove("alert");
+    }
+  }
+});
