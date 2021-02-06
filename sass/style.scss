@@ -7,49 +7,7 @@
 @import "others/glopal";
 @import "others/animations";
 @import "pages/home";
+@import "pages/login";
 @import "layouts/header";
 @import "layouts/navbar";
 @import "layouts/footer";
-
-.sample-heading {
-  padding: 1em;
-  border: 0.25em solid;
-  position: relative;
-
-  &::before,
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    background: #eee;
-  }
-
-  &::before {
-    top: -0.3em; // let it overlap a bit to prevent thin line which could appear during scaling in some browsers etc.
-    bottom: -0.3em;
-    left: 1em;
-    right: 1em;
-  }
-
-  &::after {
-    left: -0.3em;
-    right: -0.3em;
-    top: 1em;
-    bottom: 1em;
-  }
-
-  // you need this to move the text in front of the ::after overlay
-  .heading {
-    position: relative;
-    z-index: 1;
-  }
-}
-///////////////////////////
-//   Presentation only   //
-///////////////////////////
-.sample-heading.explanation {
-  &::before,
-  &::after {
-    background: rgba(#f0f, 0.5);
-  }
-}

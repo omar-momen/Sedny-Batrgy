@@ -1,0 +1,170 @@
+// 0 0 25px 5px rgb(0 0 0 / 30%)
+.login_page {
+  .login_img_box {
+    position: relative;
+    background: url(../img/main_bg_5.png);
+    background-size: cover;
+    background-position: right;
+    background-color: rgba(19, 27, 45, 0.54);
+    background-blend-mode: overlay;
+    height: 100vh;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    overflow: hidden;
+    img {
+      position: absolute;
+      top: 2rem;
+      right: 3rem; // RTL
+    }
+    p {
+      font-size: 2rem;
+      width: 65%;
+      @media (max-width: 992px) {
+        width: 100%;
+      }
+    }
+    @media (max-width: 767.98px) {
+      display: none;
+    }
+  }
+
+  .wrapper {
+    position: relative;
+    @include flexCenter;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .heading {
+    h2 {
+      font-size: 4rem;
+      color: $colorDark;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    @include underLineDotted;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: -6rem; // RTL
+      transform: rotateY(180deg);
+      width: 15rem;
+      height: auto;
+      opacity: 0.3;
+    }
+  }
+
+  .attention {
+    color: $colorLight;
+    font-size: 1.8rem;
+    p {
+      text-align: center;
+    }
+  }
+
+  .login_form {
+    @include flexCenter;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 42rem;
+    max-width: 100%;
+    position: relative;
+    input {
+      position: relative;
+      border: 1px solid rgba(0, 0, 0, 0.25);
+      border-radius: 44px;
+      background-color: #fff;
+      width: 100%;
+      padding: 1.5rem 6rem 1.5rem;
+      margin-top: 1rem;
+      font-size: 1.5rem;
+      transition: 0.3s ease-out;
+      &::placeholder {
+        color: $colorDark;
+        font-weight: 600;
+      }
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 6px 3px $colorLight;
+      }
+    }
+    label {
+      width: 100%;
+      position: relative;
+      i {
+        position: absolute;
+        z-index: 1;
+        top: 2.4rem;
+        left: 2rem; // RTL
+        font-size: 2.5rem;
+        color: $colorLight;
+      }
+    }
+    label[for="password"] {
+      i {
+        &:last-child {
+          left: 90%; // RTL
+          cursor: pointer;
+          opacity: 0;
+          transition: all 0.3s ease;
+        }
+      }
+    }
+    input[type="submit"] {
+      margin-top: 2rem;
+      background: transparent
+        linear-gradient(90deg, #5ad1ff 0%, #25b0e5 100%, #9d009e 100%);
+      color: #fff;
+      padding: 1.5rem;
+      transition: all 0.4s ease;
+      @include buttonHover;
+    }
+    .validation {
+      align-self: flex-start;
+      margin-top: 2rem;
+      font-size: 1.8rem;
+      color: #e74c3c;
+      transition: all 0.3s ease;
+      height: 5rem;
+      p {
+        display: none;
+        transition: all 0.4s ease;
+      }
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    padding: 20rem 0;
+  }
+}
+
+// Rtl Section
+html[dir="rtl"] {
+  body {
+    .login_page .login_img_box img {
+      right: unset;
+      left: -4rem;
+    }
+    .login_page .heading img {
+      left: unset;
+      right: -6rem;
+      transform: rotateY(0);
+    }
+    .login_page .login_form label i {
+      left: unset;
+      right: 2.4rem;
+    }
+    .login_page .login_form label[for="password"] i:last-child {
+      left: unset;
+      right: 90%;
+    }
+  }
+}
