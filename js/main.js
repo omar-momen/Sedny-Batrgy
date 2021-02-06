@@ -14,3 +14,9 @@ let siwtch_lang = () => {
 $(window).on("load", siwtch_lang);
 language_button.addEventListener("click", siwtch_lang);
 /********** End Switch Dom (right To left) (left To right) **********/
+
+/********** Start loading **********/
+$(window).on("load", function () {
+  $(".loading-overlay").fadeOut();
+});
+/********** End loading **********/
