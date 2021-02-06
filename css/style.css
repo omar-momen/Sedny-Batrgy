@@ -272,13 +272,28 @@ a {
   .login_page .login_form .validation {
     align-self: flex-start;
     margin-top: 2rem;
-    font-size: 1.8rem;
-    color: #e74c3c;
+    font-size: 1.4rem;
     transition: all 0.3s ease;
-    height: 5rem; }
+    opacity: 0; }
     .login_page .login_form .validation p {
-      display: none;
-      transition: all 0.4s ease; }
+      transition: all 1s ease; }
+      .login_page .login_form .validation p.valid {
+        color: #6ed7ff;
+        opacity: 0; }
+        .login_page .login_form .validation p.valid::before {
+          content: "\f00c";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          margin: 0 1rem; }
+      .login_page .login_form .validation p.invalid {
+        color: #e74c3c;
+        opacity: 1;
+        display: block; }
+        .login_page .login_form .validation p.invalid::before {
+          content: "\f00d";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          margin: 0 1rem; }
 @media (max-width: 767.98px) {
   .login_page {
     padding: 20rem 0; } }

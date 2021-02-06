@@ -130,13 +130,32 @@
     .validation {
       align-self: flex-start;
       margin-top: 2rem;
-      font-size: 1.8rem;
-      color: #e74c3c;
+      font-size: 1.4rem;
       transition: all 0.3s ease;
-      height: 5rem;
+      opacity: 0;
       p {
-        display: none;
-        transition: all 0.4s ease;
+        transition: all 1s ease;
+        &.valid {
+          color: $colorLight;
+          opacity: 0;
+          &::before {
+            content: "\f00c";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            margin: 0 1rem;
+          }
+        }
+        &.invalid {
+          color: #e74c3c;
+          opacity: 1;
+          display: block;
+          &::before {
+            content: "\f00d";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            margin: 0 1rem;
+          }
+        }
       }
     }
   }

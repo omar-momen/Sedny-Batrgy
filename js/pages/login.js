@@ -40,25 +40,61 @@ let validationElement = document.querySelector(".validation"),
   lowerCase = document.getElementById("small"),
   capital = document.getElementById("capital"),
   number = document.getElementById("number"),
-  characters = document.getElementById("characters");
+  Letterslength = document.getElementById("characters");
 
-// lowercase letters
-let lowerCaseLetters = /[a-z]/g;
+// Lowercase, Uppercase, A number, Minimun 8 characters
+let lowerCaseLetters = /[a-z]/g,
+  capitalLetters = /[A-Z]/g,
+  numbers = /[0-9]/g;
+
 passwordInput.onkeyup = function () {
+  validationElement.style.opacity = "1";
   if (this.value.match(lowerCaseLetters)) {
-    lowerCase.style.display = "none";
+    lowerCase.classList.remove("invalid");
+    lowerCase.classList.add("valid");
+    setTimeout(() => {
+      lowerCase.style.display = "none";
+    }, 1050);
   } else {
+    lowerCase.classList.remove("valid");
+    lowerCase.classList.add("invalid");
     lowerCase.style.display = "block";
   }
-};
 
-// Capital
-let capitalLetters = /[A-Z]/g;
-passwordInput.onkeyup = function () {
   if (this.value.match(capitalLetters)) {
-    capital.style.display = "none";
+    capital.classList.remove("invalid");
+    capital.classList.add("valid");
+    setTimeout(() => {
+      capital.style.display = "none";
+    }, 1050);
   } else {
+    capital.classList.remove("valid");
+    capital.classList.add("invalid");
     capital.style.display = "block";
+  }
+
+  if (this.value.match(numbers)) {
+    number.classList.remove("invalid");
+    number.classList.add("valid");
+    setTimeout(() => {
+      number.style.display = "none";
+    }, 1050);
+  } else {
+    number.classList.remove("valid");
+    number.classList.add("invalid");
+    number.style.display = "block";
+  }
+
+  if (this.value.length >= 8) {
+    Letterslength.classList.remove("invalid");
+    Letterslength.classList.add("valid");
+    setTimeout(() => {
+      Letterslength.style.display = "none";
+    }, 1050);
+  } else {
+    Letterslength.classList.remove("valid");
+    Letterslength.classList.add("invalid");
+    Letterslength.classList.add("invalid");
   }
 };
 
