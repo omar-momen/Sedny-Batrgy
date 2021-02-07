@@ -9,8 +9,9 @@
     align-items: center;
     border-radius: 3px;
     margin-top: -3px;
+    margin-bottom: 3rem;
     .sub_line {
-      width: 30px;
+      width: 30%;
       height: 3px;
       background-color: $colorLight;
       border-radius: 3px;
@@ -64,27 +65,50 @@
 }
 
 @mixin nav_overrite {
-  nav {
+  nav.nav {
     position: absolute;
     .main_nav {
-      .sign_in {
-        a {
-          color: #fff !important;
+      .row {
+        .sign_in {
+          a {
+            color: #fff !important;
+          }
         }
-      }
-      form {
-        span {
-          background: #777 !important;
+        form {
+          span {
+            background: #777 !important;
+          }
         }
-      }
-      .links {
-        li {
-          color: #fff !important;
+        .col:nth-child(3) {
+          .links {
+            li {
+              color: #fff;
+              &.active {
+                color: $colorLight;
+                font-weight: bolder;
+                border-bottom: 2px solid $colorLight;
+              }
+              &:hover {
+                color: $colorLight;
+                text-shadow: none;
+                transform: translateY(-3px);
+              }
+            }
+          }
         }
-      }
-      .logo {
-        background: transparent !important;
+        .logo {
+          background: transparent !important;
+        }
       }
     }
+  }
+}
+
+@mixin heading_background {
+  color: #fff;
+  transform: translateY(30px);
+  font-size: 4.5rem;
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    transform: translateY(70px);
   }
 }

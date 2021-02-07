@@ -3,8 +3,10 @@ const active_Class = (parent_query_selector, child_node_name) => {
   document
     .querySelector(parent_query_selector)
     .addEventListener("click", (e) => {
+      console.log("click");
       let target = e.target;
       if (target.nodeName == child_node_name) {
+        console.log("li click");
         Array.from(target.parentElement.children).forEach((li) => {
           li.classList.remove("active");
         });

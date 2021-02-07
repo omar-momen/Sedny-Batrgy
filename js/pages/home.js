@@ -4,7 +4,7 @@ $(".header_fill_carousal").owlCarousel({
   dots: false,
   autoplay: true,
   nav: true,
-  animateOut: "fadeOut",
+  // animateOut: "fadeOut",
   autoplayHoverPause: true,
   loop: true,
   autoplayTimeout: 5000,
