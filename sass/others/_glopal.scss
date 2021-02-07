@@ -111,7 +111,7 @@ a {
 
 /**** Scroll Style ****/
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -120,6 +120,7 @@ a {
 
 ::-webkit-scrollbar-thumb {
   background: rgba(90, 206, 251, 0.7);
+  border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb:hover {

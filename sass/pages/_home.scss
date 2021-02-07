@@ -1,2 +1,42 @@
 .services_section {
+  .row {
+    gap: 20px;
+  }
+  .flex {
+    @include flexCenter;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #fff;
+    box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.3);
+    width: 27rem;
+    max-width: 100%;
+    height: 21rem;
+    max-height: 100%;
+  }
+  .img_wrapper {
+    border-radius: 50%;
+    width: 8rem;
+    height: 8rem;
+    @include flexCenter;
+    &.light_purple {
+      border: 2px solid $lightPurple;
+    }
+    &.light_blue {
+      border: 2px solid $lightBlue;
+    }
+    &.light_green {
+      border: 2px solid $lightGreen;
+    }
+    &.light_black {
+      border: 2px solid $lightBlack;
+    }
+    img {
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+  span {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
 }
