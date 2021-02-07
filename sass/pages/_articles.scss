@@ -1,0 +1,19 @@
+.article_page {
+  @include nav_overrite;
+  .article_header {
+    @include flexCenter;
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url(../img/main_bg_5.png);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+    h1 {
+      @include heading_background;
+    }
+  }
+}
