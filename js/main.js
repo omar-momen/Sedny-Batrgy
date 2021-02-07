@@ -20,3 +20,9 @@ $(window).on("load", function () {
   $(".loading-overlay").fadeOut();
 });
 /********** End loading **********/
+
+// Search input
+$("nav .main_nav form span").click(function () {
+  $(this).next().slideToggle();
+  $(this).next().focus();
+});

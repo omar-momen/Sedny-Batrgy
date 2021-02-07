@@ -62,3 +62,29 @@
   justify-content: center;
   align-items: center;
 }
+
+@mixin nav_overrite {
+  nav {
+    position: absolute;
+    .main_nav {
+      .sign_in {
+        a {
+          color: #fff !important;
+        }
+      }
+      form {
+        span {
+          background: #777 !important;
+        }
+      }
+      .links {
+        li {
+          color: #fff !important;
+        }
+      }
+      .logo {
+        background: transparent !important;
+      }
+    }
+  }
+}
