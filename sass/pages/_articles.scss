@@ -133,7 +133,7 @@
           .text {
             width: 90%;
             background: #fff;
-            padding: 1rem;
+            padding: 1.5rem;
             margin: 0 auto;
             border-radius: 1rem;
             transform: translatey(-3.1rem);
@@ -143,6 +143,11 @@
               @media (max-width: 767px) {
                 font-size: 2.5rem;
               }
+            }
+            @include underLineDotted;
+            .line {
+              margin: 1rem 0;
+              justify-content: start;
             }
             p {
               color: #131b2d;
