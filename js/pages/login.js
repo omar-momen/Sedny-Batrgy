@@ -44,6 +44,18 @@ let validationElement = document.querySelector(".validation"),
   number = document.getElementById("number"),
   Letterslength = document.getElementById("characters");
 
+lowerCase.textContent = "A lower letter";
+capital.textContent = "A capital letter";
+number.textContent = "A number";
+Letterslength.textContent = "Minimum 8 letter";
+
+if (pageDirection === "rtl") {
+  lowerCase.textContent = "حرف صغير";
+  capital.textContent = "حرف كبير";
+  number.textContent = "رقم";
+  Letterslength.textContent = "ثمانية حروف على الاقل";
+}
+
 // Lowercase, Uppercase, A number, Minimun 8 characters
 let lowerCaseLetters = /[a-z]/g,
   capitalLetters = /[A-Z]/g,
