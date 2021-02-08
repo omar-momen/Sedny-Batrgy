@@ -117,6 +117,7 @@
   span {
     font-size: 1.8rem;
     font-weight: 600;
+    text-align: center;
   }
 }
 
@@ -159,6 +160,10 @@
   .about_content {
     grid-column: 1 / span 7;
     grid-row: 2 / span 2;
+    @media (max-width: 479.98px) {
+      grid-column: 1 / span 12;
+      grid-row: 1 / span 2;
+    }
     background: linear-gradient(
       90deg,
       rgba(255, 255, 255, 1) 50%,
@@ -201,6 +206,10 @@
     grid-row: 1 / span 4;
     position: relative;
     box-shadow: 0px 3px 6px #00000029;
+    @media (max-width: 479.98px) {
+      grid-column: 1 / span 12;
+      grid-row: 3 / span 4;
+    }
     .video_wrapper {
       height: 100%;
       position: relative;
@@ -282,7 +291,10 @@
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: auto;
     place-items: center;
-    column-gap: 10px;
+    column-gap: 1rem;
+    @media (max-width: 479.98px) {
+      gap: 2rem 3rem;
+    }
   }
   .grid_item {
     color: #fff;
@@ -319,6 +331,9 @@
       flex-direction: row;
       flex-wrap: nowrap;
       z-index: 1;
+      @media (max-width: 479.98px) {
+        grid-column: 1 / span 7;
+      }
       .expereince {
         display: flex;
         border-left: 0.6rem solid #fff;
@@ -333,7 +348,7 @@
           position: absolute;
           width: 0.6rem;
           height: 2.5rem;
-          top: 0;
+          top: -0.1rem;
           right: 0;
           background-color: #fff;
         }
@@ -342,7 +357,7 @@
           position: absolute;
           width: 0.6rem;
           height: 2.5rem;
-          bottom: 0;
+          bottom: -0.1rem;
           right: 0;
           background-color: #fff;
         }
@@ -430,6 +445,7 @@
     }
     .services_content {
       position: relative;
+      padding-bottom: 5rem;
       &::before {
         content: "";
         width: 6rem;
@@ -589,6 +605,45 @@
         span {
           top: 50%;
           left: 42%;
+        }
+      }
+    }
+    @media (max-width: 420px) {
+      .grid_item {
+        &:first-child {
+          span {
+            left: 20%;
+          }
+        }
+        &:nth-child(2) {
+          span {
+            left: 38%;
+          }
+        }
+        &:nth-child(3) {
+          span {
+            left: 13%;
+          }
+        }
+        &:nth-child(4) {
+          span {
+            left: 13%;
+          }
+        }
+        &:nth-child(5) {
+          span {
+            left: 38%;
+          }
+        }
+        &:nth-child(6) {
+          span {
+            left: 13%;
+          }
+        }
+        &:nth-child(7) {
+          span {
+            left: 34%;
+          }
         }
       }
     }
