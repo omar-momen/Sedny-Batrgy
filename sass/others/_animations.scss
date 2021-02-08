@@ -45,3 +45,14 @@
   }
 }
 /************* Start Header scrollDown *************/
+
+/******* Home Animation ********/
+@keyframes buttonChevronHover {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(2rem);
+  }
+}

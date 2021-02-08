@@ -51,3 +51,30 @@ const nav = document.querySelector("nav.nav");
 const nav_height_value = nav.clientHeight;
 const window_height = window.innerHeight;
 main_header.style.height = window_height - nav_height_value + "px";
+
+// Video Popup
+$("#videoPopup").magnificPopup({
+  type: "iframe",
+});
+
+document.getElementById("more").onclick = function () {
+  document.getElementById("videoPopup").click();
+};
+
+$(window).scroll(function () {
+  var scrollTop = $(window).scrollTop(),
+    sectionOffset = $("#numbers").offset().top - 600;
+  if (scrollTop >= sectionOffset) {
+    $(".counter_up").countTo({
+      speed: 7000,
+      refreshInterval: 50,
+      formatter: function (value, options) {
+        return value
+          .toFixed(options.decimals)
+          .toString()
+          .replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+      },
+    });
+    $(".clients_number .grid_item .counter_up").removeClass("counter_up");
+  }
+});
