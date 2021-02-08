@@ -107,7 +107,14 @@
 @mixin heading_background {
   color: #fff;
   transform: translateY(30px);
-  font-size: 4.5rem;
+  font-size: 3.5rem;
+  padding: 0.8rem 1rem;
+  background: linear-gradient(to right, $colorLight 2px, transparent 2px) 0 100%,
+    linear-gradient(to left, $colorLight 2px, transparent 2px) 100% 0,
+    linear-gradient(to bottom, $colorLight 2px, transparent 2px) 100% 0,
+    linear-gradient(to top, $colorLight 2px, transparent 2px) 0 100%;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
   @media (min-width: 768px) and (max-width: 991.98px) {
     transform: translateY(70px);
   }
