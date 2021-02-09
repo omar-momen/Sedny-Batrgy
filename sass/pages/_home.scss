@@ -124,7 +124,7 @@
 // Home About Us
 .home_about_us {
   position: relative;
-  border-top: 1px solid rgba(112, 112, 112, 0.14);
+  border-top: 0.1rem solid rgba(112, 112, 112, 0.14);
   background: url(../icons/about_background.svg);
   background-size: cover;
   background-position: top;
@@ -136,8 +136,8 @@
     width: 7rem;
     height: 5rem;
     background-color: #fff;
-    box-shadow: 0px 3px 6px #0000001f;
-    border-radius: 0 45px 45px 0; // RTL
+    box-shadow: 0 0.3rem 0.6rem #0000001f;
+    border-radius: 0 4.5rem 4.5rem 0; // RTL
     @include flexCenter;
     img {
       width: 4rem;
@@ -169,10 +169,10 @@
       rgba(255, 255, 255, 1) 50%,
       rgba(255, 255, 255, 0.4) 50%
     );
-    box-shadow: 0px 3px 6px #00000029;
+    box-shadow: 0 0.3rem 0.6rem #00000029;
     padding: 2rem 7rem 2rem 2rem; // RTL
     place-self: center stretch;
-    border-radius: 7px;
+    border-radius: 0.7rem;
     position: relative;
     z-index: 2;
     h3 {
@@ -205,7 +205,7 @@
     grid-column: 7 / span 12;
     grid-row: 1 / span 4;
     position: relative;
-    box-shadow: 0px 3px 6px #00000029;
+    box-shadow: 0 0.3rem 0.6rem #00000029;
     @media (max-width: 479.98px) {
       grid-column: 1 / span 12;
       grid-row: 3 / span 4;
@@ -399,7 +399,6 @@
 // Our Services
 .our_services {
   position: relative;
-  margin-bottom: 100rem;
   color: #fff;
   &::before {
     content: "";
@@ -446,6 +445,10 @@
     .services_content {
       position: relative;
       padding-bottom: 5rem;
+      opacity: 0;
+      &.active {
+        opacity: 1;
+      }
       &::before {
         content: "";
         width: 6rem;
@@ -461,7 +464,7 @@
         width: 6rem;
         height: 6rem;
         position: absolute;
-        bottom: 8rem;
+        bottom: 10rem;
         border-right: 0.3rem solid $colorLight; // RTL
         border-bottom: 0.3rem solid $colorLight; // RTL
         right: -1rem;
@@ -478,8 +481,8 @@
       font-weight: bold;
       padding: 0.5em 6rem;
       color: #fff;
-      border-radius: 30px;
-      box-shadow: 0px 3px 6px #00000029;
+      border-radius: 3rem;
+      box-shadow: 0 0.3rem 0.6rem #00000029;
       transition: 0.3s;
       &::before {
         content: "\f054";
@@ -506,34 +509,50 @@
     grid: auto / repeat(auto-fit, minmax(10rem, 1fr));
     grid-template-rows: auto;
     place-items: center;
-    gap: 0 3rem;
+    gap: 3rem 3rem;
     .grid_item {
       position: relative;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-      grid-template-rows: 1fr;
-      place-items: center;
+      cursor: pointer;
+      &.active {
+        img {
+          filter: invert(22%) sepia(75%) saturate(2000%) hue-rotate(170deg)
+            brightness(100%) contrast(100%);
+        }
+        span {
+          color: #fff;
+        }
+      }
+      &:hover {
+        img {
+          filter: invert(22%) sepia(75%) saturate(2000%) hue-rotate(145deg)
+            brightness(100%) contrast(100%);
+        }
+        span {
+          color: #fff;
+        }
+      }
       img {
         max-width: 100%;
         grid-column: 1;
         grid-row: 1;
+        transition: all 0.3s ease;
       }
       span {
-        grid-column: 1;
-        grid-row: 1;
-        z-index: 2;
         position: absolute;
+        z-index: 2;
         color: $colorDark;
         font-size: 1.4rem;
         font-weight: 600;
         width: 8rem;
         max-width: 100%;
         text-align: center;
+        user-select: none;
       }
       &:first-child {
         grid-column: 1;
+        transform: translate(5rem, 1.5rem);
         img {
-          transform: rotate(217deg);
+          transform: rotate(225deg);
         }
         span {
           top: 28%;
@@ -542,8 +561,9 @@
       }
       &:nth-child(2) {
         grid-column: 3;
+        transform: translate(-5rem, 1.5rem);
         img {
-          transform: rotate(-33deg);
+          transform: rotate(-43deg);
         }
         span {
           top: 35%;
@@ -588,8 +608,9 @@
       }
       &:nth-child(6) {
         grid-row: 3;
+        transform: translate(5rem, -1.5rem);
         img {
-          transform: rotate(145deg);
+          transform: rotate(135deg);
         }
         span {
           top: 44%;
@@ -599,12 +620,13 @@
       &:nth-child(7) {
         grid-column: 3;
         grid-row: 3;
+        transform: translate(-5rem, -1.5rem);
         img {
-          transform: rotate(35deg);
+          transform: rotate(45deg);
         }
         span {
-          top: 50%;
-          left: 42%;
+          top: 52%;
+          left: 40%;
         }
       }
     }
@@ -648,4 +670,27 @@
       }
     }
   }
+}
+
+// Our Clients
+.our_clients {
+  margin-bottom: 100rem;
+  .heading {
+    @include underLineDotted;
+  }
+  .clients_slider {
+    margin-top: 6rem;
+    .item {
+      width: 100%;
+      height: 10rem;
+      border-right: 0.1rem solid rgba(204, 204, 204, 0.5);
+      padding-right: 4rem;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+  @include carouselDots;
 }

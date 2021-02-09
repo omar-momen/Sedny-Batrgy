@@ -78,3 +78,33 @@ $(window).scroll(function () {
     $(".clients_number .grid_item .counter_up").removeClass("counter_up");
   }
 });
+
+let navLinks = document.querySelectorAll(".grid_items_container .grid_item");
+
+navLinks.forEach((element) => {
+  element.addEventListener("click", function () {
+    navLinks.forEach((navLink) => navLink.classList.remove("active"));
+    this.classList.add("active");
+  });
+});
+
+// Clients Slider
+$(".clients_slider").owlCarousel({
+  loop: true,
+  margin: 50,
+  responsiveClass: true,
+  autoplay: true,
+  nav: false,
+  responsive: {
+    0: {
+      items: 2,
+    },
+    600: {
+      items: 3,
+    },
+    1000: {
+      items: 5,
+      loop: false,
+    },
+  },
+});

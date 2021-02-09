@@ -119,3 +119,30 @@
     transform: translateY(70px);
   }
 }
+
+@mixin carouselDots {
+  .owl-carousel {
+    .owl-dots {
+      .owl-dot {
+        outline: none;
+        &.active {
+          span {
+            background-color: $colorLight;
+            border: 1px solid $colorLight;
+          }
+        }
+        & > span {
+          transition: 0.3s;
+          width: 1.2rem;
+          height: 1.2rem;
+          border: 1px solid $colorLight;
+        }
+        &:hover {
+          span {
+            background-color: #b0e9ff;
+          }
+        }
+      }
+    }
+  }
+}
