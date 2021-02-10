@@ -1781,68 +1781,56 @@ nav.nav {
             height: 4rem; } }
 
 header.header {
-  position: relative; }
+  position: relative;
+  height: 500px; }
   header.header .header_fill_carousal {
     height: inherit;
     clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 60%, 100% 100%, 49% 95%, 0 100%, 0 73%, 0 35%, 0 0); }
-    header.header .header_fill_carousal .owl-stage-outer {
+    header.header .header_fill_carousal .slick-arrow {
+      display: none !important; }
+    header.header .header_fill_carousal .slick-list {
       height: inherit; }
-      header.header .header_fill_carousal .owl-stage-outer .owl-stage {
+      header.header .header_fill_carousal .slick-list .slick-track {
         height: inherit; }
-        header.header .header_fill_carousal .owl-stage-outer .owl-stage .owl-item {
-          background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-          background-size: cover;
-          background-position: center;
+        header.header .header_fill_carousal .slick-list .slick-track .slick-slide {
           height: inherit; }
-          header.header .header_fill_carousal .owl-stage-outer .owl-stage .owl-item > div {
-            height: inherit;
-            position: relative; }
-            header.header .header_fill_carousal .owl-stage-outer .owl-stage .owl-item > div img {
-              width: 100%;
-              height: 100%;
-              object-fit: cover; }
-            header.header .header_fill_carousal .owl-stage-outer .owl-stage .owl-item > div .overlay {
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%; }
+          header.header .header_fill_carousal .slick-list .slick-track .slick-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; }
   header.header .header_slices_carousal {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
+    width: 100%;
     clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 60%, 100% 100%, 49% 95%, 0 100%, 0 73%, 0 35%, 0 0); }
-    header.header .header_slices_carousal .owl-stage-outer {
+    header.header .header_slices_carousal .slick-list {
       height: inherit; }
-      header.header .header_slices_carousal .owl-stage-outer .owl-stage {
+      header.header .header_slices_carousal .slick-list .slick-track {
         height: inherit; }
-        header.header .header_slices_carousal .owl-stage-outer .owl-stage .owl-item {
-          height: inherit; }
-          header.header .header_slices_carousal .owl-stage-outer .owl-stage .owl-item > div {
-            height: inherit;
-            background: rgba(0, 0, 0, 0.5);
-            border-right: 0.1rem solid #7a7878;
-            color: #fff;
-            position: relative;
-            transition: all 0.4s ease;
-            cursor: pointer; }
-            header.header .header_slices_carousal .owl-stage-outer .owl-stage .owl-item > div:hover {
-              background: rgba(0, 0, 0, 0.7); }
-              header.header .header_slices_carousal .owl-stage-outer .owl-stage .owl-item > div:hover .text {
-                transform: translateY(-3rem); }
-            header.header .header_slices_carousal .owl-stage-outer .owl-stage .owl-item > div .text {
-              transition: transform 0.4s ease;
-              position: absolute;
-              bottom: 10rem;
-              padding: 2.5rem; }
-              header.header .header_slices_carousal .owl-stage-outer .owl-stage .owl-item > div .text p {
-                font-size: 2.5rem; }
-              header.header .header_slices_carousal .owl-stage-outer .owl-stage .owl-item > div .text img {
-                font-size: 20px;
-                width: unset; }
-    header.header .header_slices_carousal .owl-nav {
-      display: none; }
+        header.header .header_slices_carousal .slick-list .slick-track .slick-slide {
+          position: relative;
+          transition: all 0.4s ease;
+          height: inherit;
+          background: rgba(0, 0, 0, 0.3);
+          border-right: 0.1rem solid #7a7878;
+          color: #fff;
+          cursor: pointer; }
+          header.header .header_slices_carousal .slick-list .slick-track .slick-slide.slick-current {
+            background: rgba(0, 0, 0, 0.5); }
+            header.header .header_slices_carousal .slick-list .slick-track .slick-slide.slick-current .text {
+              transform: translateY(-3rem); }
+          header.header .header_slices_carousal .slick-list .slick-track .slick-slide .text {
+            transition: transform 0.4s ease;
+            position: absolute;
+            bottom: 2rem;
+            padding: 2.2rem; }
+            header.header .header_slices_carousal .slick-list .slick-track .slick-slide .text p {
+              font-size: 2.5rem; }
+            header.header .header_slices_carousal .slick-list .slick-track .slick-slide .text img {
+              font-size: 20px;
+              width: unset; }
   header.header .scroll_down {
     color: #75bee8; }
     header.header .scroll_down a {
