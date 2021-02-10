@@ -1,49 +1,53 @@
 /******* Start Header Carousals ********/
-$(".header_fill_carousal").owlCarousel({
-  items: 1,
-  dots: false,
+$(".header_fill_carousal").slick({
   autoplay: true,
-  nav: true,
-  // animateOut: "fadeOut",
-  autoplayHoverPause: true,
-  loop: true,
-  autoplayTimeout: 5000,
+  autoplaySpeed: 5000,
+  speed: 1000,
+  arrows: true,
+  fade: true,
 });
-$(".header_slices_carousal").owlCarousel({
-  items: 4,
-  dots: false,
+
+$(".header_slices_carousal").slick({
   autoplay: true,
-  loop: true,
-  autoplayTimeout: 5000,
-  responsiveClass: true,
-  responsive: {
-    0: {
-      items: 1,
-      nav: true,
+  autoplaySpeed: 5000,
+  speed: 500,
+  arrows: false,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  asNavFor: ".header_fill_carousal",
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      },
     },
-    600: {
-      items: 2,
-      nav: true,
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      },
     },
-    768: {
-      items: 3,
-      nav: false,
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
     },
-    1000: {
-      items: 4,
-      nav: true,
-    },
-  },
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ],
 });
-$(".header_fill_carousal").hover(function () {
-  console.log("hoverd");
+
+$(".header_slices_carousal .slick-slide").hover(function () {
+  $(".header_fill_carousal .slick-next").click();
+  $(this).addClass("slick-current").siblings().removeClass("slick-current");
 });
 /******* End Header Carousals ********/
-
-// Carousal hover
-$(".header_slices_carousal .owl-item > div").hover(function () {
-  $(".header_fill_carousal .owl-nav .owl-prev").click();
-});
 
 // Adjust main Header_height
 const main_header = document.querySelector("header.header");

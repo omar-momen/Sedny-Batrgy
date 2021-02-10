@@ -1,5 +1,6 @@
 header.header {
   position: relative;
+  height: 500px;
   .header_fill_carousal {
     height: inherit;
     clip-path: polygon(
@@ -14,47 +15,34 @@ header.header {
       0 35%,
       0 0
     );
-    .owl-stage-outer {
+    .slick-arrow {
+      display: none !important;
+      &.slick-prev {
+      }
+      &.slick-next {
+      }
+    }
+    .slick-list {
       height: inherit;
-      .owl-stage {
+      .slick-track {
         height: inherit;
-        .owl-item {
-          background-image: linear-gradient(
-            to right,
-            rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)
-          );
-          background-size: cover;
-          background-position: center;
+        .slick-slide {
           height: inherit;
-          & > div {
-            height: inherit;
-            position: relative;
-            img {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-            }
-            .overlay {
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-            }
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
           }
         }
       }
     }
-    // .owl-nav {
-    //   visibility: hidden;
-    // }
   }
   .header_slices_carousal {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
+    width: 100%;
     clip-path: polygon(
       50% 0%,
       100% 0,
@@ -67,45 +55,39 @@ header.header {
       0 35%,
       0 0
     );
-    .owl-stage-outer {
+    .slick-list {
       height: inherit;
-      .owl-stage {
+      .slick-track {
         height: inherit;
-        .owl-item {
-          height: inherit;
-          & > div {
-            height: inherit;
+        .slick-slide {
+          position: relative;
+          transition: all 0.4s ease;
+          &.slick-current {
             background: rgba(0, 0, 0, 0.5);
-            border-right: 0.1rem solid #7a7878;
-            color: #fff;
-            position: relative;
-            transition: all 0.4s ease;
-            cursor: pointer;
-            &:hover {
-              background: rgba(0, 0, 0, 0.7);
-              .text {
-                transform: translateY(-3rem);
-              }
-            }
             .text {
-              transition: transform 0.4s ease;
-              position: absolute;
-              bottom: 10rem;
-              padding: 2.5rem;
-              p {
-                font-size: 2.5rem;
-              }
-              img {
-                font-size: 20px;
-                width: unset;
-              }
+              transform: translateY(-3rem);
+            }
+          }
+          height: inherit;
+          background: rgba(0, 0, 0, 0.3);
+          border-right: 0.1rem solid #7a7878;
+          color: #fff;
+          cursor: pointer;
+          .text {
+            transition: transform 0.4s ease;
+            position: absolute;
+            bottom: 2rem;
+            padding: 2.2rem;
+            p {
+              font-size: 2.5rem;
+            }
+            img {
+              font-size: 20px;
+              width: unset;
             }
           }
         }
       }
-    }
-    .owl-nav {
-      display: none;
     }
   }
   .scroll_down {
