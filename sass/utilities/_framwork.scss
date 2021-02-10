@@ -53,3 +53,6 @@
 .main_weight {
   font-weight: 600;
 }
+.flex_center {
+  @include flexCenter;
+}

@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="css/libs/all.min.css" />
     <link rel="stylesheet" href="css/libs/slick.css" />
     <link rel="stylesheet" href="css/libs/slick-theme.css" />
-    <link rel="stylesheet" href="css/libs/stackedCards.css" />
     <link rel="stylesheet" href="css/libs/magnific-popup.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -226,7 +225,7 @@
               iure dolores magni odio quos omnis veniam aut reiciendis rem dolor
               non inventore laboriosam.
             </p>
-            <button id="more" class="btn text-light main_weight">
+            <button id="more" class="btn more_btn text-light main_weight">
               More <i class="far fa-hand-point-right"></i>
             </button>
           </div>
@@ -299,7 +298,7 @@
         </div>
         <div class="grid_container">
           <div class="grid_item order">
-            <div class="services_content active">
+            <div class="services_content active" id="tab-one">
               <h3 class="main_weight head_size">Lorem, ipsum dolor.</h3>
               <p class="mt-4">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
@@ -314,33 +313,82 @@
               </p>
               <a href="#" class="btn color_light_back mt-5">More</a>
             </div>
+            <div class="services_content" id="tab-two">
+              <h3 class="main_weight head_size">Lorem, ipsum dolor.</h3>
+              <p class="mt-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+                deserunt labore, ullam iste possimus pariatur atque assumenda
+                perferendis cum dicta voluptatum voluptas enim aliquid debitis
+              </p>
+              <a href="#" class="btn color_light_back mt-5">More</a>
+            </div>
+            <div class="services_content" id="tab-three">
+              <h3 class="main_weight head_size">Lorem, ipsum dolor.</h3>
+              <p class="mt-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+                deserunt labore, ullam iste possimus pariatur atque assumenda
+                perferendis cum dicta voluptatum voluptas enim aliquid debitis
+                reprehenderit unde sed molestiae quae ducimus assumenda impedit
+                consequuntur porro.
+              </p>
+              <a href="#" class="btn color_light_back mt-5">More</a>
+            </div>
+            <div class="services_content" id="tab-four">
+              <h3 class="main_weight head_size">Lorem, ipsum dolor.</h3>
+              <p class="mt-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+                deserunt labore, ullam iste possimus pariatur atque assumenda
+                perferendis cum dicta voluptatum voluptas enim aliquid debitis
+                eveniet ut qsdae ducimus assumenda impedit consequuntur porro.
+              </p>
+              <a href="#" class="btn color_light_back mt-5">More</a>
+            </div>
+            <div class="services_content" id="tab-five">
+              <h3 class="main_weight head_size">Lorem, ipsum dolor.</h3>
+              <p class="mt-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+                deserunt labore, ullam iste possimus pariatur atque assumenda
+                perferes error, eius nobis veniam vero consequuntur porro.
+              </p>
+              <a href="#" class="btn color_light_back mt-5">More</a>
+            </div>
+            <div class="services_content" id="tab-six">
+              <h3 class="main_weight head_size">Lorem, ipsum dolor.</h3>
+              <p class="mt-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+                deserunt labore, ullam iste possimus pariatur atque assumenda
+                perferendis cum dicta voluptatum voluptas enim aliquid debitis
+                consequuntur porro.
+              </p>
+              <a href="#" class="btn color_light_back mt-5">More</a>
+            </div>
           </div>
           <div class="grid_item order">
             <div class="grid_items_container" dir="ltr">
-              <div class="grid_item active">
+              <div class="grid_item active tab" data-tab="one">
                 <img src="icons/service_shape.svg" alt="Service" />
                 <span>Lorem ipsum dolor sit.</span>
               </div>
-              <div class="grid_item">
+              <div class="grid_item tab" data-tab="two">
                 <img src="icons/service_shape.svg" alt="Service" />
                 <span>Lorem ipsum dolor sit.</span>
               </div>
-              <div class="grid_item">
+              <div class="grid_item tab" data-tab="three">
                 <img src="icons/service_shape.svg" alt="Service" />
                 <span>Lorem ipsum dolor sit.</span>
               </div>
-              <div class="grid_item">
+              <div class="grid_item tab">
                 <p class="text-center">Lorem ipsum dolor sit.</p>
               </div>
-              <div class="grid_item">
+              <div class="grid_item tab" data-tab="four">
                 <img src="icons/service_shape.svg" alt="Service" />
                 <span>Lorem ipsum dolor sit.</span>
               </div>
-              <div class="grid_item">
+              <div class="grid_item tab" data-tab="five">
                 <img src="icons/service_shape.svg" alt="Service" />
                 <span>Lorem ipsum dolor sit.</span>
               </div>
-              <div class="grid_item">
+              <div class="grid_item tab" data-tab="six">
                 <img src="icons/service_shape.svg" alt="Service" />
                 <span>Lorem ipsum dolor sit.</span>
               </div>
@@ -389,16 +437,42 @@
               </div>
             </div>
             <div class="content mt-5 mb-4">
-              <p class="text-center">
-                The process of improving measure of an enterpprise's . Business
-                growth can be aLorem ipsum dolor sit amet, consectetur adipis
-                elit sed do eiusmod tempor incidunt labore et dolore magna
-                aliqua. .
-              </p>
+              <div class="item">
+                <p class="text-center">
+                  The process of improving measure of an enterpprise's .
+                  Business growth can be aLorem ipsum dolor sit amet,
+                  consectetur adipis elit sed do eiusmod tempor incidunt labore
+                  et dolore magna aliqua. .
+                </p>
+              </div>
+              <div class="item">
+                <p class="text-center">
+                  The process of improving measure of an enterpprise's .
+                  Business growth can be aLorem ipsum dolor sit amet,
+                  consectetur adipis elit sed do eiusmod tempor incidunt labore
+                  et dolore magna aliqua. .
+                </p>
+              </div>
+              <div class="item">
+                <p class="text-center">
+                  The process of improving measure of an enterpprise's .
+                  Business growth can be aLorem ipsum dolor sit amet,
+                  consectetur adipis elit sed do eiusmod tempor incidunt labore
+                  et dolore magna aliqua. .
+                </p>
+              </div>
+              <div class="item">
+                <p class="text-center">
+                  The process of improving measure of an enterpprise's .
+                  Business growth can be aLorem ipsum dolor sit amet,
+                  consectetur adipis elit sed do eiusmod tempor incidunt labore
+                  et dolore magna aliqua. .
+                </p>
+              </div>
             </div>
           </div>
           <div class="col-12 col-lg-7">
-            <div class="articles_slider" dir="ltr">
+            <div class="articles_slider">
               <div class="item">
                 <img src="img/articles_bg.png" alt="Item" />
                 <a href="#">
@@ -455,9 +529,9 @@
           </div>
         </div>
 
-        <div class="cards_slider stacked-cards stacked-cards-slide">
-          <ul>
-            <li class="slide_card">
+        <div class="row flex_center">
+          <div class="col-12 col-md-10 col-lg-7 cards_slider">
+            <div class="item">
               <div class="card_content">
                 <i class="fas fa-quote-left"></i>
                 <i class="fas fa-quote-right"></i>
@@ -470,50 +544,50 @@
                   libero voluptas, necessitatibus delectus officiis officia?
                 </p>
               </div>
-            </li>
-            <li class="slide_card">
+            </div>
+            <div class="item">
               <div class="card_content">
                 <i class="fas fa-quote-left"></i>
                 <i class="fas fa-quote-right"></i>
                 <div class="owner_img">
                   <img src="img/partner_2.jpg" alt="Parnter Image" />
-                  <h3>Mr. Bean</h3>
+                  <h3>Mr. bean</h3>
                 </div>
                 <p class="text-center head_color mt-5">
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet
                   libero voluptas, necessitatibus delectus officiis officia?
                 </p>
               </div>
-            </li>
-            <li class="slide_card">
+            </div>
+            <div class="item">
               <div class="card_content">
                 <i class="fas fa-quote-left"></i>
                 <i class="fas fa-quote-right"></i>
                 <div class="owner_img">
                   <img src="img/partner_3.jpg" alt="Parnter Image" />
-                  <h3>margot robbie</h3>
+                  <h3>Margrrot Robbie</h3>
                 </div>
                 <p class="text-center head_color mt-5">
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet
                   libero voluptas, necessitatibus delectus officiis officia?
                 </p>
               </div>
-            </li>
-            <li class="slide_card">
+            </div>
+            <div class="item">
               <div class="card_content">
                 <i class="fas fa-quote-left"></i>
                 <i class="fas fa-quote-right"></i>
                 <div class="owner_img">
                   <img src="img/partner_4.jpg" alt="Parnter Image" />
-                  <h3>John krasinski</h3>
+                  <h3>rose blackpink</h3>
                 </div>
                 <p class="text-center head_color mt-5">
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet
                   libero voluptas, necessitatibus delectus officiis officia?
                 </p>
               </div>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -626,7 +700,6 @@
     <script src="js/libs/jquery-3.4.1.min.js"></script>
     <script src="js/libs/jquery.countTo.js"></script>
     <script src="js/libs/slick.min.js"></script>
-    <script src="js/libs/stackedCards.min.js"></script>
     <script src="js/libs/jquery.magnific-popup.min.js"></script>
     <script src="js/funcs.js"></script>
     <script src="js/main.js"></script>

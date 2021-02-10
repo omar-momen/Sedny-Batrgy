@@ -56,7 +56,7 @@ const nav_height_value = nav.clientHeight;
 const window_height = window.innerHeight;
 main_header.style.height = window_height - nav_height_value + "px";
 
-// Video Popup
+// About US Section
 $("#videoPopup").magnificPopup({
   type: "iframe",
 });
@@ -65,6 +65,12 @@ document.getElementById("more").onclick = function () {
   document.getElementById("videoPopup").click();
 };
 
+if (document.documentElement.getAttribute("dir") === "rtl") {
+  document.querySelector(".more_btn i").classList.remove("fa-hand-point-right");
+  document.querySelector(".more_btn i").classList.add("fa-hand-point-left");
+}
+
+// Clients Number
 $(window).scroll(function () {
   var scrollTop = $(window).scrollTop(),
     sectionOffset = $("#numbers").offset().top - 600;
@@ -83,6 +89,7 @@ $(window).scroll(function () {
   }
 });
 
+// Services Section
 let tabsElemens = document.querySelectorAll(".grid_items_container .grid_item");
 
 tabsElemens.forEach((element) => {
@@ -92,6 +99,14 @@ tabsElemens.forEach((element) => {
     );
     this.classList.add("active");
   });
+});
+
+$(".grid_items_container .grid_item").on("click", function () {
+  // $(this).addClass("active").siblings().removeClass("active");
+  $("#tab-" + $(this).data("tab"))
+    .fadeIn()
+    .siblings()
+    .css("display", "none");
 });
 
 // Clients Slider
@@ -105,7 +120,7 @@ $(".clients_slider").slick({
   adaptiveHeight: true,
   centerPadding: "60px",
   arrows: false,
-  // autoplay: true,
+  autoplay: true,
   autoplaySpeed: 3000,
   pauseOnHover: true,
   pauseOnDotsHover: true,
@@ -136,23 +151,21 @@ $(".articles_slider").slick({
   centerMode: false,
   dots: true,
   infinite: true,
-  speed: 500,
-  autoplaySpeed: 3000,
+  speed: 1000,
   slidesToShow: 3,
   slidesToScroll: 2,
-  // adaptiveHeight: true,
-  centerPadding: "60px",
+  adaptiveHeight: true,
   arrows: false,
   autoplay: true,
-  pauseOnHover: true,
-  pauseOnDotsHover: true,
+  autoplaySpeed: 3000,
+  pauseOnHover: false,
+  rtl: document.documentElement.getAttribute("dir") == "rtl" ? true : false,
   responsive: [
     {
       breakpoint: 992,
       settings: {
         arrows: false,
         centerMode: false,
-        centerPadding: "40px",
         slidesToShow: 3,
       },
     },
@@ -161,7 +174,6 @@ $(".articles_slider").slick({
       settings: {
         arrows: false,
         centerMode: false,
-        centerPadding: "40px",
         slidesToShow: 2,
       },
     },
@@ -170,28 +182,43 @@ $(".articles_slider").slick({
       settings: {
         arrows: false,
         centerMode: false,
-        centerPadding: "40px",
         slidesToShow: 2,
       },
     },
   ],
 });
+$(".our_articles .content").slick({
+  dots: false,
+  arrows: true,
+  infinite: true,
+  speed: 1000,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  adaptiveHeight: true,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  pauseOnHover: false,
+  rtl: document.documentElement.getAttribute("dir") == "rtl" ? true : false,
+});
 
-let slideItems = document.querySelectorAll(".articles_slider .item");
-
-slideItems.forEach((element) => {
-  element.addEventListener("click", function () {
-    slideItems.forEach((slideItem) =>
-      slideItem.classList.remove("slick-current")
-    );
-    this.classList.add("slick-current");
-  });
+$(".articles_slider .slick-slide").hover(function () {
+  $(".our_articles .content .slick-next").click();
+  $(this).addClass("slick-current").siblings().removeClass("slick-current");
 });
 
 // Partners Cards Slider
-var stackedCard = new stackedCards({
-  selector: ".cards_slider",
-  layout: "slide",
-  transformOrigin: "center",
+$(".cards_slider").slick({
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  adaptiveHeight: true,
+  centerPadding: "60px",
+  arrows: false,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  pauseOnHover: true,
+  pauseOnDotsHover: true,
+  rtl: document.documentElement.getAttribute("dir") == "rtl" ? true : false,
 });
-stackedCard.init();
