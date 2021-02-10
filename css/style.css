@@ -806,19 +806,15 @@ a {
       background-color: rgba(204, 204, 204, 0.3); }
   .our_clients .clients_slider .slick-dots li button {
     border: 0.2rem solid rgba(110, 215, 255, 0.5);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
+    border-radius: 50%; }
     .our_clients .clients_slider .slick-dots li button::before {
       font-family: "slick";
-      font-size: 5rem;
-      line-height: 20px;
+      font-size: 1.4rem;
+      line-height: 2.3rem;
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 20px;
-      height: 20px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       content: "•";
       text-align: center;
       color: #6ed7ff;
@@ -929,19 +925,15 @@ a {
       box-shadow: 0 0 0.6rem 0.2rem #fff; }
   .our_articles .articles_slider .slick-dots li button {
     border: 0.2rem solid rgba(110, 215, 255, 0.5);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
+    border-radius: 50%; }
     .our_articles .articles_slider .slick-dots li button::before {
       font-family: "slick";
-      font-size: 5rem;
-      line-height: 20px;
+      font-size: 1.4rem;
+      line-height: 2.3rem;
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 20px;
-      height: 20px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       content: "•";
       text-align: center;
       color: #6ed7ff;
