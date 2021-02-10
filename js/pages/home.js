@@ -101,7 +101,7 @@ $(".clients_slider").slick({
   adaptiveHeight: true,
   centerPadding: "60px",
   arrows: false,
-  autoplay: true,
+  // autoplay: true,
   autoplaySpeed: 3000,
   pauseOnHover: true,
   pauseOnDotsHover: true,

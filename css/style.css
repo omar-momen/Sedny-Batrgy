@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap");
 .color_dark {
   color: #131b2d; }
@@ -809,13 +810,23 @@ a {
     display: flex;
     justify-content: center;
     align-items: center; }
+    .our_clients .clients_slider .slick-dots li button::before {
+      font-family: "slick";
+      font-size: 5rem;
+      line-height: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      content: "•";
+      text-align: center;
+      color: #6ed7ff;
+      transition: 0.3s ease;
+      -webkit-font-smoothing: antialiased; }
     @media (max-width: 479.98px) {
       .our_clients .clients_slider .slick-dots li button {
         border: none; } }
-    .our_clients .clients_slider .slick-dots li button::before {
-      font-size: 5rem;
-      transition: 0.3s ease;
-      color: #6ed7ff; }
     .our_clients .clients_slider .slick-dots li button:hover::before {
       color: #bfedff; }
   .our_clients .clients_slider .slick-dots li.slick-active button::before {
@@ -922,13 +933,23 @@ a {
     display: flex;
     justify-content: center;
     align-items: center; }
+    .our_articles .articles_slider .slick-dots li button::before {
+      font-family: "slick";
+      font-size: 5rem;
+      line-height: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      content: "•";
+      text-align: center;
+      color: #6ed7ff;
+      transition: 0.3s ease;
+      -webkit-font-smoothing: antialiased; }
     @media (max-width: 479.98px) {
       .our_articles .articles_slider .slick-dots li button {
         border: none; } }
-    .our_articles .articles_slider .slick-dots li button::before {
-      font-size: 5rem;
-      transition: 0.3s ease;
-      color: #6ed7ff; }
     .our_articles .articles_slider .slick-dots li button:hover::before {
       color: #bfedff; }
   .our_articles .articles_slider .slick-dots li.slick-active button::before {

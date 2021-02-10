@@ -128,13 +128,23 @@
         border: 0.2rem solid rgba($color: $colorLight, $alpha: 0.5);
         border-radius: 50%;
         @include flexCenter;
+        &::before {
+          font-family: "slick";
+          font-size: 5rem;
+          line-height: 20px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 20px;
+          height: 20px;
+          content: "•";
+          text-align: center;
+          color: $colorLight;
+          transition: 0.3s ease;
+          -webkit-font-smoothing: antialiased;
+        }
         @media (max-width: 479.98px) {
           border: none;
-        }
-        &::before {
-          font-size: 5rem;
-          transition: 0.3s ease;
-          color: $colorLight;
         }
         &:hover {
           &::before {
