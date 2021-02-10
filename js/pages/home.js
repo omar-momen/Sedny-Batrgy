@@ -5,8 +5,8 @@ $(".header_fill_carousal").slick({
   speed: 1000,
   arrows: true,
   fade: true,
+  rtl: document.documentElement.getAttribute("dir") == "rtl" ? true : false,
 });
-
 $(".header_slices_carousal").slick({
   autoplay: true,
   autoplaySpeed: 5000,
@@ -15,6 +15,7 @@ $(".header_slices_carousal").slick({
   slidesToShow: 4,
   slidesToScroll: 1,
   asNavFor: ".header_fill_carousal",
+  rtl: document.documentElement.getAttribute("dir") == "rtl" ? true : false,
   responsive: [
     {
       breakpoint: 1024,
@@ -42,7 +43,6 @@ $(".header_slices_carousal").slick({
     // instead of a settings object
   ],
 });
-
 $(".header_slices_carousal .slick-slide").hover(function () {
   $(".header_fill_carousal .slick-next").click();
   $(this).addClass("slick-current").siblings().removeClass("slick-current");
