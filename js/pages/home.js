@@ -79,32 +79,115 @@ $(window).scroll(function () {
   }
 });
 
-let navLinks = document.querySelectorAll(".grid_items_container .grid_item");
+let tabsElemens = document.querySelectorAll(".grid_items_container .grid_item");
 
-navLinks.forEach((element) => {
+tabsElemens.forEach((element) => {
   element.addEventListener("click", function () {
-    navLinks.forEach((navLink) => navLink.classList.remove("active"));
+    tabsElemens.forEach((tabsElement) =>
+      tabsElement.classList.remove("active")
+    );
     this.classList.add("active");
   });
 });
 
 // Clients Slider
-$(".clients_slider").owlCarousel({
-  loop: true,
-  margin: 50,
-  responsiveClass: true,
+$(".clients_slider").slick({
+  centerMode: false,
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 5,
+  slidesToScroll: 4,
+  adaptiveHeight: true,
+  centerPadding: "60px",
+  arrows: false,
   autoplay: true,
-  nav: false,
-  responsive: {
-    0: {
-      items: 2,
+  autoplaySpeed: 3000,
+  pauseOnHover: true,
+  pauseOnDotsHover: true,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: false,
+        centerPadding: "40px",
+        slidesToShow: 3,
+      },
     },
-    600: {
-      items: 3,
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: false,
+        centerPadding: "40px",
+        slidesToShow: 2,
+      },
     },
-    1000: {
-      items: 5,
-      loop: false,
-    },
-  },
+  ],
 });
+
+// Our Articles Slider
+$(".articles_slider").slick({
+  centerMode: false,
+  dots: true,
+  infinite: true,
+  speed: 500,
+  autoplaySpeed: 3000,
+  slidesToShow: 3,
+  slidesToScroll: 2,
+  // adaptiveHeight: true,
+  centerPadding: "60px",
+  arrows: false,
+  autoplay: true,
+  pauseOnHover: true,
+  pauseOnDotsHover: true,
+  responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        arrows: false,
+        centerMode: false,
+        centerPadding: "40px",
+        slidesToShow: 3,
+      },
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: false,
+        centerPadding: "40px",
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: false,
+        centerPadding: "40px",
+        slidesToShow: 2,
+      },
+    },
+  ],
+});
+
+let slideItems = document.querySelectorAll(".articles_slider .item");
+
+slideItems.forEach((element) => {
+  element.addEventListener("click", function () {
+    slideItems.forEach((slideItem) =>
+      slideItem.classList.remove("slick-current")
+    );
+    this.classList.add("slick-current");
+  });
+});
+
+// Partners Cards Slider
+var stackedCard = new stackedCards({
+  selector: ".cards_slider",
+  layout: "slide",
+  transformOrigin: "center",
+});
+stackedCard.init();

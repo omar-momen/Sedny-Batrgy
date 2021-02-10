@@ -121,26 +121,31 @@
   }
 }
 
-@mixin carouselDots {
-  .owl-carousel {
-    .owl-dots {
-      .owl-dot {
-        outline: none;
-        &.active {
-          span {
-            background-color: $colorLight;
-            border: 1px solid $colorLight;
-          }
+@mixin slickDots {
+  .slick-dots {
+    li {
+      button {
+        border: 0.2rem solid rgba($color: $colorLight, $alpha: 0.5);
+        border-radius: 50%;
+        @include flexCenter;
+        @media (max-width: 479.98px) {
+          border: none;
         }
-        & > span {
-          transition: 0.3s;
-          width: 1.2rem;
-          height: 1.2rem;
-          border: 1px solid $colorLight;
+        &::before {
+          font-size: 5rem;
+          transition: 0.3s ease;
+          color: $colorLight;
         }
         &:hover {
-          span {
-            background-color: #b0e9ff;
+          &::before {
+            color: #bfedff;
+          }
+        }
+      }
+      &.slick-active {
+        button {
+          &::before {
+            color: #00b0f3;
           }
         }
       }

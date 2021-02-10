@@ -9,10 +9,14 @@
     <link rel="stylesheet" href="css/libs/all.min.css" />
     <link rel="stylesheet" href="css/libs/owl.carousel.min.css" />
     <link rel="stylesheet" href="css/libs/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/libs/slick.css" />
+    <link rel="stylesheet" href="css/libs/slick-theme.css" />
+    <link rel="stylesheet" href="css/libs/stackedCards.css" />
     <link rel="stylesheet" href="css/libs/magnific-popup.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body>
+  <body style="height: auto">
+    <!--Temp-->
     <!-- ? *********** Start Fixed Stuff *********** -->
     <!-- Start loading -->
     <div class="loading-overlay">
@@ -23,7 +27,6 @@
     </div>
     <!-- End loading -->
     <!-- ? *********** End Fixed Stuff *********** -->
-    <a href="pages/tranining_development.html">test</a>
     <nav class="nav">
       <div class="upper_nav">
         <div class="row">
@@ -204,7 +207,7 @@
           <img src="icons/headphone.svg" alt="Headpone" />
         </div>
         <div class="heading">
-          <h2 class="text-center color_dark fw-bold head_size mb-4">
+          <h2 class="text-center head_color fw-bold head_size mb-4">
             Who are we
           </h2>
           <div class="line">
@@ -287,7 +290,7 @@
     <section class="section_margin our_services">
       <div class="container">
         <div class="heading">
-          <h2 class="text-center color_dark fw-bold head_size mb-4">
+          <h2 class="text-center head_color fw-bold head_size mb-4">
             Our Services
           </h2>
           <div class="line">
@@ -315,7 +318,7 @@
             </div>
           </div>
           <div class="grid_item order">
-            <div class="grid_items_container">
+            <div class="grid_items_container" dir="ltr">
               <div class="grid_item active">
                 <img src="icons/service_shape.svg" alt="Service" />
                 <span>Lorem ipsum dolor sit.</span>
@@ -350,10 +353,10 @@
     </section>
 
     <!--===== Our Clients =====-->
-    <section class="our_clients mt-5">
+    <section class="our_clients mt-5" dir="ltr">
       <div class="container">
         <div class="heading">
-          <h2 class="text-center color_dark fw-bold head_size mb-4">
+          <h2 class="text-center head_color fw-bold head_size mb-4">
             Our Clients
           </h2>
           <div class="line">
@@ -362,7 +365,7 @@
             <span class="sub_line"></span>
           </div>
         </div>
-        <div class="owl-carousel owl-theme clients_slider">
+        <div class="clients_slider">
           <div class="item"><img src="img/spacex.png" alt="Client" /></div>
           <div class="item"><img src="img/brand-1.png" alt="Client" /></div>
           <div class="item"><img src="img/microsoft.png" alt="Client" /></div>
@@ -374,7 +377,148 @@
       </div>
     </section>
 
-    <section class="section_margin our_articles"></section>
+    <!--===== Our Articles =====-->
+    <section class="section_margin our_articles">
+      <div class="container-fluid p-0">
+        <div class="row">
+          <div class="col-12 col-lg-5 article_content text-center">
+            <div class="heading">
+              <h2 class="text-center fw-bold head_size mb-4">Our Articles</h2>
+              <div class="line">
+                <span class="sub_line"></span>
+                <span class="sub_line"></span>
+                <span class="sub_line"></span>
+              </div>
+            </div>
+            <div class="content mt-5 mb-4">
+              <p class="text-center">
+                The process of improving measure of an enterpprise's . Business
+                growth can be aLorem ipsum dolor sit amet, consectetur adipis
+                elit sed do eiusmod tempor incidunt labore et dolore magna
+                aliqua. .
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-7">
+            <div class="articles_slider" dir="ltr">
+              <div class="item">
+                <img src="img/articles_bg.png" alt="Item" />
+                <a href="#">
+                  <span
+                    >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Quas, blanditiis?</span
+                  >
+                </a>
+              </div>
+              <div class="item">
+                <img src="img/accounting.png" alt="Item" />
+                <a href="#">
+                  <span
+                    >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Quas, blanditiis?</span
+                  >
+                </a>
+              </div>
+              <div class="item">
+                <img src="img/main_bg_4.png" alt="Item" />
+                <a href="#">
+                  <span
+                    >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Quas, blanditiis?</span
+                  >
+                </a>
+              </div>
+              <div class="item">
+                <img src="img/main_bg_3.png" alt="Item" />
+                <a href="#">
+                  <span
+                    >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Quas, blanditiis?</span
+                  >
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--===== Partners =====-->
+    <section class="section_margin partners">
+      <div class="container">
+        <div class="heading">
+          <h2 class="text-center head_color fw-bold head_size mb-4">
+            Partners
+          </h2>
+          <div class="line">
+            <span class="sub_line"></span>
+            <span class="sub_line"></span>
+            <span class="sub_line"></span>
+          </div>
+        </div>
+
+        <div class="cards_slider stacked-cards stacked-cards-slide">
+          <ul>
+            <li class="slide_card">
+              <div class="card_content">
+                <i class="fas fa-quote-left"></i>
+                <i class="fas fa-quote-right"></i>
+                <div class="owner_img">
+                  <img src="img/partner_1.png" alt="Parnter Image" />
+                  <h3>rose blackpink</h3>
+                </div>
+                <p class="text-center head_color mt-5">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet
+                  libero voluptas, necessitatibus delectus officiis officia?
+                </p>
+              </div>
+            </li>
+            <li class="slide_card">
+              <div class="card_content">
+                <i class="fas fa-quote-left"></i>
+                <i class="fas fa-quote-right"></i>
+                <div class="owner_img">
+                  <img src="img/partner_2.jpg" alt="Parnter Image" />
+                  <h3>Mr. Bean</h3>
+                </div>
+                <p class="text-center head_color mt-5">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet
+                  libero voluptas, necessitatibus delectus officiis officia?
+                </p>
+              </div>
+            </li>
+            <li class="slide_card">
+              <div class="card_content">
+                <i class="fas fa-quote-left"></i>
+                <i class="fas fa-quote-right"></i>
+                <div class="owner_img">
+                  <img src="img/partner_3.jpg" alt="Parnter Image" />
+                  <h3>margot robbie</h3>
+                </div>
+                <p class="text-center head_color mt-5">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet
+                  libero voluptas, necessitatibus delectus officiis officia?
+                </p>
+              </div>
+            </li>
+            <li class="slide_card">
+              <div class="card_content">
+                <i class="fas fa-quote-left"></i>
+                <i class="fas fa-quote-right"></i>
+                <div class="owner_img">
+                  <img src="img/partner_4.jpg" alt="Parnter Image" />
+                  <h3>John krasinski</h3>
+                </div>
+                <p class="text-center head_color mt-5">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet
+                  libero voluptas, necessitatibus delectus officiis officia?
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
     <footer class="footer">
       <div class="row upper">
@@ -484,6 +628,8 @@
     <script src="js/libs/jquery-3.4.1.min.js"></script>
     <script src="js/libs/jquery.countTo.js"></script>
     <script src="js/libs/owl.carousel.min.js"></script>
+    <script src="js/libs/slick.min.js"></script>
+    <script src="js/libs/stackedCards.min.js"></script>
     <script src="js/libs/jquery.magnific-popup.min.js"></script>
     <script src="js/funcs.js"></script>
     <script src="js/main.js"></script>
