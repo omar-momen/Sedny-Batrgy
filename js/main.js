@@ -1,12 +1,6 @@
 /********** Start loading **********/
 $(window).on("load", function () {
   $(".loading-overlay").fadeOut();
-  /********* Start main_nav Services Hover *********/
-  const active_tab = document.querySelector(
-    "nav.nav .main_nav ul.links .services .services_hover .tab_body .tab.active"
-  );
-  services_hover.style.height = active_tab.clientHeight + 150 + "px";
-  /********* End main_nav Services Hover *********/
 });
 /********** End loading **********/
 
@@ -54,25 +48,43 @@ const services_hover = document.querySelector(
 );
 services_hover.style.top = main_nav_height + "px";
 // parent
-$("nav.nav .main_nav ul.links li.services").click(function () {
-  $("nav.nav .main_nav ul.links .services .services_hover").toggleClass(
-    "active"
+if (window.innerWidth >= 992) {
+  $("nav.nav .main_nav ul.links li.services").hover(
+    function () {
+      $("nav.nav .main_nav ul.links .services .services_hover").addClass(
+        "active"
+      );
+      const active_tab = document.querySelector(
+        "nav.nav .main_nav ul.links .services .services_hover .tab_body .tab.active"
+      );
+      services_hover.style.height = active_tab.clientHeight + 150 + "px";
+    },
+    function () {
+      $("nav.nav .main_nav ul.links .services .services_hover").removeClass(
+        "active"
+      );
+    }
   );
-});
-$("nav.nav .main_nav ul.links .services .services_hover").click(function (e) {
-  e.stopPropagation();
-});
-//   function () {
-//     $("nav.nav .main_nav ul.links .services .services_hover").removeClass(
-//       "active"
-//     );
-//   }
-// );
-// childs
-$("nav.nav .main_nav ul.links .services .services_hover").click(function (e) {
-  e.preventDefault();
-});
+} else {
+  $("nav.nav .main_nav ul.links li.services").click(function () {
+    $("nav.nav .main_nav ul.links .services .services_hover").toggleClass(
+      "active"
+    );
+    const active_tab = document.querySelector(
+      "nav.nav .main_nav ul.links .services .services_hover .tab_body .tab.active"
+    );
+    services_hover.style.height = active_tab.clientHeight + 150 + "px";
+  });
+  $("nav.nav .main_nav ul.links .services .services_hover").click(function (e) {
+    e.stopPropagation();
+  });
+}
 
+// $("nav.nav .main_nav ul.links .services .services_hover").click(function (e) {
+//   e.stopPropagation();
+// });
+
+// childs
 if (window.innerWidth >= 992) {
   $("nav.nav .main_nav ul.links .services .services_hover ul.tabs li").hover(
     function () {
