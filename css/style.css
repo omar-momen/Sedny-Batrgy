@@ -1925,7 +1925,7 @@ nav.nav {
             width: 100%;
             background: #fff;
             box-shadow: 0px 0.5rem 1rem #1c335b75;
-            transition: all 0.3s ease-in-out;
+            transition: all 0.2s ease-in-out;
             z-index: 2;
             transform: translatex(100vw); }
             nav.nav .main_nav .row .col:nth-child(3) ul.links > li .services_hover.active {
