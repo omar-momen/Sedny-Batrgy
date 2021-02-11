@@ -59,6 +59,9 @@ $("nav.nav .main_nav ul.links li.services").click(function () {
     "active"
   );
 });
+$("nav.nav .main_nav ul.links .services .services_hover").click(function (e) {
+  e.stopPropagation();
+});
 //   function () {
 //     $("nav.nav .main_nav ul.links .services .services_hover").removeClass(
 //       "active"
