@@ -54,18 +54,17 @@ const services_hover = document.querySelector(
 );
 services_hover.style.top = main_nav_height + "px";
 // parent
-$("nav.nav .main_nav ul.links .services").hover(
-  function () {
-    $("nav.nav .main_nav ul.links .services .services_hover").addClass(
-      "active"
-    );
-  },
-  function () {
-    $("nav.nav .main_nav ul.links .services .services_hover").removeClass(
-      "active"
-    );
-  }
-);
+$("nav.nav .main_nav ul.links li.services").click(function () {
+  $("nav.nav .main_nav ul.links .services .services_hover").toggleClass(
+    "active"
+  );
+});
+//   function () {
+//     $("nav.nav .main_nav ul.links .services .services_hover").removeClass(
+//       "active"
+//     );
+//   }
+// );
 // childs
 $("nav.nav .main_nav ul.links .services .services_hover").click(function (e) {
   e.preventDefault();
