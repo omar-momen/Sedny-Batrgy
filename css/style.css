@@ -78,7 +78,8 @@ body {
   height: 7000px;
   /*Temp*/
   font-family: "Cairo", sans-serif;
-  perspective: 600px; }
+  perspective: 600px;
+  overflow-x: hidden; }
 
 *,
 *::after,
@@ -1836,6 +1837,79 @@ html[dir="rtl"] body .login_page .login_form label[for="password"] i:last-child 
           width: 1rem;
           height: 0.3rem;
           background-color: rgba(58, 184, 232, 0.5); }
+
+.start_test_page nav.nav {
+  position: absolute;
+  z-index: 1; }
+  .start_test_page nav.nav .main_nav .row .sign_in a {
+    color: #fff !important; }
+  .start_test_page nav.nav .main_nav .row form span {
+    background: #777 !important; }
+  .start_test_page nav.nav .main_nav .row .col:nth-child(3) .links li a {
+    color: #fff; }
+  .start_test_page nav.nav .main_nav .row .col:nth-child(3) .links li.active a {
+    color: #6ed7ff;
+    font-weight: bolder;
+    border-bottom: 2px solid #6ed7ff; }
+  .start_test_page nav.nav .main_nav .row .col:nth-child(3) .links li:hover a {
+    color: #6ed7ff;
+    text-shadow: none;
+    transform: translateY(-3px); }
+  .start_test_page nav.nav .main_nav .row .logo {
+    background: transparent !important; }
+.start_test_page .start_test_header {
+  background: url(../img/main_bg_5.png) no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: overlay;
+  height: 50rem;
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-items: center; }
+.start_test_page .heading {
+  width: 60%;
+  transform: translateY(12rem);
+  color: #fff; }
+  .start_test_page .heading h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    border-left: 4px solid #fff;
+    padding: 0 1rem; }
+  .start_test_page .heading p {
+    font-size: 2rem;
+    opacity: 0.8;
+    line-height: 2; }
+.start_test_page .test_body .row {
+  gap: 1rem; }
+.start_test_page .test_body .test_content {
+  box-shadow: 0px 0 0.6rem 0.3rem #0000001a;
+  border-radius: 0.8rem; }
+  .start_test_page .test_body .test_content .head {
+    background-color: #6ed7ff;
+    padding: 2rem;
+    border-radius: 0.8rem 0.8rem 0 0; }
+    .start_test_page .test_body .test_content .head h3 {
+      color: #fff;
+      font-weight: bold; }
+  .start_test_page .test_body .test_content .content {
+    padding: 1.5rem;
+    line-height: 2; }
+    .start_test_page .test_body .test_content .content p {
+      font-size: 1.5rem;
+      color: rgba(19, 27, 45, 0.8); }
+.start_test_page .start_test_bar .img img {
+  width: 100%; }
+.start_test_page .start_test_bar .test_details .start_test_btn {
+  margin-top: 2rem;
+  background: transparent linear-gradient(90deg, #5ad1ff 0%, #25b0e5 100%, #9d009e 100%);
+  color: #fff;
+  padding: 1.5rem;
+  transition: all 0.4s ease;
+  box-shadow: 0 0.3rem 0.6rem #00000029;
+  border-radius: 4.4rem; }
 
 nav.nav {
   width: 100%; }
