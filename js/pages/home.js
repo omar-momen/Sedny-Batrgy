@@ -38,9 +38,6 @@ $(".header_slices_carousal").slick({
         slidesToScroll: 1,
       },
     },
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
   ],
 });
 $(".header_slices_carousal .slick-slide").hover(function () {
@@ -48,13 +45,6 @@ $(".header_slices_carousal .slick-slide").hover(function () {
   $(this).addClass("slick-current").siblings().removeClass("slick-current");
 });
 /******* End Header Carousals ********/
-
-// Adjust main Header_height
-const main_header = document.querySelector("header.header");
-const nav = document.querySelector("nav.nav");
-const nav_height_value = nav.clientHeight;
-const window_height = window.innerHeight;
-main_header.style.height = window_height - nav_height_value + "px";
 
 // About US Section
 $("#videoPopup").magnificPopup({
