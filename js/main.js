@@ -41,9 +41,9 @@ $("nav .main_nav form span").click(function () {
 });
 
 // Toggle Class Active On Main Nav Links
-$("nav.nav .main_nav ul.links li").click(function () {
-  $(this).addClass("active").siblings().removeClass("active");
-});
+// $("nav.nav .main_nav ul.links li").click(function () {
+//   $(this).addClass("active").siblings().removeClass("active");
+// });
 
 /********** Start Nav Services Hover **********/
 // Adjust main Nav_height
@@ -67,16 +67,33 @@ $("nav.nav .main_nav ul.links .services").hover(
   }
 );
 // childs
-$("nav.nav .main_nav ul.links .services .services_hover ul.tabs li").hover(
-  function () {
-    $(this).addClass("active").siblings().removeClass("active");
-    // console.log($($(this).data("active")).height() + 300 + "px");
-    services_hover.style.height =
-      $($(this).data("active")).height() + 150 + "px";
-    $($(this).data("active"))
-      .addClass("active")
-      .siblings()
-      .removeClass("active");
-  }
-);
+$("nav.nav .main_nav ul.links .services .services_hover").click(function (e) {
+  e.preventDefault();
+});
+
+if (window.innerWidth >= 992) {
+  $("nav.nav .main_nav ul.links .services .services_hover ul.tabs li").hover(
+    function () {
+      $(this).addClass("active").siblings().removeClass("active");
+      services_hover.style.height =
+        $($(this).data("active")).height() + 150 + "px";
+      $($(this).data("active"))
+        .addClass("active")
+        .siblings()
+        .removeClass("active");
+    }
+  );
+} else {
+  $("nav.nav .main_nav ul.links .services .services_hover ul.tabs li").click(
+    function () {
+      $(this).addClass("active").siblings().removeClass("active");
+      services_hover.style.height =
+        $($(this).data("active")).height() + 150 + "px";
+      $($(this).data("active"))
+        .addClass("active")
+        .siblings()
+        .removeClass("active");
+    }
+  );
+}
 /********** End Nav Services Hover **********/
