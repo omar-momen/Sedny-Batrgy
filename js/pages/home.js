@@ -49,13 +49,6 @@ $(".header_slices_carousal .slick-slide").hover(function () {
 });
 /******* End Header Carousals ********/
 
-// Adjust main Header_height
-const main_header = document.querySelector("header.header");
-const nav = document.querySelector("nav.nav");
-const nav_height_value = nav.clientHeight;
-const window_height = window.innerHeight;
-main_header.style.height = window_height - nav_height_value + "px";
-
 // Video Popup
 $("#videoPopup").magnificPopup({
   type: "iframe",

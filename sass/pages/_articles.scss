@@ -26,6 +26,15 @@
           box-shadow: 4px 5px 20px 0px rgba(0, 0, 0, 0.4);
           margin: 20px 0;
           overflow: hidden;
+          &:hover {
+            .upper_info {
+              z-index: 1;
+            }
+            img {
+              position: unset;
+              z-index: unset;
+            }
+          }
           &.green {
             .upper_info {
               span:first-child {
@@ -80,7 +89,6 @@
             position: absolute;
             top: 0;
             left: 0;
-            z-index: 1;
             width: 100%;
             background-image: linear-gradient(
               to bottom,
@@ -122,10 +130,12 @@
             object-fit: cover;
             transition: all 0.4s ease-in-out;
             backface-visibility: hidden;
+            position: relative;
+            z-index: -1;
             cursor: pointer;
             transform: scale(1.2);
             &:hover {
-              transform: scale(1.1);
+              transform: scale(1);
             }
           }
           .text {

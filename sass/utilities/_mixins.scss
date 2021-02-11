@@ -83,16 +83,22 @@
         .col:nth-child(3) {
           .links {
             li {
-              color: #fff;
+              a {
+                color: #fff;
+              }
               &.active {
-                color: $colorLight;
-                font-weight: bolder;
-                border-bottom: 2px solid $colorLight;
+                a {
+                  color: $colorLight;
+                  font-weight: bolder;
+                  border-bottom: 2px solid $colorLight;
+                }
               }
               &:hover {
-                color: $colorLight;
-                text-shadow: none;
-                transform: translateY(-3px);
+                a {
+                  color: $colorLight;
+                  text-shadow: none;
+                  transform: translateY(-3px);
+                }
               }
             }
           }
