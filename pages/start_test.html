@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/libs/all.min.css" />
     <link rel="stylesheet" href="../css/style.css" />
   </head>
+
   <body>
     <div class="start_test_page">
       <!-- Start loading -->
@@ -366,7 +367,7 @@
       <div class="test_body mt-5">
         <div class="container">
           <div class="row">
-            <div class="col-8">
+            <div class="col-sm-8 col-12">
               <div class="test_content">
                 <div class="head">
                   <h3>Training and development</h3>
@@ -393,20 +394,98 @@
                   </p>
                 </div>
               </div>
+              <div class="test_files mt-5">
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        <img src="../icons/MOV.svg" alt="" />
+                        <span>Training and development</span>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseOne"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingOne"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <div class="videos_wrapper">
+                          <div class="video">
+                            <span>The paragraph tag</span>
+                            <div class="video_details">
+                              <i class="fas fa-clock"></i>
+                              <span class="time">23 Minutes</span>
+                              <a
+                                href="https://www.youtube.com/watch?v=6fyeTlk2Gqo"
+                                target="_blank"
+                                ><i class="fas fa-play"></i
+                              ></a>
+                            </div>
+                          </div>
+                          <div class="video">
+                            <span>The paragraph tag</span>
+                            <div class="video_details">
+                              <i class="fas fa-clock"></i>
+                              <span class="time">23 Minutes</span>
+                              <a
+                                href="https://www.dailymotion.com/video/x7z9naf?playlist=x6y580"
+                                target="_blank"
+                                ><i class="fas fa-play"></i
+                              ></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="download_pdf mt-5">
+                  <div class="head">
+                    <img src="../icons/PDF.svg" alt="PDF" />
+                    <h3>Training and development</h3>
+                  </div>
+                  <a href="#">
+                    <img src="../icons/download.svg" alt="Download" />
+                  </a>
+                </div>
+                <div class="download_pdf mt-5">
+                  <div class="head">
+                    <img src="../icons/PDF.svg" alt="PDF" />
+                    <h3>Training and development</h3>
+                  </div>
+                  <a href="#">
+                    <img src="../icons/download.svg" alt="Download" />
+                  </a>
+                </div>
+              </div>
             </div>
-            <div class="col-3">
+            <div class="col-sm-4 col-12">
               <div class="start_test_bar">
                 <div class="img">
                   <img src="../img/main_bg_2.png" alt="Test Image" />
                 </div>
-                <div class="test_details">
-                  <div class="start_test_btn">
-                    <a href="#">Start Test</a>
+                <div class="test_details mt-2">
+                  <div class="start_test_btn text-center">
+                    <a href="#" class="btn">Start Test</a>
                   </div>
                   <ul class="icons">
-                    <li><i class="far fa-user"></i></li>
-                    <li><i class="far fa-comment"></i></li>
-                    <li><i class="fas fa-book"></i></li>
+                    <li>
+                      <i class="far fa-user"></i> <span>20</span> Students
+                    </li>
+                    <li>
+                      <i class="far fa-comment"></i> <span>50</span> Questions
+                    </li>
+                    <li>
+                      <i class="far fa-file-alt"></i> <span>3</span> lessons
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -417,6 +496,7 @@
     </div>
 
     <script src="../js/libs/jquery-3.4.1.min.js"></script>
+    <script src="../js/libs/bootstrap.min.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/pages/start_test.js"></script>
   </body>
