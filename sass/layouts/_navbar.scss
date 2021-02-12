@@ -190,10 +190,8 @@ nav.nav {
                 border-bottom: 0.2rem solid $colorLight;
                 & > a {
                   color: $colorLight;
-                  font-weight: bolder;
                 }
               }
-              border-bottom: 0.2rem solid $colorLight;
               & > a {
                 color: $colorLight;
                 font-weight: bolder;
@@ -206,6 +204,11 @@ nav.nav {
               }
             }
             &.services {
+              &.active:hover {
+                &:hover {
+                  border: none;
+                }
+              }
               &:hover {
                 border: none;
                 & > a {
