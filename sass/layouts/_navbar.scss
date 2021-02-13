@@ -275,13 +275,14 @@ nav.nav {
               }
             }
             .services_hover {
+              overflow: hidden;
               position: absolute;
               left: 0;
               width: 100%;
               background: #fff;
               box-shadow: 0px 0.5rem 1rem #1c335b75;
               z-index: 2;
-              display: none;
+              // display: none;
               &.active {
                 transition: all 0.4s ease-in-out;
               }
@@ -293,10 +294,14 @@ nav.nav {
                 margin: 0;
               }
               .services_body {
+                height: inherit;
                 .row {
+                  height: inherit;
                   align-items: flex-start;
                   .col:first-child {
+                    height: inherit;
                     ul.tabs {
+                      height: inherit;
                       background: #f2f2f2;
                       width: 100%;
                       @media (max-width: 992px) {
@@ -634,6 +639,52 @@ nav.nav {
             & {
               img {
                 height: 4rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+html[dir="rtl"] {
+  nav.nav {
+    .main_nav {
+      .row {
+        .col:nth-child(3) {
+          ul.links {
+            & > li {
+              .services_hover {
+                .services_body {
+                  .row {
+                    .col:first-child {
+                      ul.tabs {
+                        li {
+                          &.active.tab_one {
+                            border-left: unset;
+                            border-right: 4px solid #4cb050;
+                          }
+                          &.active.tab_tow {
+                            border-left: unset;
+                            border-right: 4px solid #6ed7ff;
+                          }
+                          &.active.tab_three {
+                            border-right: 4px solid #4c1cd5;
+                            border-left: unset;
+                          }
+                          &.active.tab_four {
+                            border-right: 4px solid #2c3e51;
+                            border-left: unset;
+                          }
+                          &.active.tab_five {
+                            border-right: 4px solid #0265ec;
+                            border-left: unset;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
               }
             }
           }
