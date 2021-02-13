@@ -3,7 +3,6 @@ nav.nav {
   .upper_nav {
     padding: 1.5rem;
     background-color: #131b2d;
-    color: #fff;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -75,13 +74,38 @@ nav.nav {
     padding: 0 3rem;
     width: 100%;
     position: relative;
-    background-color: #fff;
     transition: all 0.4s ease;
     &.fixed {
+      background-color: #131b2d;
       position: fixed;
       z-index: 1000;
       padding: 0;
       box-shadow: 0 10px 10px #3333332e;
+      .row {
+        .col:nth-child(3) {
+          ul.links {
+            & > li {
+              & > a {
+                color: #fff;
+              }
+              &:hover {
+                border-bottom: 0.3rem solid #fff;
+                & > a {
+                  color: #fff;
+                }
+              }
+              &.active {
+                & > a {
+                  color: $colorLight;
+                }
+                &:hover {
+                  border-bottom: 0.3rem solid $colorLight;
+                }
+              }
+            }
+          }
+        }
+      }
     }
     @media (max-width: 991.98px) {
       & {
@@ -449,17 +473,62 @@ nav.nav {
                               &.headein_five {
                                 color: #0265ec;
                               }
-                            }
-                            ul {
-                              li {
-                                font-size: 2rem;
-                                margin-bottom: 1rem;
-                                a {
-                                  color: #1c335b;
-                                }
-                                &:hover {
+                              & + ul {
+                                li {
+                                  font-size: 2rem;
+                                  margin-bottom: 1rem;
                                   a {
-                                    color: #4cb050;
+                                    color: #1c335b;
+                                  }
+                                  &:hover {
+                                    a {
+                                      color: #4cb050;
+                                    }
+                                  }
+                                }
+                              }
+                              &.headein_one + ul {
+                                li {
+                                  &:hover {
+                                    a {
+                                      color: #4cb050;
+                                    }
+                                  }
+                                }
+                              }
+                              &.headein_tow + ul {
+                                li {
+                                  &:hover {
+                                    a {
+                                      color: #6ed7ff;
+                                    }
+                                  }
+                                }
+                              }
+                              &.headein_three + ul {
+                                li {
+                                  &:hover {
+                                    a {
+                                      color: #4c1cd5;
+                                    }
+                                  }
+                                }
+                              }
+                              &.headein_four + ul {
+                                li {
+                                  &:hover {
+                                    a {
+                                      color: #2c3e51;
+                                    }
+                                  }
+                                }
+                              }
+                              &.headein_five + ul {
+                                li {
+                                  &:hover {
+                                    a {
+                                      color: #0265ec;
+                                    }
                                   }
                                 }
                               }
