@@ -30,6 +30,7 @@ body {
 *::before {
   box-sizing: inherit;
   text-align: start;
+  backface-visibility: hidden;
 }
 ul {
   padding: 0;
