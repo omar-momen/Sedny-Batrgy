@@ -52,50 +52,50 @@ const services_hover = document.querySelector(
 );
 services_hover.style.top = main_nav_height + "px";
 // parent
-// if (window.innerWidth >= 992) {
-//   $("nav.nav .main_nav ul.links li.services").hover(
-//     function () {
-//       services_hover.style.height = "600px";
-//       $("nav.nav .main_nav ul.links .services .services_hover").slideDown(300);
-//       setTimeout(() => {
-//         $("nav.nav .main_nav ul.links .services .services_hover").addClass(
-//           "active"
-//         );
-//       }, 301);
-//     },
-//     function () {
-//       $("nav.nav .main_nav ul.links .services .services_hover").removeClass(
-//         "active"
-//       );
-//       $("nav.nav .main_nav ul.links .services .services_hover").slideUp(300);
-//     }
-//   );
-//   $("span.arrow_up").hover(function () {
-//     $("nav.nav .main_nav ul.links .services .services_hover").removeClass(
-//       "active"
-//     );
-//     $("nav.nav .main_nav ul.links .services .services_hover").slideUp();
-//   });
-// } else {
-//   $("nav.nav .main_nav ul.links li.services").click(function () {
-//     services_hover.style.height = "600px";
-//     $("nav.nav .main_nav ul.links .services .services_hover").slideToggle(500);
-//     setTimeout(() => {
-//       $("nav.nav .main_nav ul.links .services .services_hover").toggleClass(
-//         "active"
-//       );
-//     }, 501);
-//   });
-//   $("span.arrow_up").click(function () {
-//     $("nav.nav .main_nav ul.links .services .services_hover").removeClass(
-//       "active"
-//     );
-//     $("nav.nav .main_nav ul.links .services .services_hover").slideUp();
-//   });
-//   $("nav.nav .main_nav ul.links .services .services_hover").click(function (e) {
-//     e.stopPropagation();
-//   });
-// }
+if (window.innerWidth >= 992) {
+  $("nav.nav .main_nav ul.links li.services").hover(
+    function () {
+      services_hover.style.height = "600px";
+      $("nav.nav .main_nav ul.links .services .services_hover").slideDown(300);
+      setTimeout(() => {
+        $("nav.nav .main_nav ul.links .services .services_hover").addClass(
+          "active"
+        );
+      }, 301);
+    },
+    function () {
+      $("nav.nav .main_nav ul.links .services .services_hover").removeClass(
+        "active"
+      );
+      $("nav.nav .main_nav ul.links .services .services_hover").slideUp(300);
+    }
+  );
+  $("span.arrow_up").hover(function () {
+    $("nav.nav .main_nav ul.links .services .services_hover").removeClass(
+      "active"
+    );
+    $("nav.nav .main_nav ul.links .services .services_hover").slideUp();
+  });
+} else {
+  $("nav.nav .main_nav ul.links li.services").click(function () {
+    services_hover.style.height = "600px";
+    $("nav.nav .main_nav ul.links .services .services_hover").slideToggle(500);
+    setTimeout(() => {
+      $("nav.nav .main_nav ul.links .services .services_hover").toggleClass(
+        "active"
+      );
+    }, 501);
+  });
+  $("span.arrow_up").click(function () {
+    $("nav.nav .main_nav ul.links .services .services_hover").removeClass(
+      "active"
+    );
+    $("nav.nav .main_nav ul.links .services .services_hover").slideUp();
+  });
+  $("nav.nav .main_nav ul.links .services .services_hover").click(function (e) {
+    e.stopPropagation();
+  });
+}
 
 // childs
 if (window.innerWidth >= 992) {
