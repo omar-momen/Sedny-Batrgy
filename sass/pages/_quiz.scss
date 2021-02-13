@@ -7,6 +7,9 @@
 .quiz_page {
   @include nav_overrite;
   
+  &.stop_clicking{
+    pointer-events: none;
+  }
 
   .quiz_header {
     background: url(../img/main_bg_5.png) no-repeat;

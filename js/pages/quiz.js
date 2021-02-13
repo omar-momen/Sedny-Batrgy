@@ -1,7 +1,7 @@
 // Counter Down
 let countDownInterval;
-function count_Down(duration) {
-  let seconds = duration;
+function count_Down(time) {
+  let seconds = time;
   let countdownEL = document.querySelector(".timer");
   let minutes, remSeconds;
   let progressTime = seconds * 1000;
@@ -15,11 +15,11 @@ function count_Down(duration) {
 
     if (--seconds < 0) {
       clearInterval(countDownInterval);
-      Swal.fire({
-        title: "Time is up",
-        text: `We will send your results on your email (ahmedkhaild@gmail.com)`,
-        confirmButtonText: "Return to training page",
-      });
+      // Swal.fire({
+      //   title: "Time is up",
+      //   text: `We will send your results on your email (ahmedkhaild@gmail.com)`,
+      //   confirmButtonText: "Return to training page",
+      // });
     }
 
     countdownEL.innerHTML = `${minutes}:${remSeconds}`;
@@ -31,7 +31,10 @@ function count_Down(duration) {
     fill: {
       gradient: ["red", "orange"],
     },
-    animation: { duration: progressTime, linear: "circleProgressEasing" },
+    animation: {
+      duration: progressTime + 1000,
+      linear: "circleProgressEasing",
+    },
     startAngle: 4.7,
     fill: { color: "#4DC9F8" },
     thickness: 4,
@@ -39,8 +42,16 @@ function count_Down(duration) {
 }
 count_Down(120);
 // Main Variables
+let quizPage = document.querySelector(".quiz_page");
 let questionsContainer = document.querySelector(".questions_area .container");
 let submitButton = document.getElementById("finish");
+
+// Global Variables
+let qObj;
+let qCount;
+let currentIndex = 0;
+let rightAnswers = 0;
+
 function get_questions() {
   let request = new XMLHttpRequest();
   request.onreadystatechange = function () {
@@ -57,6 +68,7 @@ function get_questions() {
 }
 
 function addQuestionData(obj, count) {
+  // Create The Question Elements
   let questionDiv = document.createElement("div");
   let questionArea = document.createElement("div");
   let answersArea = document.createElement("div");
@@ -77,23 +89,21 @@ function addQuestionData(obj, count) {
   questionArea.appendChild(questionNumber);
   questionArea.appendChild(questionTitle);
 
-  // Add Answers
+  // Add Answers To The Question Div
   for (let i = 1; i <= 4; i++) {
     let answerDiv = document.createElement("div");
-    let radioInput = document.createElement("input");
-    let labelEl = document.createElement("label");
-    let labelText = document.createTextNode(obj[`answer_${i}`]);
-
     answerDiv.className = "answer";
 
     // Add type + name + id + data attribute
+    let radioInput = document.createElement("input");
     radioInput.name = "question";
     radioInput.type = "radio";
     radioInput.id = `answer_${i}`;
     radioInput.dataset.answer = obj[`answer_${i}`];
 
+    let labelEl = document.createElement("label");
+    let labelText = document.createTextNode(obj[`answer_${i}`]);
     labelEl.htmlFor = `answer_${i}`;
-
     labelEl.appendChild(labelText);
 
     answerDiv.appendChild(radioInput);
@@ -104,16 +114,17 @@ function addQuestionData(obj, count) {
     questionDiv.appendChild(questionArea);
     questionDiv.appendChild(answersArea);
   }
+  // Aappend the Question to the Questions Container
   questionsContainer.appendChild(questionDiv);
 }
 get_questions();
 
 // Submit Button
 submitButton.onclick = function () {
-  Swal.fire({
-    icon: 'success',
-    title: 'Exam finished',
-    text: `We will send your results on your email (ahmedkhaild@gmail.com)`,
-    confirmButtonText: "Return to training page",
-  })
-}
+  // Swal.fire({
+  //   icon: "success",
+  //   title: "Exam finished",
+  //   text: `We will send your results on your email (ahmedkhaild@gmail.com)`,
+  //   confirmButtonText: "Return to training page",
+  // });
+};
