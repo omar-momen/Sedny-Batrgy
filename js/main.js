@@ -55,7 +55,7 @@ services_hover.style.top = main_nav_height + "px";
 if (window.innerWidth >= 992) {
   $("nav.nav .main_nav ul.links li.services").hover(
     function () {
-      services_hover.style.height = "400px";
+      services_hover.style.height = "500px";
       $("nav.nav .main_nav ul.links .services .services_hover").slideDown(300);
       setTimeout(() => {
         $("nav.nav .main_nav ul.links .services .services_hover").addClass(
@@ -102,7 +102,8 @@ if (window.innerWidth >= 992) {
   $("nav.nav .main_nav ul.links .services .services_hover ul.tabs li").hover(
     function () {
       $(this).addClass("active").siblings().removeClass("active");
-      services_hover.style.height = $($(this).data("active")).height() + "px";
+      services_hover.style.height =
+        $($(this).data("active")).height() + 150 + "px";
       $($(this).data("active"))
         .addClass("active")
         .siblings()
@@ -113,7 +114,8 @@ if (window.innerWidth >= 992) {
   $("nav.nav .main_nav ul.links .services .services_hover ul.tabs li").click(
     function () {
       $(this).addClass("active").siblings().removeClass("active");
-      services_hover.style.height = $($(this).data("active")).height() + "px";
+      services_hover.style.height =
+        $($(this).data("active")).height() + 150 + "px";
       $($(this).data("active"))
         .addClass("active")
         .siblings()
