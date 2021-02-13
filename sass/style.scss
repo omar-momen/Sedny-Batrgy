@@ -1,6 +1,6 @@
 // Fonts
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 @import "others/_variables";
 @import "utilities/_mixins";
@@ -17,6 +17,7 @@
 @import "pages/_contact_us.scss";
 @import "pages/_start_test";
 @import "pages/_quiz";
+@import "pages/_courses";
 @import "layouts/navbar";
 @import "layouts/header";
 @import "layouts/footer";
