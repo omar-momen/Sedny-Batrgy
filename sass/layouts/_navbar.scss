@@ -72,7 +72,7 @@ nav.nav {
     }
   }
   .main_nav {
-    padding: 0.5rem 3rem;
+    padding: 0 3rem;
     width: 100%;
     position: relative;
     background-color: #fff;
@@ -180,11 +180,11 @@ nav.nav {
           justify-content: center;
           align-items: center;
           & > li {
-            margin: 0 1.3rem;
+            margin: 0px 1.3rem;
             transition: all 0.5s ease;
             cursor: pointer;
             border-bottom: 0.3rem solid transparent;
-            padding: 2.5rem 0 2rem;
+            padding: 3rem 0 2rem;
             & > a {
               display: block;
               color: $colorDark;

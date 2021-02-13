@@ -46,7 +46,7 @@ $(window).scroll(function () {
 /********** Start Nav Services Hover **********/
 // Adjust main Nav_height
 const main_nav = document.querySelector("nav.nav .main_nav");
-const main_nav_height = main_nav.offsetHeight;
+const main_nav_height = main_nav.clientHeight;
 const services_hover = document.querySelector(
   "nav.nav .main_nav ul.links .services .services_hover"
 );
