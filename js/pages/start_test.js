@@ -1,0 +1,3 @@
+$(".videoPopup").magnificPopup({
+  type: "iframe",
+});

@@ -79,7 +79,6 @@ body {
   height: 7000px;
   /*Temp*/
   font-family: "Cairo", sans-serif;
-  perspective: 600px;
   overflow-x: hidden; }
 
 *,
@@ -2667,6 +2666,12 @@ html[dir="rtl"] .start_test_page .test_body .test_files .accordion-item .accordi
 html[dir="rtl"] .accordion-button::after {
   margin-left: unset;
   margin-right: auto; }
+
+.swal2-popup {
+  font-size: 1.6rem !important; }
+
+.swal2-html-container {
+  text-align: center; }
 
 .quiz_page nav.nav {
   position: absolute;
