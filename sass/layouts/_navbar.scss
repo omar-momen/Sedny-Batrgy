@@ -208,7 +208,9 @@ nav.nav {
             transition: all 0.5s ease;
             cursor: pointer;
             border-bottom: 0.3rem solid transparent;
-            padding: 3rem 0 2rem;
+            @media (min-width: 992px) {
+              padding: 3rem 0 2rem;
+            }
             & > a {
               display: block;
               color: $colorDark;
@@ -294,12 +296,18 @@ nav.nav {
                 margin: 0;
               }
               .services_body {
-                height: inherit;
-                .row {
+                @media (min-width: 992px) {
                   height: inherit;
+                }
+                .row {
+                  @media (min-width: 992px) {
+                    height: inherit;
+                  }
                   align-items: flex-start;
                   .col:first-child {
-                    height: inherit;
+                    @media (min-width: 992px) {
+                      height: inherit;
+                    }
                     ul.tabs {
                       height: inherit;
                       background: #f2f2f2;
