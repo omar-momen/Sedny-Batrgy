@@ -87,15 +87,15 @@
                 color: #fff;
               }
               &.active {
+                border-bottom: 0.2rem solid $colorLight;
+                & > a {
+                  color: $colorLight;
+                }
                 &:hover {
                   border-bottom: 0.2rem solid $colorLight;
                   & > a {
                     color: $colorLight;
                   }
-                }
-                border-bottom: 0.2rem solid $colorLight;
-                & > a {
-                  color: $colorLight;
                 }
               }
               &:hover {

@@ -47,19 +47,21 @@ let questionsContainer = document.querySelector(".questions_area .container");
 let submitButton = document.getElementById("finish");
 
 // Global Variables
-let qObj;
+let questionsObject;
 let qCount;
 let currentIndex = 0;
-let rightAnswers = 0;
+let right_answers = 0;
 
 function get_questions() {
   let request = new XMLHttpRequest();
   request.onreadystatechange = function () {
     if (this.readyState === 4 && this.status === 200) {
-      let questionsObject = JSON.parse(this.responseText);
+      questionsObject = JSON.parse(this.responseText);
 
-      for (let i = 0; i <= 8; i++) {
-        addQuestionData(questionsObject[i], i + 1);
+      qCount = questionsObject.length;
+
+      for (let i = 0; i < qCount; i++) {
+        addQuestionData(questionsObject[currentIndex], i + 1);
       }
     }
   };
@@ -94,16 +96,18 @@ function addQuestionData(obj, count) {
     let answerDiv = document.createElement("div");
     answerDiv.className = "answer";
 
+    let uniqe_id = (count + i) * Math.random();
+
     // Add type + name + id + data attribute
     let radioInput = document.createElement("input");
-    radioInput.name = "question";
+    radioInput.name = `question_${count}`;
     radioInput.type = "radio";
-    radioInput.id = `answer_${i}`;
+    radioInput.id = `answer_${uniqe_id}`;
     radioInput.dataset.answer = obj[`answer_${i}`];
 
     let labelEl = document.createElement("label");
     let labelText = document.createTextNode(obj[`answer_${i}`]);
-    labelEl.htmlFor = `answer_${i}`;
+    labelEl.htmlFor = `answer_${uniqe_id}`;
     labelEl.appendChild(labelText);
 
     answerDiv.appendChild(radioInput);
@@ -116,15 +120,64 @@ function addQuestionData(obj, count) {
   }
   // Aappend the Question to the Questions Container
   questionsContainer.appendChild(questionDiv);
+  // Increes To Next Question
+  currentIndex++;
 }
 get_questions();
 
 // Submit Button
 submitButton.onclick = function () {
-  // Swal.fire({
-  //   icon: "success",
-  //   title: "Exam finished",
-  //   text: `We will send your results on your email (ahmedkhaild@gmail.com)`,
-  //   confirmButtonText: "Return to training page",
-  // });
+  let sure = prompt("Are u sure", "yes");
+  if (sure == "yes" || sure == "Yes" || sure == "YES") {
+    check_Answer();
+    show_results();
+    console.log(right_answers);
+  }
 };
+
+// Check Answer Fucntion
+function check_Answer() {
+  let questions_test = Array.from(document.querySelectorAll(".question"));
+  questions_test.forEach((question, index) => {
+    let answers_container = question.lastElementChild;
+    let answers = Array.from(answers_container.children);
+    let r_answer = questionsObject[index]["right_answer"];
+    let choosen_answer;
+    answers.forEach((answer) => {
+      let answer_input = answer.firstElementChild;
+      if (answer_input.checked) {
+        choosen_answer = answer_input.dataset.answer;
+      }
+    });
+    // increes right_answers by (1) if The Answer is true
+    if (choosen_answer == r_answer) {
+      right_answers++;
+    }
+  });
+}
+
+// Show Results Function
+function show_results() {
+  if (right_answers > qCount / 2) {
+    Swal.fire({
+      icon: "success",
+      title: "Exam finished",
+      text: `You answerd ${right_answers} from ${qCount}`,
+      confirmButtonText: "<a href='courses.html'>Return to training page</a>",
+    });
+  } else if (right_answers == qCount) {
+    Swal.fire({
+      icon: "success",
+      title: "Exam finished",
+      text: `You answerd ${right_answers} from ${qCount}`,
+      confirmButtonText: "<a href='courses.html'>Return to training page</a>",
+    });
+  } else {
+    Swal.fire({
+      icon: "error",
+      title: "Exam finished",
+      text: `You answerd ${right_answers} from ${qCount}`,
+      confirmButtonText: "<a href='courses.html'>Return to training page</a>",
+    });
+  }
+}
