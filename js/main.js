@@ -115,7 +115,7 @@ if (window.innerWidth >= 992) {
     function () {
       $(this).addClass("active").siblings().removeClass("active");
       services_hover.style.height =
-        $($(this).data("active")).height() + 150 + "px";
+        $($(this).data("active")).height() + 220 + "px";
       $($(this).data("active"))
         .addClass("active")
         .siblings()
