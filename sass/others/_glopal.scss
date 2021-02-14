@@ -113,21 +113,23 @@ a {
 /****** End loading ******/
 
 /**** Scroll Style ****/
-::-webkit-scrollbar {
-  width: 10px;
-}
+@media (min-width: 992px) {
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
 
-::-webkit-scrollbar-track {
-  background: #fff;
-}
+  ::-webkit-scrollbar-track {
+    background: #fff;
+  }
 
-::-webkit-scrollbar-thumb {
-  background: rgba(90, 206, 251, 0.7);
-  border-radius: 6px;
-}
+  ::-webkit-scrollbar-thumb {
+    background: rgba(90, 206, 251, 0.7);
+    border-radius: 6px;
+  }
 
-::-webkit-scrollbar-thumb:hover {
-  background: $colorLight;
+  ::-webkit-scrollbar-thumb:hover {
+    background: $colorLight;
+  }
 }
 .icon-hammer:before {
   content: "\e900";

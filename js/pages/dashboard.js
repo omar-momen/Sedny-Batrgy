@@ -31,3 +31,24 @@ document.body.addEventListener("keydown", function (event) {
     notifcation_menu.classList.remove("show");
   }
 });
+
+// Navbar Toggler
+let navToggleButtom = document.querySelector(".toggler");
+let tabsElement = document.querySelector(".tabs_wrapper");
+let tabsNav = document.querySelector(".tabs_nav");
+
+navToggleButtom.onclick = function () {
+  this.classList.toggle("clicked");
+  this.classList.toggle("close");
+  tabsElement.classList.toggle("opened");
+};
+
+tabsElement.onclick = function () {
+  this.classList.remove("opened");
+  navToggleButtom.classList.remove("clicked");
+  navToggleButtom.classList.remove("close");
+};
+
+tabsNav.onclick = function (e) {
+  e.stopPropagation();
+};

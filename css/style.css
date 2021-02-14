@@ -161,19 +161,19 @@ a {
 
 /****** End loading ******/
 /**** Scroll Style ****/
-::-webkit-scrollbar {
-  width: 10px; }
+@media (min-width: 992px) {
+  ::-webkit-scrollbar {
+    width: 10px; }
 
-::-webkit-scrollbar-track {
-  background: #fff; }
+  ::-webkit-scrollbar-track {
+    background: #fff; }
 
-::-webkit-scrollbar-thumb {
-  background: rgba(90, 206, 251, 0.7);
-  border-radius: 6px; }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(90, 206, 251, 0.7);
+    border-radius: 6px; }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #6ed7ff; }
-
+  ::-webkit-scrollbar-thumb:hover {
+    background: #6ed7ff; } }
 .icon-hammer:before {
   content: "\e900";
   color: #1c335b; }
@@ -3202,56 +3202,54 @@ body.fix_body {
   @media (min-width: 992px) {
     .dashboard_page {
       overflow-x: hidden; } }
-  .dashboard_page .tabs_side {
+  .dashboard_page .nav_container .tabs_wrapper {
     height: 100%;
-    background: linear-gradient(180deg, #131b2d 0%, #177ba2 100%);
-    font-size: 1.5rem;
-    color: #fff;
-    padding: 3rem 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     transition: all 0.4s ease-in-out; }
-    .dashboard_page .tabs_side .logo {
-      padding: 0 3rem; }
-      .dashboard_page .tabs_side .logo img {
-        width: 100%; }
-    .dashboard_page .tabs_side .tabs {
-      margin-top: 6rem;
-      width: 100%;
-      padding-left: 2rem; }
-      .dashboard_page .tabs_side .tabs ul li {
-        position: relative;
-        padding: 1rem;
-        margin: 3rem 0;
-        text-align: center;
-        user-select: none;
-        transition: 0.3s;
-        cursor: pointer; }
-        .dashboard_page .tabs_side .tabs ul li a {
-          color: #fff;
-          text-decoration: none;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-          padding-bottom: 2.5rem; }
-        .dashboard_page .tabs_side .tabs ul li.active {
+    .dashboard_page .nav_container .tabs_wrapper .tabs_nav {
+      height: 100%;
+      background: linear-gradient(180deg, #131b2d 0%, #177ba2 100%);
+      font-size: 1.5rem;
+      color: #fff;
+      padding: 3rem 0; }
+      .dashboard_page .nav_container .tabs_wrapper .tabs_nav .logo {
+        padding: 0 3rem; }
+        .dashboard_page .nav_container .tabs_wrapper .tabs_nav .logo img {
+          width: 100%; }
+      .dashboard_page .nav_container .tabs_wrapper .tabs_nav .tabs {
+        margin-top: 3rem;
+        width: 100%;
+        padding-left: 2rem; }
+        .dashboard_page .nav_container .tabs_wrapper .tabs_nav .tabs ul li {
           position: relative;
-          border: none;
-          border-radius: 4.4rem 0 0 4.4rem;
-          background-color: #ebeef6; }
-          .dashboard_page .tabs_side .tabs ul li.active a {
-            color: #000;
-            border-bottom: none; }
-  .dashboard_page .dashboard_nav {
+          padding: 1rem;
+          margin: 3rem 0;
+          text-align: center;
+          user-select: none;
+          transition: 0.3s;
+          cursor: pointer; }
+          .dashboard_page .nav_container .tabs_wrapper .tabs_nav .tabs ul li a {
+            color: #fff;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 2.5rem; }
+          .dashboard_page .nav_container .tabs_wrapper .tabs_nav .tabs ul li.active {
+            position: relative;
+            border: none;
+            border-radius: 4.4rem 0 0 4.4rem;
+            background-color: #ebeef6; }
+            .dashboard_page .nav_container .tabs_wrapper .tabs_nav .tabs ul li.active a {
+              color: #000;
+              border-bottom: none; }
+  .dashboard_page .nav_container .dashboard_nav {
     font-size: 2rem; }
-    .dashboard_page .dashboard_nav .notifcation_bar {
+    .dashboard_page .nav_container .dashboard_nav .notifcation_bar {
       position: relative;
       background-color: #fff;
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 1rem 5rem; }
-      .dashboard_page .dashboard_nav .notifcation_bar .toggler {
+      .dashboard_page .nav_container .dashboard_nav .notifcation_bar .toggler {
         flex-grow: 0.05;
         background: transparent;
         width: 2rem;
@@ -3262,51 +3260,52 @@ body.fix_body {
         outline: none;
         z-index: 99;
         display: none; }
-        .dashboard_page .dashboard_nav .notifcation_bar .toggler span {
+        .dashboard_page .nav_container .dashboard_nav .notifcation_bar .toggler span {
           background-color: #000;
           width: 100%;
           height: 0.3rem;
           display: inline-block;
           transition: all 0.3s linear;
           position: relative; }
-        .dashboard_page .dashboard_nav .notifcation_bar .toggler.clicked span:first-child {
+        .dashboard_page .nav_container .dashboard_nav .notifcation_bar .toggler.clicked span:first-child {
           transform: rotate(45deg);
           top: 0.6rem; }
-        .dashboard_page .dashboard_nav .notifcation_bar .toggler.clicked span:nth-child(2) {
+        .dashboard_page .nav_container .dashboard_nav .notifcation_bar .toggler.clicked span:nth-child(2) {
           opacity: 0; }
-        .dashboard_page .dashboard_nav .notifcation_bar .toggler.clicked span:last-child {
+        .dashboard_page .nav_container .dashboard_nav .notifcation_bar .toggler.clicked span:last-child {
           transform: rotate(135deg);
           top: -0.563rem; }
-        .dashboard_page .dashboard_nav .notifcation_bar .toggler.close {
+        .dashboard_page .nav_container .dashboard_nav .notifcation_bar .toggler.close {
           position: fixed;
           top: 2rem;
-          right: 0;
-          z-index: 99; }
-          .dashboard_page .dashboard_nav .notifcation_bar .toggler.close span {
+          left: 25%;
+          z-index: 99;
+          width: 5rem; }
+          .dashboard_page .nav_container .dashboard_nav .notifcation_bar .toggler.close span {
             background-color: #fff; }
-      .dashboard_page .dashboard_nav .notifcation_bar h3 {
+      .dashboard_page .nav_container .dashboard_nav .notifcation_bar h3 {
         flex-grow: 0.9;
         font-weight: 600;
         font-size: 2.5rem; }
-      .dashboard_page .dashboard_nav .notifcation_bar .user_details {
+      .dashboard_page .nav_container .dashboard_nav .notifcation_bar .user_details {
         display: flex;
         align-items: center; }
-        .dashboard_page .dashboard_nav .notifcation_bar .user_details img {
+        .dashboard_page .nav_container .dashboard_nav .notifcation_bar .user_details img {
           width: 6rem;
           height: 6rem;
           object-fit: cover;
           border-radius: 50%; }
-        .dashboard_page .dashboard_nav .notifcation_bar .user_details span {
+        .dashboard_page .nav_container .dashboard_nav .notifcation_bar .user_details span {
           margin: 0 1rem;
           font-weight: bold;
           font-weight: 600;
           font-size: 1.6rem; }
-        .dashboard_page .dashboard_nav .notifcation_bar .user_details .notifcation_menu {
+        .dashboard_page .nav_container .dashboard_nav .notifcation_bar .user_details .notifcation_menu {
           position: relative; }
-          .dashboard_page .dashboard_nav .notifcation_bar .user_details .notifcation_menu a {
+          .dashboard_page .nav_container .dashboard_nav .notifcation_bar .user_details .notifcation_menu a {
             text-decoration: none;
             color: #000; }
-            .dashboard_page .dashboard_nav .notifcation_bar .user_details .notifcation_menu a span {
+            .dashboard_page .nav_container .dashboard_nav .notifcation_bar .user_details .notifcation_menu a span {
               position: absolute;
               top: 0.2rem;
               left: 0.1rem;
@@ -3320,9 +3319,9 @@ body.fix_body {
               justify-content: center;
               align-items: center;
               user-select: none; }
-            .dashboard_page .dashboard_nav .notifcation_bar .user_details .notifcation_menu a i {
+            .dashboard_page .nav_container .dashboard_nav .notifcation_bar .user_details .notifcation_menu a i {
               margin: 0 1.5rem; }
-          .dashboard_page .dashboard_nav .notifcation_bar .user_details .notifcation_menu .menu {
+          .dashboard_page .nav_container .dashboard_nav .notifcation_bar .user_details .notifcation_menu .menu {
             position: absolute;
             top: 4.7rem;
             left: -41.3rem;
@@ -3334,22 +3333,22 @@ body.fix_body {
             opacity: 0;
             visibility: hidden; }
             @media (max-width: 479.98px) {
-              .dashboard_page .dashboard_nav .notifcation_bar .user_details .notifcation_menu .menu {
+              .dashboard_page .nav_container .dashboard_nav .notifcation_bar .user_details .notifcation_menu .menu {
                 width: 45rem;
                 left: -15.3rem; } }
-            .dashboard_page .dashboard_nav .notifcation_bar .user_details .notifcation_menu .menu.show {
+            .dashboard_page .nav_container .dashboard_nav .notifcation_bar .user_details .notifcation_menu .menu.show {
               opacity: 1;
               visibility: visible; }
-            .dashboard_page .dashboard_nav .notifcation_bar .user_details .notifcation_menu .menu .head {
+            .dashboard_page .nav_container .dashboard_nav .notifcation_bar .user_details .notifcation_menu .menu .head {
               position: relative;
               display: flex;
               align-items: center;
               padding: 1rem;
               color: #fff;
               background-color: #6ed7ff; }
-              .dashboard_page .dashboard_nav .notifcation_bar .user_details .notifcation_menu .menu .head h4 {
+              .dashboard_page .nav_container .dashboard_nav .notifcation_bar .user_details .notifcation_menu .menu .head h4 {
                 margin: 0 1rem; }
-              .dashboard_page .dashboard_nav .notifcation_bar .user_details .notifcation_menu .menu .head::before {
+              .dashboard_page .nav_container .dashboard_nav .notifcation_bar .user_details .notifcation_menu .menu .head::before {
                 content: "";
                 position: absolute;
                 top: -1.8rem;
@@ -3361,23 +3360,23 @@ body.fix_body {
                 border-bottom: 1.9rem solid #6ed7ff;
                 z-index: -18; }
               @media (max-width: 479.98px) {
-                .dashboard_page .dashboard_nav .notifcation_bar .user_details .notifcation_menu .menu .head::before {
+                .dashboard_page .nav_container .dashboard_nav .notifcation_bar .user_details .notifcation_menu .menu .head::before {
                   right: 58.4%; } }
-            .dashboard_page .dashboard_nav .notifcation_bar .user_details .notifcation_menu .menu .component {
+            .dashboard_page .nav_container .dashboard_nav .notifcation_bar .user_details .notifcation_menu .menu .component {
               padding: 1rem;
               background-color: #fff; }
-              .dashboard_page .dashboard_nav .notifcation_bar .user_details .notifcation_menu .menu .component .notice {
+              .dashboard_page .nav_container .dashboard_nav .notifcation_bar .user_details .notifcation_menu .menu .component .notice {
                 display: flex;
                 align-items: center;
                 background-color: #2d3c800a;
                 box-shadow: 0px 3px 6px #00000008;
                 padding: 3rem 1rem;
                 border-radius: 0.5rem; }
-                .dashboard_page .dashboard_nav .notifcation_bar .user_details .notifcation_menu .menu .component .notice:not(:first-of-type) {
+                .dashboard_page .nav_container .dashboard_nav .notifcation_bar .user_details .notifcation_menu .menu .component .notice:not(:first-of-type) {
                   margin-top: 1rem; }
-                .dashboard_page .dashboard_nav .notifcation_bar .user_details .notifcation_menu .menu .component .notice.active {
+                .dashboard_page .nav_container .dashboard_nav .notifcation_bar .user_details .notifcation_menu .menu .component .notice.active {
                   border: 0.2rem solid #6ed7ff; }
-                .dashboard_page .dashboard_nav .notifcation_bar .user_details .notifcation_menu .menu .component .notice .fa-bell {
+                .dashboard_page .nav_container .dashboard_nav .notifcation_bar .user_details .notifcation_menu .menu .component .notice .fa-bell {
                   font-size: 3rem;
                   width: 6rem;
                   height: 6rem;
@@ -3390,59 +3389,69 @@ body.fix_body {
                   justify-content: center;
                   align-items: center; }
                   @media (max-width: 479.98px) {
-                    .dashboard_page .dashboard_nav .notifcation_bar .user_details .notifcation_menu .menu .component .notice .fa-bell {
+                    .dashboard_page .nav_container .dashboard_nav .notifcation_bar .user_details .notifcation_menu .menu .component .notice .fa-bell {
                       width: 5rem;
                       height: 4rem; } }
-                .dashboard_page .dashboard_nav .notifcation_bar .user_details .notifcation_menu .menu .component .notice .notice_details {
+                .dashboard_page .nav_container .dashboard_nav .notifcation_bar .user_details .notifcation_menu .menu .component .notice .notice_details {
                   display: flex;
                   flex-direction: column;
                   font-size: 1.5rem;
                   margin: 0 1rem; }
-                  .dashboard_page .dashboard_nav .notifcation_bar .user_details .notifcation_menu .menu .component .notice .notice_details a {
+                  .dashboard_page .nav_container .dashboard_nav .notifcation_bar .user_details .notifcation_menu .menu .component .notice .notice_details a {
                     color: #1c335b;
                     font-weight: 600; }
-                  .dashboard_page .dashboard_nav .notifcation_bar .user_details .notifcation_menu .menu .component .notice .notice_details span {
+                  .dashboard_page .nav_container .dashboard_nav .notifcation_bar .user_details .notifcation_menu .menu .component .notice .notice_details span {
                     margin: 0;
                     font-weight: normal;
                     margin-top: 1.5rem; }
-                    .dashboard_page .dashboard_nav .notifcation_bar .user_details .notifcation_menu .menu .component .notice .notice_details span a {
+                    .dashboard_page .nav_container .dashboard_nav .notifcation_bar .user_details .notifcation_menu .menu .component .notice .notice_details span a {
                       color: #6ed7ff;
                       font-weight: normal; }
-                .dashboard_page .dashboard_nav .notifcation_bar .user_details .notifcation_menu .menu .component .notice .time {
+                .dashboard_page .nav_container .dashboard_nav .notifcation_bar .user_details .notifcation_menu .menu .component .notice .time {
                   display: flex;
                   align-items: center;
                   align-self: flex-start;
                   margin-left: auto; }
-                  .dashboard_page .dashboard_nav .notifcation_bar .user_details .notifcation_menu .menu .component .notice .time i {
+                  .dashboard_page .nav_container .dashboard_nav .notifcation_bar .user_details .notifcation_menu .menu .component .notice .time i {
                     color: #bcc0d4;
                     font-size: 2rem; }
-                  .dashboard_page .dashboard_nav .notifcation_bar .user_details .notifcation_menu .menu .component .notice .time span {
+                  .dashboard_page .nav_container .dashboard_nav .notifcation_bar .user_details .notifcation_menu .menu .component .notice .time span {
                     color: #474747;
                     font-size: 1.4rem;
                     font-weight: normal; }
 
 @media (max-width: 991.98px) {
-  .dashboard_page .tabs_side {
-    position: fixed;
-    top: 0rem;
-    left: -25rem;
-    height: 100%;
-    width: 25%;
-    bottom: 0;
-    z-index: 99; }
-    .dashboard_page .tabs_side .logo {
-      margin-top: 4rem; }
-    .dashboard_page .tabs_side .tabs {
-      margin-top: 0; }
-  .dashboard_page .dashboard_nav {
+  .dashboard_page .nav_container {
     position: fixed;
     width: 100%;
-    height: 100%;
     top: 0;
     left: 0;
     right: 0; }
-    .dashboard_page .dashboard_nav .notifcation_bar .toggler {
-      display: block; } }
+    .dashboard_page .nav_container .tabs_wrapper {
+      height: 100%;
+      width: 0;
+      bottom: 0;
+      z-index: 99;
+      position: fixed;
+      top: 0rem;
+      left: -25rem; }
+      .dashboard_page .nav_container .tabs_wrapper.opened {
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%; }
+      .dashboard_page .nav_container .tabs_wrapper .logo {
+        margin-top: 4rem; }
+      .dashboard_page .nav_container .tabs_wrapper .tabs {
+        margin-top: 0; }
+      .dashboard_page .nav_container .tabs_wrapper .tabs_nav {
+        width: 35%;
+        overflow-y: scroll; }
+        .dashboard_page .nav_container .tabs_wrapper .tabs_nav .tabs {
+          margin-top: 1rem; }
+    .dashboard_page .nav_container .dashboard_nav .notifcation_bar .toggler {
+      display: block; }
+      .dashboard_page .nav_container .dashboard_nav .notifcation_bar .toggler:hover span, .dashboard_page .nav_container .dashboard_nav .notifcation_bar .toggler:focus span {
+        background-color: #d63031; } }
 nav.nav {
   width: 100%; }
   nav.nav .upper_nav {
