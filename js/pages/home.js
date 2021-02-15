@@ -54,12 +54,25 @@ $("#videoPopup").magnificPopup({
 document.getElementById("more").onclick = function () {
   document.getElementById("videoPopup").click();
 };
-
+let more_btn_icon = document.querySelector(".more_btn i");
 if (document.documentElement.getAttribute("dir") === "rtl") {
-  document.querySelector(".more_btn i").classList.remove("fa-hand-point-right");
-  document.querySelector(".more_btn i").classList.add("fa-hand-point-left");
+  more_btn_icon.classList.remove("fa-arrow-right");
+  more_btn_icon.classList.add("fa-arrow-left");
+  if (window.innerWidth >= 480) {
+    more_btn_icon.classList.remove("fa-arrow-down");
+    more_btn_icon.classList.add("fa-arrow-left");
+  }
+}
+if (window.innerWidth <= 480) {
+  more_btn_icon.classList.remove("fa-arrow-right");
+  more_btn_icon.classList.remove("fa-arrow-left");
+  more_btn_icon.classList.add("fa-arrow-down");
+} else {
+  more_btn_icon.classList.remove("fa-arrow-down");
+  more_btn_icon.classList.add("fa-arrow-right");
 }
 
+console.log(window.innerWidth);
 // Clients Number
 $(window).scroll(function () {
   var scrollTop = $(window).scrollTop(),

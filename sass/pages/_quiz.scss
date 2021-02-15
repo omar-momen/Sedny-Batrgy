@@ -1,13 +1,13 @@
-.swal2-popup{
+.swal2-popup {
   font-size: 1.6rem !important;
 }
-.swal2-html-container{
-  text-align: center
+.swal2-html-container {
+  text-align: center;
 }
 .quiz_page {
   @include nav_overrite;
-  
-  &.stop_clicking{
+
+  &.stop_clicking {
     pointer-events: none;
   }
 
@@ -22,7 +22,7 @@
     display: flex;
     justify-content: start;
     align-items: center;
-    // z-index: -1;
+    z-index: -1;
   }
   .heading {
     width: 60%;
@@ -35,30 +35,29 @@
       border-left: 4px solid #fff; // RTL
       padding: 0 1rem;
     }
-
   }
-  .timer_box{
+  .timer_box {
     position: absolute;
     bottom: 0;
-    color: #FFF;
+    color: #fff;
     font-size: 2rem;
     display: flex;
     align-items: center;
-    background-color: rgba($color: #FFF, $alpha: 0.3);
-    border-radius: .8rem .8rem 0 0;
+    background-color: rgba($color: #fff, $alpha: 0.3);
+    border-radius: 0.8rem 0.8rem 0 0;
     padding: 1rem 4rem;
-    .counter_down{
+    .counter_down {
       position: relative;
       font-size: 2rem;
       width: 7rem;
       height: 7rem;
       border-radius: 50%;
-      background-color: #FFF;
+      background-color: #fff;
       color: #000;
       @include flexCenter;
       z-index: 1;
-      .counter_progress{
-        canvas{
+      .counter_progress {
+        canvas {
           position: absolute;
           top: 50%;
           left: 50%;
@@ -66,72 +65,60 @@
           width: 110% !important;
           height: 110% !important;
         }
-        &::before{
-          content: "";
-          position: absolute;
-          width: 0;
-          height: 0;
-          border-top: .6rem solid transparent;
-          border-bottom: .6rem solid transparent;
-          border-right: 1.2rem solid #4DC9F8;
-          top: -.8rem;
-          left: 2.3rem;
-          filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.3));
-          opacity: .7;
-        }
       }
     }
-    span{
-      background: linear-gradient(180deg, #5AD1FF 0%, #25B0E5 100%);
-      color: #FFF;
-      padding: .5rem 3rem;
-      border-radius: .8rem;
+    span {
+      background: linear-gradient(180deg, #5ad1ff 0%, #25b0e5 100%);
+      color: #fff;
+      padding: 0.5rem 3rem;
+      border-radius: 0.8rem;
       margin-left: -1.2rem; // RTL
     }
   }
-  .questions_head{
+  .questions_head {
     width: 100%;
-    background-color: #25B0E5;
+    background-color: #25b0e5;
     padding: 1rem 2rem;
-    border-radius: .8rem;
+    border-radius: 0.8rem;
     box-shadow: 0px 0 0.6rem 0.3rem #0000001a;
-    font-family: 'Poppins', sans-serif;
-    h3{
-      color: #FFF;
+    font-family: "Poppins", sans-serif;
+    h3 {
+      color: #fff;
       font-weight: 400;
       margin: 0;
     }
   }
-  .question{
-    background-color: #FFF;
-    border-radius: .8rem;
+  .question {
+    background-color: #fff;
+    border-radius: 0.8rem;
     box-shadow: 0px 0 0.6rem 0.3rem #0000001a;
     padding: 2rem;
-    font-family: 'Poppins', sans-serif;
-    .question_area{
+    font-family: "Poppins", sans-serif;
+    .question_area {
       display: flex;
       align-items: center;
       font-size: 2rem;
-      h3{
+      h3 {
         font-size: 1.5rem;
         color: $colorDark;
         background-color: #e8e8e8;
-        box-shadow: 0px 3px 6px #00000029;;
+        box-shadow: 0px 3px 6px #00000029;
         padding: 1.5rem 1rem;
         width: 100%;
-        border-left: .8rem solid $colorLight;
-        border-radius: .8rem;
+        border-left: 0.8rem solid $colorLight;
+        border-radius: 0.8rem;
         margin: 0 1rem;
         font-weight: 600;
       }
     }
-    .answers_area{
+    .answers_area {
       padding: 0 6rem;
       margin-top: 2.2rem;
-      .answer{
+      .answer {
         margin-top: 1rem;
         position: relative;
-        label, input{
+        label,
+        input {
           font-size: 1.6rem;
           cursor: pointer;
         }
@@ -144,7 +131,7 @@
             }
           }
         }
-        label{
+        label {
           margin: 0 1rem;
           position: relative;
           display: flex;
@@ -156,7 +143,7 @@
             left: -2.7rem; // RTL
             width: 2rem;
             height: 2rem;
-            background-color: #FFF;
+            background-color: #fff;
             border: 1px solid $colorLight;
             border-radius: 50%;
             transition: 0.3s linear;
@@ -183,7 +170,8 @@
       }
     }
   }
-  .finish_button{
+  .finish_button {
+    padding-bottom: 4rem;
     button {
       margin: 5rem auto 0;
       padding: 1rem 4rem;
@@ -198,16 +186,43 @@
   }
 }
 
+.swal2-container {
+  .swal2-popup {
+    .swal2-content {
+      font-weight: bold;
+    }
+    .swal2-actions {
+      .swal2-confirm {
+        background: transparent
+          linear-gradient(90deg, #5ad1ff 0%, #25b0e5 100%, #9d009e 100%);
+        color: #fff;
+        transition: all 0.4s ease;
+        box-shadow: 0 0.3rem 0.6rem #00000029;
+        font-size: 1.8rem;
+        border-radius: 4.4rem;
+        @include buttonHover;
+        &:hover {
+          background-color: $colorLight;
+        }
+        a {
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
 html[dir="rtl"] {
   .quiz_page {
     .heading {
-      h2{
+      h2 {
         border-left: unset;
-        border-right: .4rem solid #FFF;
+        border-right: 0.4rem solid #fff;
       }
     }
     .timer_box {
-      span{
+      span {
         margin-left: unset;
         margin-right: -1.2rem;
       }
@@ -215,12 +230,12 @@ html[dir="rtl"] {
     .question {
       .answers_area {
         .answer {
-          label{
-            &::before{
+          label {
+            &::before {
               left: unset;
               right: -2.7rem;
             }
-            &::after{
+            &::after {
               left: unset;
               right: -2.7rem;
             }
