@@ -164,6 +164,9 @@
       grid-column: 1 / span 12;
       grid-row: 1 / span 2;
     }
+    @media (min-width: 370px) and (max-width: 479.98px) {
+      margin-bottom: 12rem;
+    }
     background: linear-gradient(
       90deg,
       rgba(255, 255, 255, 1) 50%,
@@ -191,8 +194,14 @@
       left: 55%;
       padding: 0.5rem 3.5rem;
       transition: 0.3s ease-in-out;
+      @media (max-width: 479.98px) {
+        padding: 0.5rem 2.5rem;
+      }
       i {
         animation: buttonChevronHover 1s ease infinite alternate;
+        @media (max-width: 479.98px) {
+          animation: buttonChevronHoverSm 1s ease infinite alternate;
+        }
       }
 
       &:hover {
@@ -254,7 +263,8 @@
         background: rgba(0, 0, 0, 0.3);
         border-radius: 0.4rem;
         @include flexCenter;
-        i {
+        span {
+          position: relative;
           @include flexCenter;
           font-size: 4rem;
           color: #34c7ff;
@@ -263,9 +273,13 @@
           background-color: #fff;
           border-radius: 50%;
           transition: 0.3s;
-        }
-        &:hover {
           i {
+            position: absolute;
+            top: 50%;
+            left: 53%;
+            transform: translate(-50%, -50%);
+          }
+          &:hover {
             width: 9rem;
             height: 9rem;
             font-size: 5rem;
@@ -969,9 +983,10 @@ html[dir="rtl"] {
       button {
         left: unset;
         right: 55%;
-        &:hover {
-          i {
-            animation: buttonChevronHoverRtl 1s ease infinite alternate;
+        i {
+          animation: buttonChevronHoverRtl 1s ease infinite alternate;
+          @media (max-width: 479.98px) {
+            animation: buttonChevronHoverSm 1s ease infinite alternate;
           }
         }
       }

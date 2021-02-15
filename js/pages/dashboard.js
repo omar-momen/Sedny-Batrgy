@@ -22,6 +22,10 @@ notifcation_bell.onclick = function (e) {
 notifcation_menu.onclick = function (e) {
   e.stopPropagation();
 };
+document.body.touchstart = function () {
+  notifcation_menu.classList.remove("show");
+};
+
 document.body.onclick = function () {
   notifcation_menu.classList.remove("show");
 };
@@ -52,3 +56,14 @@ tabsElement.onclick = function () {
 tabsNav.onclick = function (e) {
   e.stopPropagation();
 };
+
+$(".counter_up").countTo({
+  speed: 7000,
+  refreshInterval: 70,
+  formatter: function (value, options) {
+    return value
+      .toFixed(options.decimals)
+      .toString()
+      .replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+  },
+});

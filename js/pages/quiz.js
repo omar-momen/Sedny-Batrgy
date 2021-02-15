@@ -1,46 +1,3 @@
-// Counter Down
-let countDownInterval;
-function count_Down(time) {
-  let seconds = time;
-  let countdownEL = document.querySelector(".timer");
-  let minutes, remSeconds;
-  let progressTime = seconds * 1000;
-
-  countDownInterval = setInterval(() => {
-    minutes = Math.floor(seconds / 60);
-    remSeconds = seconds % 60;
-
-    minutes = minutes < 10 ? `0${minutes}` : minutes;
-    remSeconds = remSeconds < 10 ? `0${remSeconds}` : remSeconds;
-
-    if (--seconds < 0) {
-      clearInterval(countDownInterval);
-      // Swal.fire({
-      //   title: "Time is up",
-      //   text: `We will send your results on your email (ahmedkhaild@gmail.com)`,
-      //   confirmButtonText: "Return to training page",
-      // });
-    }
-
-    countdownEL.innerHTML = `${minutes}:${remSeconds}`;
-  }, 1000);
-
-  $(".counter_progress").circleProgress({
-    value: 1,
-    size: 80,
-    fill: {
-      gradient: ["red", "orange"],
-    },
-    animation: {
-      duration: progressTime + 1000,
-      linear: "circleProgressEasing",
-    },
-    startAngle: 4.7,
-    fill: { color: "#4DC9F8" },
-    thickness: 4,
-  });
-}
-count_Down(120);
 // Main Variables
 let quizPage = document.querySelector(".quiz_page");
 let questionsContainer = document.querySelector(".questions_area .container");
@@ -158,26 +115,78 @@ function check_Answer() {
 
 // Show Results Function
 function show_results() {
+  let question_percentage = (right_answers / qCount) * 100;
+
   if (right_answers > qCount / 2) {
     Swal.fire({
       icon: "success",
       title: "Exam finished",
-      text: `You answerd ${right_answers} from ${qCount}`,
+      text: `Congratulations, you got ${Math.floor(question_percentage)}%`,
       confirmButtonText: "<a href='courses.html'>Return to training page</a>",
+      allowOutsideClick: false,
+      allowEscapeKey: false,
     });
   } else if (right_answers == qCount) {
     Swal.fire({
       icon: "success",
       title: "Exam finished",
-      text: `You answerd ${right_answers} from ${qCount}`,
+      text: `Congratulations, you got ${Math.floor(question_percentage)}%`,
       confirmButtonText: "<a href='courses.html'>Return to training page</a>",
+      allowOutsideClick: false,
+      allowEscapeKey: false,
     });
   } else {
     Swal.fire({
       icon: "error",
       title: "Exam finished",
-      text: `You answerd ${right_answers} from ${qCount}`,
+      text: `Fail, you got ${Math.floor(question_percentage)}%`,
       confirmButtonText: "<a href='courses.html'>Return to training page</a>",
+      allowOutsideClick: false,
+      allowEscapeKey: false,
     });
   }
 }
+
+// Counter Down
+let countDownInterval;
+function count_Down(time) {
+  let seconds = time;
+  let countdownEL = document.querySelector(".timer");
+  let minutes, remSeconds;
+  let progressTime = seconds * 1000;
+
+  countDownInterval = setInterval(() => {
+    minutes = Math.floor(seconds / 60);
+    remSeconds = seconds % 60;
+
+    minutes = minutes < 10 ? `0${minutes}` : minutes;
+    remSeconds = remSeconds < 10 ? `0${remSeconds}` : remSeconds;
+
+    if (--seconds < 0) {
+      clearInterval(countDownInterval);
+      // Swal.fire({
+      //   title: "Time is up",
+      //   text: `We will send your results on your email (ahmedkhaild@gmail.com)`,
+      //   confirmButtonText: "Return to training page",
+      // });
+    }
+
+    countdownEL.innerHTML = `${minutes}:${remSeconds}`;
+  }, 1000);
+
+  $(".counter_progress").circleProgress({
+    value: 1,
+    size: 80,
+    fill: {
+      gradient: ["red", "orange"],
+    },
+    animation: {
+      duration: progressTime + 1000,
+      linear: "circleProgressEasing",
+    },
+    startAngle: 4.7,
+    fill: { color: "#4DC9F8" },
+    thickness: 4,
+  });
+}
+count_Down(120);
