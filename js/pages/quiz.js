@@ -84,12 +84,18 @@ get_questions();
 
 // Submit Button
 submitButton.onclick = function () {
-  let sure = prompt("Are u sure", "yes");
-  if (sure == "yes" || sure == "Yes" || sure == "YES") {
-    check_Answer();
-    show_results();
-    console.log(right_answers);
-  }
+  Swal.fire({
+    title: "Are you sure you want to finish the exam?",
+    showDenyButton: true,
+    confirmButtonText: `Yes`,
+    denyButtonText: `No`,
+  }).then((result) => {
+    if (result.isConfirmed) {
+      check_Answer();
+      show_results();
+    } else if (result.isDenied) {
+    }
+  });
 };
 
 // Check Answer Fucntion
@@ -164,11 +170,8 @@ function count_Down(time) {
 
     if (--seconds < 0) {
       clearInterval(countDownInterval);
-      // Swal.fire({
-      //   title: "Time is up",
-      //   text: `We will send your results on your email (ahmedkhaild@gmail.com)`,
-      //   confirmButtonText: "Return to training page",
-      // });
+      check_Answer();
+      show_results();
     }
 
     countdownEL.innerHTML = `${minutes}:${remSeconds}`;
@@ -189,4 +192,4 @@ function count_Down(time) {
     thickness: 4,
   });
 }
-count_Down(120);
+count_Down(1800);

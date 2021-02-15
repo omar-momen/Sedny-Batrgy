@@ -93,7 +93,7 @@ $(window).scroll(function () {
 });
 
 // Services Section
-let tabsElemens = document.querySelectorAll(".grid_items_container .grid_item");
+let tabsElemens = document.querySelectorAll(".grid_items_container .tab");
 
 tabsElemens.forEach((element) => {
   element.addEventListener("click", function () {

@@ -581,6 +581,25 @@
         span {
           top: 25%;
           left: 25%;
+          @media (min-width: 992px) and (max-width: 1999.98px) {
+            top: 22%;
+            left: 20.5%;
+          }
+          @media (min-width: 576px) and (max-width: 767.98px) {
+            left: 28%;
+          }
+          @media (min-width: 480px) and (max-width: 575.98px) {
+            top: 27%;
+            left: 31%;
+          }
+          @media (min-width: 1200px) {
+            top: 25%;
+            left: 25%;
+          }
+          @media (max-width: 420px) {
+            left: 16% !important;
+            top: 19% !important;
+          }
         }
       }
       &:nth-child(2) {
@@ -592,6 +611,25 @@
         span {
           top: 32%;
           left: 43%;
+          @media (min-width: 992px) and (max-width: 1999.98px) {
+            top: 29%;
+            left: 37.5%;
+          }
+          @media (min-width: 576px) and (max-width: 767.98px) {
+            left: 45%;
+          }
+          @media (min-width: 480px) and (max-width: 575.98px) {
+            top: 34%;
+            left: 49%;
+          }
+          @media (min-width: 1200px) {
+            top: 32%;
+            left: 43%;
+          }
+          @media (max-width: 420px) {
+            left: 34% !important;
+            top: 27% !important;
+          }
         }
       }
       &:nth-child(3) {
@@ -602,6 +640,25 @@
         span {
           top: 32%;
           left: 18%;
+          @media (min-width: 992px) and (max-width: 1999.98px) {
+            top: 30%;
+            left: 13.5%;
+          }
+          @media (min-width: 576px) and (max-width: 767.98px) {
+            left: 21%;
+          }
+          @media (min-width: 480px) and (max-width: 575.98px) {
+            top: 36%;
+            left: 24%;
+          }
+          @media (min-width: 1200px) {
+            top: 32%;
+            left: 18%;
+          }
+          @media (max-width: 420px) {
+            left: 8% !important;
+            top: 30% !important;
+          }
         }
       }
       &:nth-child(4) {
@@ -622,6 +679,9 @@
           background-color: transparent;
           border: 1.2rem solid rgba(255, 255, 255, 0.3);
           border-radius: 50%;
+          @media (max-width: 420px) {
+            display: none;
+          }
         }
       }
       &:nth-child(5) {
@@ -629,6 +689,25 @@
         span {
           top: 44%;
           left: 42%;
+          @media (min-width: 992px) and (max-width: 1999.98px) {
+            top: 41%;
+            left: 38.5%;
+          }
+          @media (min-width: 576px) and (max-width: 767.98px) {
+            left: 46%;
+          }
+          @media (min-width: 480px) and (max-width: 575.98px) {
+            top: 45%;
+            left: 49%;
+          }
+          @media (min-width: 1200px) {
+            top: 44%;
+            left: 42%;
+          }
+          @media (max-width: 420px) {
+            left: 33% !important;
+            top: 40% !important;
+          }
         }
       }
       &:nth-child(6) {
@@ -640,6 +719,25 @@
         span {
           top: 44%;
           left: 19%;
+          @media (min-width: 992px) and (max-width: 1999.98px) {
+            top: 43%;
+            left: 14%;
+          }
+          @media (min-width: 576px) and (max-width: 767.98px) {
+            left: 22%;
+          }
+          @media (min-width: 480px) and (max-width: 575.98px) {
+            top: 47%;
+            left: 25%;
+          }
+          @media (min-width: 1200px) {
+            top: 44%;
+            left: 19%;
+          }
+          @media (max-width: 420px) {
+            left: 10% !important;
+            top: 42% !important;
+          }
         }
       }
       &:nth-child(7) {
@@ -652,6 +750,25 @@
         span {
           top: 52%;
           left: 36%;
+          @media (min-width: 992px) and (max-width: 1999.98px) {
+            top: 51%;
+            left: 31.5%;
+          }
+          @media (min-width: 576px) and (max-width: 767.98px) {
+            left: 39%;
+          }
+          @media (min-width: 480px) and (max-width: 575.98px) {
+            top: 52%;
+            left: 43%;
+          }
+          @media (min-width: 1200px) {
+            top: 52%;
+            left: 36%;
+          }
+          @media (max-width: 420px) {
+            left: 28% !important;
+            top: 48% !important;
+          }
         }
       }
     }
