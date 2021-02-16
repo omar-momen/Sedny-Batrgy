@@ -59,6 +59,14 @@
         }
       }
       .sign_in {
+        a {
+          color: #dddbdb;
+        }
+        &:hover {
+          a {
+            color: #fff;
+          }
+        }
       }
       .glope {
       }
@@ -478,6 +486,25 @@
       }
     }
   }
+  .form_section {
+    .close_form_section {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      i {
+        color: #fff;
+        font-size: 2rem;
+      }
+      &:hover {
+        i {
+          color: red;
+        }
+      }
+    }
+  }
+  @include search_form;
 }
 html[dir="rtl"] {
   .navbar {

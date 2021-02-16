@@ -25,11 +25,14 @@ if (main_header) {
   main_header.style.height = window_height - nav_height_value + "px";
 }
 
-// // Main Nav Search input
-// $("nav.navbar form span").click(function () {
-//   $(this).next().slideToggle();
-//   $(this).next().focus();
-// });
+// Main Nav Search input
+$("nav.navbar .corner_div span.search_icon").click(function () {
+  console.log("lol");
+  $("nav.navbar .form_section").addClass("active");
+});
+$("nav.navbar .form_section .close_form_section").click(function () {
+  $("nav.navbar .form_section").removeClass("active");
+});
 
 // Main Nav Scroll Fixed
 $(window).scroll(function () {
