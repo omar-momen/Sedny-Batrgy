@@ -192,6 +192,22 @@
       font-weight: bold;
     }
     .swal2-actions {
+      .swal2-deny {
+        background: #ee1b1b;
+        color: #fff;
+        transition: all 0.4s ease;
+        box-shadow: 0 0.3rem 0.6rem #00000029;
+        font-size: 1.8rem;
+        border-radius: 4.4rem;
+        @include buttonHover;
+        &:hover {
+          background-color: #ee1b1b;
+        }
+        a {
+          color: #fff;
+          text-decoration: none;
+        }
+      }
       .swal2-confirm {
         background: transparent
           linear-gradient(90deg, #5ad1ff 0%, #25b0e5 100%, #9d009e 100%);
