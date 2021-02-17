@@ -36,6 +36,7 @@ $("nav.navbar .form_section .close_form_section").click(function () {
 
 // Main Nav Scroll Fixed
 $(window).scroll(function () {
+  progres_Bar();
   if ($(window).scrollTop() > 10) {
     $("nav.navbar").addClass("fixed");
   } else {
@@ -108,4 +109,13 @@ $("nav.navbar ul.links .services .services_hover ul.tabs li").hover(
       .removeClass("active");
   }
 );
+
+function progres_Bar() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
 /********** End Nav Services Hover **********/

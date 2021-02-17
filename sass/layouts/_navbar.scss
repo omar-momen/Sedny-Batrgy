@@ -1,13 +1,27 @@
 .navbar {
-  background-color: #131b2d;
+  background-color: #fff;
   padding: 0;
   position: relative;
   transition: all 0.4s ease;
-  padding: 0 2rem;
-  @media (max-width: 992px) {
-    padding: 1rem 0;
+  @media (min-width: 400px) {
+    padding: 0 2rem;
+  }
+  .progress-container {
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 5px;
+    background: rgba(0, 0, 0, 0.25);
+    .progress-bar {
+      height: 5px;
+      background: #e92841;
+      width: 0%;
+    }
   }
   &.fixed {
+    box-shadow: 0 5px 10px #0000006b;
     position: fixed;
     padding: 0;
     top: 0;
@@ -21,11 +35,14 @@
         order: 1;
       }
       img {
-        height: 5rem;
-        margin: 0 2rem;
-        @media (max-width: 992px) {
-          height: 7rem;
+        @media (max-width: 767px) {
+          height: 10rem;
         }
+        @media (max-width: 400px) {
+          height: 8rem;
+        }
+        height: 7rem;
+        margin: 0 2rem;
       }
     }
     .corner_div {
@@ -39,32 +56,44 @@
         order: 2;
       }
       & > span {
-        color: #dddbdb;
-        font-size: 2.5rem;
+        @media (max-width: 767px) {
+          font-size: 4rem;
+        }
+        @media (max-width: 400px) {
+          font-size: 3rem;
+        }
+        color: #131b2d;
+        font-size: 3rem;
         padding: 0 2rem;
         cursor: pointer;
         transition: all 0.3s ease;
         &:hover {
-          color: #fff;
+          color: #333;
         }
         &:not(:last-child) {
-          border-right: 1px solid #fff;
+          border-right: 1px solid #131b2d;
         }
       }
       .navbar-toggler {
         box-shadow: none;
         span {
-          color: #fff;
-          font-size: 2rem;
+          color: #131b2d;
+          font-size: 3rem;
+          @media (max-width: 767px) {
+            font-size: 4rem;
+          }
+          @media (max-width: 400px) {
+            font-size: 3rem;
+          }
         }
       }
       .sign_in {
         a {
-          color: #dddbdb;
+          color: #131b2d;
         }
         &:hover {
           a {
-            color: #fff;
+            color: #333;
           }
         }
       }
@@ -79,8 +108,11 @@
       }
       justify-content: center;
       ul.navbar-nav {
+        @media (max-width: 992px) {
+          margin-top: 2rem;
+        }
         li.nav-item {
-          padding: 1rem 0;
+          padding: 1.6rem 0;
           margin: 0 1.5rem;
           transition: all 0.3s ease;
           border-bottom: 2px solid transparent;
@@ -100,16 +132,19 @@
                   transform: rotatez(180deg);
                 }
                 i {
-                  font-size: 2rem;
-                  color: #fff;
+                  font-size: 3rem;
+                  color: #131b2d;
                 }
               }
             }
           }
           a.nav-link {
-            color: #fff;
+            color: #131b2d;
             transition: all 0.3s ease;
             font-size: 1.7rem;
+            @media (max-width: 992px) {
+              font-size: 3.5rem;
+            }
           }
           &:hover {
             border-color: #6ed7ff;
@@ -128,17 +163,10 @@
             width: 100%;
             background: #fff;
             box-shadow: 0px 0.5rem 1rem #1c335b75;
-            z-index: 2;
+            z-index: 3;
             display: none;
             &.active {
               transition: all 0.4s ease-in-out;
-            }
-            & > p {
-              padding: 1.5rem;
-              color: $colorDark;
-              background: #f2f2f2;
-              font-size: 2rem;
-              margin: 0;
             }
             .services_body {
               @media (min-width: 992px) {
@@ -435,25 +463,25 @@
             li.drop_down_link {
               cursor: pointer;
               & > a {
-                color: #fff;
+                color: #131b2d;
                 position: relative;
                 width: fit-content;
                 padding: 1rem;
-                font-size: 1.5rem;
+                font-size: 3rem;
                 transition: all 0.3s ease;
                 display: block;
                 .arrow {
                   position: absolute;
                   top: 50%;
                   transform: translateY(-50%);
-                  right: -1.5rem;
+                  right: -2.5rem;
                   transition: all 0.3s linear;
                   &.active {
                     transform: rotatez(180deg);
                   }
                   i {
-                    font-size: 1.5rem;
-                    color: #fff;
+                    font-size: 2.5rem;
+                    color: #131b2d;
                   }
                 }
               }
@@ -469,8 +497,8 @@
                   padding: 0.5rem;
                   cursor: pointer;
                   & > a {
-                    color: #fff;
-                    font-size: 1.4rem;
+                    color: #131b2d;
+                    font-size: 2.5rem;
                     transition: all 0.3s ease;
                   }
                   &:hover {
