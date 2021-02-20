@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="shortcut icon" href="../../icons/icon.svg" />
+    <link rel="stylesheet" href="../../css/libs/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../css/libs/all.min.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+  </head>
+  <body>
+    <div class="dashboard_page">
+      <div class="tabs_toggler">
+        <button class="toggler">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <div class="dash_nav">
+        <div class="notifcation_bar">
+          <div class="toggler_space"></div>
+          <h3>الرئيسية</h3>
+          <div class="user_details">
+            <div class="notifcation_menu">
+              <a id="notifcation_bell" href="#">
+                <span>1</span>
+                <i class="far fa-bell"></i>
+              </a>
+              <div class="menu">
+                <div class="head">
+                  <i class="far fa-bell"></i>
+                  <h4>الإشعارات</h4>
+                </div>
+                <div class="component">
+                  <div class="notice active">
+                    <i class="fas fa-bell"></i>
+                    <div class="notice_details">
+                      <a href="#">توافق الاخوين الاستثمار التجاري</a>
+                      <span>قام بإرسال مرفق <a href="#">Project.pdf</a></span>
+                    </div>
+                    <div class="time">
+                      <i class="far fa-clock"></i>
+                      <span>منذ 6 دقيقة</span>
+                    </div>
+                  </div>
+                  <div class="notice">
+                    <i class="fas fa-bell"></i>
+                    <div class="notice_details">
+                      <a href="#">توافق الاخوين الاستثمار التجاري</a>
+                      <span>قام بإرسال مرفق <a href="#">Project.pdf</a></span>
+                    </div>
+                    <div class="time">
+                      <i class="far fa-clock"></i>
+                      <span>منذ 6 دقيقة</span>
+                    </div>
+                  </div>
+                  <div class="notice">
+                    <i class="fas fa-bell"></i>
+                    <div class="notice_details">
+                      <a href="#">توافق الاخوين الاستثمار التجاري</a>
+                      <span>قام بإرسال مرفق <a href="#">Project.pdf</a></span>
+                    </div>
+                    <div class="time">
+                      <i class="far fa-clock"></i>
+                      <span>منذ 6 دقيقة</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span>Mohamed Ahmed</span>
+            <img src="../../img/partner_3.jpg" alt="User Image" />
+          </div>
+        </div>
+      </div>
+
+      <div class="container_fluid p-0">
+        <div class="row">
+          <div class="col-lg-2">
+            <div class="tabs_wrapper">
+              <div class="tabs_nav">
+                <div class="logo">
+                  <img src="../../icons/dashboard/dash_logo.svg" alt="Icon" />
+                </div>
+                <form action="#" class="text-center">
+                  <input
+                    type="search"
+                    name="search"
+                    placeholder="بحث باسم الشركة"
+                  />
+                  <div class="tabs_filter text-center mt-4">
+                    <label for="active_clients">العملاء النشطة</label>
+                    <input type="radio" id="active_clients" checked="true" />
+                    <label for="inactive_clients">العملاء الغير نشطتين</label>
+                    <input type="radio" id="inactive_clients" />
+                  </div>
+                </form>
+                <div class="tabs">
+                  <ul>
+                    <li class="active"><a href="#">شركة اورونا</a></li>
+                    <li><a href="#">شركة دور الاعمال</a></li>
+                    <li><a href="#">عناية السعودية</a></li>
+                    <li><a href="#">سما النظام</a></li>
+                  </ul>
+                </div>
+                <div class="add_new_client text-center">
+                  <button id="add_client">
+                    إضافة عميل جديد | <i class="fas fa-plus-circle"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-10">
+            <div class="dashboard_content">
+              <div class="container">
+                <div class="row gap">
+                  <div class="col-xl-3 col-sm-6">
+                    <div class="category_item">
+                      <div class="category">
+                        <span>العملاء</span>
+                        <span class="counter_up" data-from="0" data-to="21"
+                          >21</span
+                        >
+                      </div>
+                      <div class="category_icon light_orange">
+                        <img src="../../icons/dashboard/clients.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 col-sm-6">
+                    <div class="category_item">
+                      <div class="category">
+                        <span>المدفوعات</span>
+                        <span class="counter_up" data-from="0" data-to="350000"
+                          >350000</span
+                        >
+                        <span class="currency">SR</span>
+                      </div>
+                      <div class="category_icon light_green">
+                        <img src="../../icons/dashboard/coins.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 col-sm-6">
+                    <div class="category_item">
+                      <div class="category">
+                        <span>التقارير</span>
+                        <span class="counter_up" data-from="0" data-to="26"
+                          >26</span
+                        >
+                      </div>
+                      <div class="category_icon light_black">
+                        <img src="../../icons/dashboard/reports.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 col-sm-6">
+                    <div class="category_item">
+                      <div class="category">
+                        <span>قيد العمل</span>
+                        <span class="counter_up" data-from="0" data-to="5000"
+                          >5000</span
+                        >
+                      </div>
+                      <div class="category_icon light_purple">
+                        <img src="../../icons/dashboard/work.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="add_client_modal">
+      <div class="modal_body text-center">
+        <div class="modal_content">
+          <div class="close_modal">
+            <button><i class="fas fa-times"></i></button>
+          </div>
+          <div class="add_client_form">
+            <div class="attention mt-3 mb-5">
+              <p>انشاء عميل جديد</p>
+            </div>
+            <form action="#" class="main_form">
+              <label for="email"><i class="fas fa-envelope"></i></label>
+              <input
+                type="email"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                required
+                placeholder="إسم المستخدم"
+              />
+              <label for="password">
+                <i class="fas fa-lock"></i>
+                <i class="fas fa-eye"></i>
+              </label>
+              <input
+                type="password"
+                title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                required
+                placeholder="كلمة المرور المؤقتة"
+              />
+              <input type="submit" class="text-center" value="إنشاء الحساب" />
+
+              <div class="validation">
+                <p id="small" class="invalid"></p>
+                <p id="capital" class="invalid"></p>
+                <p id="number" class="invalid"></p>
+                <p id="characters" class="invalid"></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../js/libs/jquery-3.4.1.min.js"></script>
+    <script src="../../js/libs/jquery.countTo.js"></script>
+    <script src="../../js/pages/dashboard/dashboard_main.js"></script>
+    <script src="../../js/pages/dashboard/dashboard.js"></script>
+  </body>
+</html>

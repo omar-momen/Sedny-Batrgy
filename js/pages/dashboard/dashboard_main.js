@@ -3,15 +3,7 @@ window.onload = function () {
   document.body.classList.add("fix_body");
 };
 
-let dashtabs = document.querySelectorAll(".tabs ul li");
-
-dashtabs.forEach((tab) => {
-  tab.addEventListener("click", function () {
-    dashtabs.forEach((dashTab) => dashTab.classList.remove("active"));
-    this.classList.add("active");
-  });
-});
-
+// Notification Menu
 let notifcation_bell = document.getElementById("notifcation_bell");
 let notifcation_menu = document.querySelector(".menu");
 
@@ -56,14 +48,3 @@ tabsElement.onclick = function () {
 tabsNav.onclick = function (e) {
   e.stopPropagation();
 };
-
-$(".counter_up").countTo({
-  speed: 7000,
-  refreshInterval: 70,
-  formatter: function (value, options) {
-    return value
-      .toFixed(options.decimals)
-      .toString()
-      .replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
-  },
-});

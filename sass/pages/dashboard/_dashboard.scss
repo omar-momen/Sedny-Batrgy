@@ -63,7 +63,7 @@ body {
     font-size: 2rem;
     position: fixed;
     right: 0; // RTL
-    width: 84.2%;
+    width: 84%;
     z-index: 1;
     .notifcation_bar {
       position: relative;
@@ -220,7 +220,7 @@ body {
                   display: flex;
                   align-items: center;
                   align-self: flex-start;
-                  margin-left: auto; // RTL
+                  margin-right: auto;
                   i {
                     color: #bcc0d4;
                     font-size: 2rem;
@@ -254,8 +254,29 @@ body {
           width: 100%;
         }
       }
+      form {
+        margin: 6rem 0;
+        input[type="search"] {
+          background-color: $colorLight;
+          color: #fff;
+          border-radius: 4.4rem;
+          border: none;
+          padding: 0.5rem 1rem;
+          outline: none;
+          &::placeholder {
+            color: #fff;
+            font-size: bold;
+          }
+        }
+        .tabs_filter {
+          label {
+            font-size: 1.2rem;
+          }
+          input[type="radio"] {
+          }
+        }
+      }
       .tabs {
-        margin-top: 3rem;
         width: 100%;
         padding-left: 2rem;
         ul {
@@ -267,10 +288,12 @@ body {
             user-select: none;
             transition: 0.3s;
             cursor: pointer;
+            &:not(:last-child) {
+              border-bottom: 1px solid rgba($color: #fff, $alpha: 0.1);
+            }
             a {
               color: #fff;
               text-decoration: none;
-              border-bottom: 1px solid rgba($color: #fff, $alpha: 0.1);
               padding-bottom: 2.5rem;
             }
             &.active {
@@ -283,6 +306,25 @@ body {
                 border-bottom: none;
               }
             }
+          }
+        }
+      }
+      .add_new_client {
+        margin-top: 10rem;
+        button {
+          background-color: $colorLight;
+          border: none;
+          outline: none;
+          color: #fff;
+          font-size: 1.2rem;
+          padding: 0.5rem 1rem;
+          margin: auto;
+          border-radius: 4.4rem;
+          transition: 0.3s;
+          @include flexCenter;
+          @include buttonHover;
+          i {
+            margin: 0 0.5rem;
           }
         }
       }
@@ -314,7 +356,7 @@ body {
           &:first-of-type {
             color: $colorDark;
             font-size: 1.8rem;
-            font-weight: 600;
+            font-weight: bold;
             margin-bottom: 1rem;
           }
           &:nth-child(2) {
@@ -379,6 +421,126 @@ body {
         overflow-y: scroll;
         .tabs {
           margin-top: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.add_client_modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background: rgba($color: #000000, $alpha: 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  &.show_model {
+    opacity: 1;
+    visibility: visible;
+  }
+  .modal_body {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background-color: #fff;
+    border-radius: 0.8rem;
+    transition: all 0.3s ease;
+    &.show_body {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    .modal_content {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      padding: 5rem;
+      @include flexCenter;
+      .close_modal {
+        position: absolute;
+        top: 0;
+        right: 0;
+        button {
+          background-color: transparent;
+          border: none;
+          outline: none;
+          font-size: 2rem;
+          padding: 0.5rem 1.5rem;
+          i {
+            transition: 0.3s ease;
+          }
+          &:hover {
+            i {
+              color: #d63031;
+            }
+          }
+        }
+      }
+      @include main_form;
+      .main_form {
+        label {
+          i {
+            left: unset;
+            right: 2rem;
+          }
+        }
+        label[for="password"] {
+          i {
+            &:last-child {
+              right: 90%;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      .add_client_form {
+        .attention {
+          p {
+            text-align: center;
+            font-size: 1.6rem;
+          }
+        }
+      }
+      .validation {
+        align-self: flex-start;
+        margin-top: 2rem;
+        font-size: 1.4rem;
+        transition: all 0.3s ease;
+        opacity: 0;
+        visibility: hidden;
+        height: 0;
+        &.show {
+          opacity: 1;
+          visibility: visible;
+          height: auto;
+        }
+        p {
+          transition: all 1s ease;
+          margin-bottom: 0.3rem;
+          &.valid {
+            color: $colorLight;
+            opacity: 0;
+            &::before {
+              content: "\f00c";
+              font-family: "Font Awesome 5 Free";
+              font-weight: 900;
+              margin: 0 1rem;
+            }
+          }
+          &.invalid {
+            color: #e74c3c;
+            opacity: 1;
+            display: block;
+            &::before {
+              content: "\f00d";
+              font-family: "Font Awesome 5 Free";
+              font-weight: 900;
+              margin: 0 1rem;
+            }
+          }
         }
       }
     }

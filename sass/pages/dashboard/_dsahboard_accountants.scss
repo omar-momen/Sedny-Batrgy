@@ -1,0 +1,125 @@
+.dashboard_page {
+  &.accountants {
+    .tabs_wrapper {
+      .tabs_nav {
+        .logo {
+          margin-bottom: 8rem;
+        }
+        .tabs {
+          ul {
+            li {
+              &.active {
+                padding: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    .fix-p {
+      padding-top: 12rem;
+    }
+    .align {
+      align-items: center;
+      justify-content: center;
+    }
+    .money_filter,
+    .branch_filter,
+    .employee_filter {
+      position: relative;
+      display: flex;
+      align-items: center;
+      label {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: $colorDark;
+      }
+      input {
+        background-color: #fff;
+        font-size: 1.6rem;
+        padding: 1rem 0;
+        color: $colorDark;
+        font-weight: 600;
+        border-radius: 0.4rem;
+        outline: none;
+        box-shadow: 0px 0.3rem 0.6rem 0 rgba(0, 0, 0, 0.3);
+        &::placeholder {
+          color: $colorDark;
+        }
+      }
+    }
+    .money_filter {
+      label {
+        margin-left: 1rem;
+      }
+      input {
+        width: 30%;
+        max-width: 100%;
+        border: 1px solid rgba($color: #000000, $alpha: 0.6);
+        outline: none;
+        text-align: center;
+        &:first-of-type {
+          border-radius: 0 0.4rem 0.4rem 0;
+          border-left: none;
+        }
+        &:last-of-type {
+          border-radius: 0.4rem 0 0 0.4rem;
+        }
+      }
+    }
+    .branch_filter,
+    .employee_filter {
+      label {
+        i {
+          position: absolute;
+          top: 50%;
+          left: 2.5rem;
+          transform: translateY(-50%);
+        }
+      }
+      input {
+        padding: 1rem;
+        width: 100%;
+        border: none;
+      }
+    }
+    .search {
+      position: relative;
+      margin: 2rem;
+      label {
+        position: absolute;
+        right: 2rem;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      input {
+        padding: 1rem 3rem;
+        font-size: 1.4rem;
+        border: none;
+        border-radius: 0.4rem;
+        &::placeholder {
+          color: #1baae1;
+          font-weight: 600;
+        }
+      }
+    }
+    .table {
+      background-color: #fff;
+      font-size: 1.2rem;
+      border-radius: 0.4rem;
+      thead {
+        border-bottom: 1px solid rgba($color: #000000, $alpha: 0.8);
+        tr {
+          th {
+            color: $colorDark;
+            font-size: 1.4rem;
+          }
+        }
+      }
+      th,
+      td {
+        padding: 1.6rem;
+      }
+    }
+  }
+}
