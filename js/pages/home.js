@@ -72,7 +72,6 @@ if (window.innerWidth <= 480) {
   more_btn_icon.classList.add("fa-arrow-right");
 }
 
-console.log(window.innerWidth);
 // Clients Number
 $(window).scroll(function () {
   var scrollTop = $(window).scrollTop(),

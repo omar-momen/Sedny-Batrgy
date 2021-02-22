@@ -27,7 +27,6 @@ if (main_header) {
 
 // Main Nav Search input
 $("nav.navbar .corner_div span.search_icon").click(function () {
-  console.log("lol");
   $("nav.navbar .form_section").addClass("active");
 });
 $("nav.navbar .form_section .close_form_section").click(function () {
@@ -42,6 +41,17 @@ $(window).scroll(function () {
   } else {
     $("nav.navbar").removeClass("fixed");
   }
+  // Scroll To Top
+  if ($(window).scrollTop() > 500) {
+    $(".scrollToTop").addClass("active");
+  } else {
+    $(".scrollToTop").removeClass("active");
+  }
+});
+$(".scrollToTop").on("click", function () {
+  $("body,html").animate({
+    scrollTop: 0,
+  });
 });
 
 /********** Start Nav Services Hover **********/
