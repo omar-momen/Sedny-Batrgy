@@ -22,7 +22,6 @@
     display: flex;
     justify-content: start;
     align-items: center;
-    z-index: -1;
   }
   .heading {
     width: 60%;
@@ -46,6 +45,14 @@
     background-color: rgba($color: #fff, $alpha: 0.3);
     border-radius: 0.8rem 0.8rem 0 0;
     padding: 1rem 4rem;
+    width: 26rem;
+    height: 10rem;
+    &.scrolled {
+      position: fixed;
+      bottom: 2rem;
+      right: 0;
+      background-color: rgba(19, 27, 45, 0.7);
+    }
     .counter_down {
       position: relative;
       font-size: 2rem;

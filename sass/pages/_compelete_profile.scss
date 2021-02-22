@@ -1,0 +1,124 @@
+.compelete_profile {
+  overflow: hidden;
+  @include main_form;
+  .main_form {
+    label[for="password"],
+    label[for="confrim"] {
+      i {
+        &:last-child {
+          left: unset;
+          right: 2rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .heading {
+    margin: 4rem 0;
+    h2 {
+      font-size: 4rem;
+      color: $colorDark;
+      font-weight: 600;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    @include underLineDotted;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: -6rem; // RTL
+      transform: rotateY(180deg);
+      width: 15rem;
+      height: auto;
+      opacity: 0.3;
+    }
+  }
+  .profile_image {
+    position: relative;
+    width: 12rem;
+    height: 12rem;
+    margin: 2rem auto;
+    text-align: center;
+    background: #b1b1b1;
+    border: 1px solid #a7a7a7;
+    border-radius: 50%;
+    z-index: 1;
+
+    form {
+      width: 100%;
+      height: 100%;
+      label {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        font-size: 2.5rem;
+        background-color: rgba($color: #fff, $alpha: 0.5);
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        text-align: center;
+        box-shadow: 0 0 0.6rem 0.3rem #0000001a;
+        cursor: pointer;
+        i {
+          color: #40b8e5;
+        }
+      }
+      input {
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        z-index: 3;
+        cursor: pointer;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        z-index: 2;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+  .validation {
+    align-self: flex-start;
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+    opacity: 0;
+    height: 9rem;
+    p {
+      transition: all 1s ease;
+      margin-bottom: 0.3rem;
+      &.valid {
+        color: $colorLight;
+        opacity: 0;
+        &::before {
+          content: "\f00c";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          margin: 0 1rem;
+        }
+      }
+      &.invalid {
+        color: #e74c3c;
+        opacity: 1;
+        display: block;
+        &::before {
+          content: "\f00d";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          margin: 0 1rem;
+        }
+      }
+    }
+  }
+}
+
+@include main_form_rtl;

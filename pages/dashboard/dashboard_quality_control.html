@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Accountants Dashboard</title>
+      <link rel="shortcut icon" href="../../icons/icon.svg" />
+      <link rel="stylesheet" href="../../css/libs/bootstrap.min.css" />
+      <link rel="stylesheet" href="../../css/libs/all.min.css" />
+      <link rel="stylesheet" href="../../css/style.css" />
+    </head>
+  </head>
+  <body>
+    <div class="dashboard_page dash_second quality_control">
+      <div class="tabs_toggler">
+        <button class="toggler">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <!--===== Dashboard Navbar =====-->
+      <div class="dash_nav">
+        <div class="notifcation_bar">
+          <div class="toggler_space"></div>
+          <h3>الرئيسية</h3>
+          <div class="user_details">
+            <div class="notifcation_menu">
+              <a id="notifcation_bell" href="#">
+                <span>1</span>
+                <i class="far fa-bell"></i>
+              </a>
+              <div class="menu">
+                <div class="head">
+                  <i class="far fa-bell"></i>
+                  <h4>الإشعارات</h4>
+                </div>
+                <div class="component">
+                  <div class="notice active">
+                    <i class="fas fa-bell"></i>
+                    <div class="notice_details">
+                      <a href="#">توافق الاخوين الاستثمار التجاري</a>
+                      <span>قام بإرسال مرفق <a href="#">Project.pdf</a></span>
+                    </div>
+                    <div class="time">
+                      <i class="far fa-clock"></i>
+                      <span>منذ 6 دقيقة</span>
+                    </div>
+                  </div>
+                  <div class="notice">
+                    <i class="fas fa-bell"></i>
+                    <div class="notice_details">
+                      <a href="#">توافق الاخوين الاستثمار التجاري</a>
+                      <span>قام بإرسال مرفق <a href="#">Project.pdf</a></span>
+                    </div>
+                    <div class="time">
+                      <i class="far fa-clock"></i>
+                      <span>منذ 6 دقيقة</span>
+                    </div>
+                  </div>
+                  <div class="notice">
+                    <i class="fas fa-bell"></i>
+                    <div class="notice_details">
+                      <a href="#">توافق الاخوين الاستثمار التجاري</a>
+                      <span>قام بإرسال مرفق <a href="#">Project.pdf</a></span>
+                    </div>
+                    <div class="time">
+                      <i class="far fa-clock"></i>
+                      <span>منذ 6 دقيقة</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span>Mohamed Ahmed</span>
+            <a href="#" id="userProfile">
+              <img src="../../img/partner_3.jpg" alt="User Image" />
+            </a>
+            <ul class="profile_menu">
+              <li>
+                <a href="#">تعديل البروفيل <i class="fas fa-user-edit"></i></a>
+              </li>
+              <li>
+                <a href="#">تسجيل الخروج</i> <i class="fas fa-door-open"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!--===== Dashboard Tabs & content =====-->
+      <div class="container_fluid p-0">
+        <div class="row">
+          <div class="col-lg-2">
+            <div class="tabs_wrapper">
+              <div class="tabs_nav">
+                <div class="logo">
+                  <img src="../../icons/dashboard/dash_logo.svg" alt="Icon" />
+                </div>
+                <div class="tabs">
+                  <ul>
+                    <li class="active">
+                      <a href="#"
+                        ><img
+                          src="../../icons/dashboard/tab_icon.svg"
+                          alt="Icon"
+                      /></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-10 col-12 fix-p">
+            <div class="container-fluid">
+              <form action="#">
+                <div class="row align">
+                  <div class="filter col-lg-3 col-12 mt-4 mb-4 mt-lg-0 mb-lg-0">
+                    <label for="location"
+                      ><i class="fas fa-chevron-down"></i
+                    ></label>
+                    <input
+                      list="locations"
+                      name="location"
+                      id="location"
+                      placeholder="تصفية بالفرع التابع له"
+                    />
+                    <datalist id="locations">
+                      <option value="فرع القاهرة"></option>
+                      <option value="فرع جدة"></option>
+                      <option value="فرع المدينة"></option>
+                      <option value="فرع الرياض"></option>
+                      <option value="فرع مكة"></option>
+                    </datalist>
+                  </div>
+                  <div class="filter col-lg-3 col-12 mt-4 mb-4 mt-lg-0 mb-lg-0">
+                    <label for="location"
+                      ><i class="fas fa-chevron-down"></i
+                    ></label>
+                    <input
+                      list="locations"
+                      name="location"
+                      id="location"
+                      placeholder="تصفية بالفرع التابع له"
+                    />
+                    <datalist id="locations">
+                      <option value="فرع القاهرة"></option>
+                      <option value="فرع جدة"></option>
+                      <option value="فرع المدينة"></option>
+                      <option value="فرع الرياض"></option>
+                      <option value="فرع مكة"></option>
+                    </datalist>
+                  </div>
+                  <div class="filter col-lg-3 col-12 mt-4 mb-4 mt-lg-0 mb-lg-0">
+                    <label for="location"
+                      ><i class="fas fa-chevron-down"></i
+                    ></label>
+                    <input
+                      list="locations"
+                      name="location"
+                      id="location"
+                      placeholder="تصفية بالفرع التابع له"
+                    />
+                    <datalist id="locations">
+                      <option value="فرع القاهرة"></option>
+                      <option value="فرع جدة"></option>
+                      <option value="فرع المدينة"></option>
+                      <option value="فرع الرياض"></option>
+                      <option value="فرع مكة"></option>
+                    </datalist>
+                  </div>
+                  <div class="filter col-lg-3 W col-12">
+                    <label for="name"
+                      ><i class="fas fa-chevron-down"></i
+                    ></label>
+                    <input
+                      list="names"
+                      name="name"
+                      id="name"
+                      placeholder="تصفية على حسب الاسم"
+                    />
+                    <datalist id="names">
+                      <option value="سعد"></option>
+                      <option value="اسعد"></option>
+                      <option value="مسعود"></option>
+                      <option value="سعيد"></option>
+                      <option value="سعدون"></option>
+                    </datalist>
+                  </div>
+                  <div class="search col-12">
+                    <label class="form-label" for="search"
+                      ><i class="fas fa-search"></i
+                    ></label>
+                    <input
+                      type="search"
+                      id="search"
+                      class="form-control"
+                      placeholder="اسم العميل"
+                    />
+                  </div>
+                </div>
+              </form>
+
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">كود العميل</th>
+                    <th scope="col">اسم الشركة</th>
+                    <th scope="col">المجال</th>
+                    <th scope="col">تاريخ دخول التقرير رقابة الجودة</th>
+                    <th scope="col">اسم الموظف</th>
+                    <th scope="col">الفرع التابع له</th>
+                    <th scope="col">رقم الهاتف</th>
+                    <th scope="col">البريد الالكتروني</th>
+                    <th scope="col">تاريخ دخول التقرير من الرقابة</th>
+                    <th scope="col">حالة التقرير</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td class="color_light">453454642</td>
+                    <td>Sony</td>
+                    <td>محاسبة</td>
+                    <td>10/1/2020</td>
+                    <td>Sonya</td>
+                    <td>Cairo</td>
+                    <td>+58454865</td>
+                    <td>sonya@info.com</td>
+                    <td>10/1/2020</td>
+                    <td>جيد</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td class="color_light">453454642</td>
+                    <td>Sony</td>
+                    <td>محاسبة</td>
+                    <td>10/1/2020</td>
+                    <td>Sonya</td>
+                    <td>Cairo</td>
+                    <td>+58454865</td>
+                    <td>sonya@info.com</td>
+                    <td>10/1/2020</td>
+                    <td>جيد</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td class="color_light">453454642</td>
+                    <td>Sony</td>
+                    <td>محاسبة</td>
+                    <td>10/1/2020</td>
+                    <td>Sonya</td>
+                    <td>Cairo</td>
+                    <td>+58454865</td>
+                    <td>sonya@info.com</td>
+                    <td>10/1/2020</td>
+                    <td>جيد</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td class="color_light">453454642</td>
+                    <td>Sony</td>
+                    <td>محاسبة</td>
+                    <td>10/1/2020</td>
+                    <td>Sonya</td>
+                    <td>Cairo</td>
+                    <td>+58454865</td>
+                    <td>sonya@info.com</td>
+                    <td>10/1/2020</td>
+                    <td>جيد</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td class="color_light">453454642</td>
+                    <td>Sony</td>
+                    <td>محاسبة</td>
+                    <td>10/1/2020</td>
+                    <td>Sonya</td>
+                    <td>Cairo</td>
+                    <td>+58454865</td>
+                    <td>sonya@info.com</td>
+                    <td>10/1/2020</td>
+                    <td>جيد</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td class="color_light">453454642</td>
+                    <td>Sony</td>
+                    <td>محاسبة</td>
+                    <td>10/1/2020</td>
+                    <td>Sonya</td>
+                    <td>Cairo</td>
+                    <td>+58454865</td>
+                    <td>sonya@info.com</td>
+                    <td>10/1/2020</td>
+                    <td>جيد</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td class="color_light">453454642</td>
+                    <td>Sony</td>
+                    <td>محاسبة</td>
+                    <td>10/1/2020</td>
+                    <td>Sonya</td>
+                    <td>Cairo</td>
+                    <td>+58454865</td>
+                    <td>sonya@info.com</td>
+                    <td>10/1/2020</td>
+                    <td>جيد</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td class="color_light">453454642</td>
+                    <td>Sony</td>
+                    <td>محاسبة</td>
+                    <td>10/1/2020</td>
+                    <td>Sonya</td>
+                    <td>Cairo</td>
+                    <td>+58454865</td>
+                    <td>sonya@info.com</td>
+                    <td>10/1/2020</td>
+                    <td>جيد</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="pagination" dir="ltr">
+                <button class="prev">
+                  <i class="fas fa-chevron-left"></i>
+                </button>
+                <span></span>
+                <button class="next">
+                  <i class="fas fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../js/pages/dashboard/dashboard_main.js"></script>
+    <script src="../../js/pages/dashboard/dashboard_second.js"></script>
+  </body>
+</html>

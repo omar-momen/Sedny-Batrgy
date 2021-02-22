@@ -20,6 +20,7 @@
         </button>
       </div>
 
+      <!--===== Dashboard Navbar =====-->
       <div class="dash_nav">
         <div class="notifcation_bar">
           <div class="toggler_space"></div>
@@ -73,11 +74,22 @@
               </div>
             </div>
             <span>Mohamed Ahmed</span>
-            <img src="../../img/partner_3.jpg" alt="User Image" />
+            <a href="#" id="userProfile">
+              <img src="../../img/partner_3.jpg" alt="User Image" />
+            </a>
+            <ul class="profile_menu">
+              <li>
+                <a href="../complete_profile.html">تعديل البروفيل <i class="fas fa-user-edit"></i></a>
+              </li>
+              <li>
+                <a href="../../index.html">تسجيل الخروج</i> <i class="fas fa-door-open"></i></a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
 
+      <!--===== Dashboard Tabs & content =====-->
       <div class="container_fluid p-0">
         <div class="row">
           <div class="col-lg-2">
@@ -87,16 +99,39 @@
                   <img src="../../icons/dashboard/dash_logo.svg" alt="Icon" />
                 </div>
                 <form action="#" class="text-center">
-                  <input
-                    type="search"
-                    name="search"
-                    placeholder="بحث باسم الشركة"
-                  />
-                  <div class="tabs_filter text-center mt-4">
-                    <label for="active_clients">العملاء النشطة</label>
-                    <input type="radio" id="active_clients" checked="true" />
-                    <label for="inactive_clients">العملاء الغير نشطتين</label>
-                    <input type="radio" id="inactive_clients" />
+                  <div class="tabs_search text-center">
+                    <label for="search"><i class="fas fa-search"></i></label>
+                    <input
+                      type="search"
+                      name="search"
+                      placeholder="بحث باسم الشركة"
+                      id="search"
+                    />
+                  </div>
+                  <div class="tabs_filter">
+                    <div class="form-check">
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        العملاء النشطة
+                      </label>
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="flexRadioDefault"
+                        id="flexRadioDefault1"
+                        checked
+                      />
+                    </div>
+                    <div class="form-check">
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        العملاء الغير نشطين
+                      </label>
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="flexRadioDefault"
+                        id="flexRadioDefault2"
+                      />
+                    </div>
                   </div>
                 </form>
                 <div class="tabs">
@@ -128,7 +163,7 @@
                           >21</span
                         >
                       </div>
-                      <div class="category_icon light_orange">
+                      <div class="category_icon light_orange_dash">
                         <img src="../../icons/dashboard/clients.svg" alt="" />
                       </div>
                     </div>
@@ -142,7 +177,7 @@
                         >
                         <span class="currency">SR</span>
                       </div>
-                      <div class="category_icon light_green">
+                      <div class="category_icon light_green_dash">
                         <img src="../../icons/dashboard/coins.svg" alt="" />
                       </div>
                     </div>
@@ -155,7 +190,7 @@
                           >26</span
                         >
                       </div>
-                      <div class="category_icon light_black">
+                      <div class="category_icon light_black_dash">
                         <img src="../../icons/dashboard/reports.svg" alt="" />
                       </div>
                     </div>
@@ -168,9 +203,316 @@
                           >5000</span
                         >
                       </div>
-                      <div class="category_icon light_purple">
+                      <div class="category_icon light_purple_dash">
                         <img src="../../icons/dashboard/work.svg" alt="" />
                       </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="status">
+                      <div class="status_btn">
+                        الحالة
+                        <button class="active">
+                          <span>نشط</span>
+                          <div class="icon">
+                            <i class="fas fa-circle"></i>
+                          </div>
+                        </button>
+                      </div>
+                      <div class="company_status">
+                        <div class="company_name">
+                          <i class="fas fa-user"></i>
+                          <span>اسم الشركة</span>
+                          <span>اورونا</span>
+                        </div>
+                        <div class="company_code">
+                          <span>كود الشركة</span>
+                          <span>56312546</span>
+                        </div>
+                        <div class="company_deals">
+                          <span>حجم التعاملات</span>
+                          <span>54865212</span>
+                        </div>
+                        <div class="company_field">
+                          <span>المجال</span>
+                          <span>احمد السعيد</span>
+                        </div>
+                        <div class="company_deal_date">
+                          <i class="far fa-clock"></i>
+                          <span>تاريخ اخر معاملة</span>
+                          <span>الاربعاء 4 مارس، 2020</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="company_info">
+                      <div class="info_elements">
+                        <div class="representative">
+                          <i class="fas fa-user"></i>
+                          <span>ممثل الشركة</span>
+                          <span>خالد المحمدي</span>
+                        </div>
+                        <div class="company_phone">
+                          <span>رقم الهاتف</span>
+                          <span>+215215454</span>
+                        </div>
+                        <div class="company_mobile">
+                          <span>رقم الموبيل</span>
+                          <span>+561241521</span>
+                        </div>
+                        <div class="company_email">
+                          <span>البريد الالكتروني</span>
+                          <span>info@info.com</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="service_content">
+                      <div class="service_head">
+                        <h3>مراجعة الحسابات</h3>
+                        <div class="start_date">
+                          <i class="far fa-clock"></i>
+                          <span>تاريخ بداية العقد</span>
+                          <span>الاربعاء 4 مارس، 2020</span>
+                        </div>
+                        <div class="expire_date">
+                          <i class="far fa-clock"></i>
+                          <span>تاريخ نهاية العقد</span>
+                          <span>الاربعاء 4 مارس، 2020</span>
+                        </div>
+                        <div class="service_code">
+                          <span>كود الخدمة</span>
+                          <span>56312546</span>
+                        </div>
+                      </div>
+
+                      <div class="service_info">
+                        <div class="service_progress">
+                          <div class="items">
+                            <div class="progress_item">
+                              <div class="status_icon">
+                                <i class="fas fa-check"></i>
+                              </div>
+                              <div class="progress_status">
+                                <span>تم الإرسال</span>
+                              </div>
+                            </div>
+
+                            <div class="progress_item">
+                              <div class="status_icon">
+                                <i class="fas fa-check"></i>
+                              </div>
+                              <div class="progress_status">
+                                <span>تمت المراجعة</span>
+                                <span>من قبل فحص الجودة</span>
+                              </div>
+                            </div>
+
+                            <div class="progress_item">
+                              <div class="status_icon">
+                                <i class="fas fa-check"></i>
+                              </div>
+                              <div class="progress_status">
+                                <span>تم الإرسال الي ادارة الجودة</span>
+                                <span>من قبل ادارة الجوده</span>
+                              </div>
+                            </div>
+
+                            <div class="progress_item">
+                              <div class="status_icon inactive">
+                                <i class="fas fa-times"></i>
+                              </div>
+                              <div class="progress_status">
+                                <span>قيد العمل</span>
+                                <span>تم العمل على الملف</span>
+                              </div>
+                            </div>
+
+                            <div class="progress_item">
+                              <div class="status_icon inactive">
+                                <i class="fas fa-times"></i>
+                              </div>
+                              <div class="progress_status">
+                                <span>قبل العرض</span>
+                                <span>من قبل العميل</span>
+                              </div>
+                            </div>
+
+                            <div class="progress_item">
+                              <div class="status_icon inactive">
+                                <i class="fas fa-times"></i>
+                              </div>
+                              <div class="progress_status">
+                                <span>تم الإرسال</span>
+                                <span>للعرض الفني والمالي</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="progress_bar">
+                            <div class="bullet">
+                              <i class="fas fa-circle"></i>
+                            </div>
+                            <div class="bullet">
+                              <i class="fas fa-circle"></i>
+                            </div>
+                            <div class="bullet">
+                              <i class="fas fa-circle"></i>
+                            </div>
+                            <div class="bullet inactive">
+                              <i class="fas fa-circle"></i>
+                            </div>
+                            <div class="bullet inactive">
+                              <i class="fas fa-circle"></i>
+                            </div>
+                            <div class="bullet inactive">
+                              <i class="fas fa-circle"></i>
+                            </div>
+                          </div>
+                          <div class="progress_date">
+                            <div class="date_item">
+                              <span class="date">15/6/2020</span>
+                              <span class="clock">19:4:2</span>
+                            </div>
+                            <div class="date_item">
+                              <span class="date">15/6/2020</span>
+                              <span class="clock">19:4:2</span>
+                            </div>
+                            <div class="date_item">
+                              <span class="date">15/6/2020</span>
+                              <span class="clock">19:4:2</span>
+                            </div>
+                            <div class="date_item">
+                              <span class="date">15/6/2020</span>
+                              <span class="clock">19:4:2</span>
+                            </div>
+                            <div class="date_item">
+                              <span class="date">15/6/2020</span>
+                              <span class="clock">19:4:2</span>
+                            </div>
+                            <div class="date_item">
+                              <span class="date">15/6/2020</span>
+                              <span class="clock">19:4:2</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="payments">
+                          <div class="head">
+                            <h3>
+                              <span>المدفوعات</span>
+                              <span>250,000 R.S</span>
+                            </h3>
+                          </div>
+                          <div class="batch">
+                            <div class="batch_budget">
+                              <span>الدفعة الاولى</span>
+                              |
+                              <span>القيمة 250,000 رس</span>
+                            </div>
+                            <div class="batch_status">
+                              <span>الحالة:</span>
+                              <span>تم الاستلام</span>
+                            </div>
+                            <div class="batch_code">
+                              <span>كود العملية:</span>
+                              <span>298544</span>
+                            </div>
+                          </div>
+                          <div class="batch inactive">
+                            <div class="batch_budget">
+                              <span>الدفعة الاولى</span>
+                              |
+                              <span>القيمة 250,000 رس</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="reports">
+                          <div class="head">
+                            <h3>التقارير</h3>
+                            <form action="#">
+                              <input type="button" value="ملفاتي" />
+                              <label for="upload">
+                                <i class="fas fa-paperclip"></i>
+                                إرفاق ملف
+                              </label>
+                              <input
+                                type="file"
+                                value="إرفاق ملف"
+                                id="upload"
+                              />
+                            </form>
+                          </div>
+                          <div class="report_files">
+                            <div class="file">
+                              <div class="report_title">
+                                <img src="../../icons/PDF.svg" alt="PDF" />
+                                <span>تقرير 1</span>
+                              </div>
+                              <div class="file_data">
+                                <span
+                                  ><i class="far fa-clock"></i> من 4
+                                  ديقيقة</span
+                                >
+                                <a href="#">
+                                  <img
+                                    src="../../icons/download.svg"
+                                    alt="Download"
+                                  />
+                                </a>
+                              </div>
+                            </div>
+                            <div class="file">
+                              <div class="report_title">
+                                <img src="../../icons/PDF.svg" alt="PDF" />
+                                <span>تقرير 2</span>
+                              </div>
+                              <div class="file_data">
+                                <span
+                                  ><i class="far fa-clock"></i> من 4
+                                  ديقيقة</span
+                                >
+                                <a href="#">
+                                  <img
+                                    src="../../icons/download.svg"
+                                    alt="Download"
+                                  />
+                                </a>
+                              </div>
+                            </div>
+                            <div class="file">
+                              <div class="report_title">
+                                <img src="../../icons/PDF.svg" alt="PDF" />
+                                <span>تقرير 3</span>
+                              </div>
+                              <div class="file_data">
+                                <span
+                                  ><i class="far fa-clock"></i> من 4
+                                  ديقيقة</span
+                                >
+                                <a href="#">
+                                  <img
+                                    src="../../icons/download.svg"
+                                    alt="Download"
+                                  />
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <button class="service_button">
+                        <i class="fas fa-caret-down"></i>
+                      </button>
+                    </div>
+
+                    <div class="add_service_button">
+                      <button id="add_service">
+                        <span>اضافة خدمة جديدة</span>
+                        <i class="fas fa-handshake"></i>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -181,6 +523,7 @@
       </div>
     </div>
 
+    <!--===== Add Client Modal =====-->
     <div class="add_client_modal">
       <div class="modal_body text-center">
         <div class="modal_content">
@@ -217,14 +560,44 @@
                 <p id="number" class="invalid"></p>
                 <p id="characters" class="invalid"></p>
               </div>
+              <p id="created">Account Created</p>
             </form>
           </div>
         </div>
       </div>
     </div>
 
+    <!--===== Add Service Model ====-->
+    <div class="add_service_modal">
+      <div class="modal_body">
+        <div class="close_modal">
+          <button><i class="fas fa-times"></i></button>
+        </div>
+        <form action="#">
+          <div class="choose_service">
+            <label for="service"><i class="fas fa-chevron-down"></i></label>
+            <input
+              list="services"
+              name="service"
+              id="service"
+              placeholder="اختر خدمة"
+            />
+            <datalist id="services">
+              <option value="مراجعة الحسابات"></option>
+              <option value="المحاسبة المالية"></option>
+              <option value="محاسبة التكايف"></option>
+              <option value="المراجعة"></option>
+              <option value="ادارة مشروع"></option>
+            </datalist>
+          </div>
+          <input type="submit" class="text-center" value="اختر" />
+        </form>
+      </div>
+    </div>
+
     <script src="../../js/libs/jquery-3.4.1.min.js"></script>
     <script src="../../js/libs/jquery.countTo.js"></script>
+    <script src="../../js/libs/bootstrap.min.js"></script>
     <script src="../../js/pages/dashboard/dashboard_main.js"></script>
     <script src="../../js/pages/dashboard/dashboard.js"></script>
   </body>

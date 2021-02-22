@@ -1,14 +1,49 @@
 window.onload = function () {
   document.documentElement.style.overflow = "unset";
   document.body.classList.add("fix_body");
+
+  // Show notifcations notify
+  let notifiy = document.createElement("div");
+  let notifiyText = document.createElement("div");
+  let notifiyHead = document.createElement("h3");
+  let notifiyHeadText = document.createTextNode("لديك اشعارات جديدة");
+  let notifiyIcon = document.createElement("i");
+  let notifcationAudio = document.createElement("audio");
+  let notifcationsNumber = document.querySelector("#notifcation_bell span");
+
+  notifiy.className = "notify";
+  notifiyText.className = "notify_body";
+
+  notifiyIcon.className = "far fa-bell";
+
+  notifiyHead.appendChild(notifiyIcon);
+  notifiyHead.appendChild(notifiyHeadText);
+  notifiyText.appendChild(notifiyHead);
+  notifiy.appendChild(notifiyText);
+
+  notifcationAudio.src = "../../audio/notification.mp3";
+  notifcationAudio.setAttribute("preload", "");
+  notifiy.appendChild(notifcationAudio);
+
+  if (notifcationsNumber.textContent > 0) {
+    document.body.appendChild(notifiy);
+    notifiy.classList.add("show");
+    notifcationAudio.play();
+    setTimeout(() => {
+      notifiy.classList.remove("show");
+    }, 5000);
+  }
 };
 
-// Notification Menu
+// Notification Menu & Profile Menu
 let notifcation_bell = document.getElementById("notifcation_bell");
 let notifcation_menu = document.querySelector(".menu");
+let profileImage = document.querySelector("#userProfile");
+let profileMenu = document.querySelector(".profile_menu");
 
 notifcation_bell.onclick = function (e) {
   notifcation_menu.classList.toggle("show");
+  profileMenu.classList.remove("show");
   e.stopPropagation();
 };
 notifcation_menu.onclick = function (e) {
@@ -27,6 +62,19 @@ document.body.addEventListener("keydown", function (event) {
     notifcation_menu.classList.remove("show");
   }
 });
+
+// Profile Menu
+profileImage.onclick = function (e) {
+  profileMenu.classList.toggle("show");
+  notifcation_menu.classList.remove("show");
+  e.stopPropagation();
+};
+document.body.addEventListener("click", function () {
+  profileMenu.classList.remove("show");
+});
+profileMenu.onclick = function (e) {
+  e.stopPropagation();
+};
 
 // Navbar Toggler
 let navToggleButtom = document.querySelector(".toggler");
