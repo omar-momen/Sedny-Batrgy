@@ -57,14 +57,14 @@ if (window.innerWidth >= 992) {
   $("nav.navbar ul.links li.services").hover(
     function () {
       services_hover.style.height = "500px";
-      $("nav.navbar ul.links .services .services_hover").slideDown(300);
+      $("nav.navbar ul.links .services .services_hover").slideDown(100);
       setTimeout(() => {
         $("nav.navbar ul.links .services .services_hover").addClass("active");
-      }, 301);
+      }, 101);
     },
     function () {
       $("nav.navbar ul.links .services .services_hover").removeClass("active");
-      $("nav.navbar ul.links .services .services_hover").slideUp(300);
+      $("nav.navbar ul.links .services .services_hover").slideUp(100);
     }
   );
   $("span.arrow_up").hover(function () {
