@@ -1,8 +1,7 @@
-let showPasswordEye = document.querySelector(".fa-eye"),
-  showPasswordEyeConfrim = document.querySelector(".fa-eye.confrim"),
-  emailInput = document.querySelector("input[type='email']"),
-  passwordInput = document.querySelector("input[type='password']"),
-  passwordConfirm = document.getElementById("confrim");
+let showPasswordEye = document.querySelector(".fa-eye");
+let showPasswordEyeConfrim = document.querySelector(".fa-eye.confrim");
+let emailInput = document.querySelector("input[type='email']");
+let passwordInput = document.querySelector("input[type='password']");
 
 // Toggle Eye
 showPasswordEye.onclick = function () {
@@ -15,19 +14,6 @@ showPasswordEye.onclick = function () {
     this.classList.remove("fa-eye-slash");
     this.classList.add("fa-eye");
     passwordInput.type = "password";
-  }
-};
-
-showPasswordEyeConfrim.onclick = function () {
-  "use strict";
-  if (this.classList.contains("fa-eye")) {
-    this.classList.remove("fa-eye");
-    this.classList.add("fa-eye-slash");
-    passwordConfirm.type = "text";
-  } else {
-    this.classList.remove("fa-eye-slash");
-    this.classList.add("fa-eye");
-    passwordConfirm.type = "password";
   }
 };
 

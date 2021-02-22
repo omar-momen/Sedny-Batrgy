@@ -3,12 +3,14 @@
   @include main_form;
   .main_form {
     label[for="password"],
-    label[for="confrim"] {
+    label[for="confrim"],
+    label[for="oldPass"] {
       i {
         &:last-child {
           left: unset;
           right: 2rem;
           cursor: pointer;
+          opacity: 0;
         }
       }
     }

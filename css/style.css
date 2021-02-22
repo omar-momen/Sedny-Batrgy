@@ -303,21 +303,38 @@ a {
   background-size: cover;
   background-position: top;
   margin-bottom: 15rem; }
-  .home_about_us .headphone {
-    position: absolute;
-    top: 2rem;
+  .home_about_us .whats_app,
+  .home_about_us .twitter {
+    position: fixed;
+    top: 47%;
     left: 0;
+    transform: translateY(-50%);
+    z-index: 99;
     width: 7rem;
     height: 5rem;
     background-color: #fff;
     box-shadow: 0 0.3rem 0.6rem #0000001f;
     border-radius: 0 4.5rem 4.5rem 0;
+    transition: 0.3s ease;
     display: flex;
     justify-content: center;
-    align-items: center; }
-    .home_about_us .headphone img {
-      width: 4rem;
-      max-width: 100%; }
+    align-items: center;
+    opacity: 0;
+    visibility: hidden; }
+    .home_about_us .whats_app.show,
+    .home_about_us .twitter.show {
+      opacity: 1;
+      visibility: visible; }
+    .home_about_us .whats_app i,
+    .home_about_us .twitter i {
+      font-size: 3rem;
+      color: #3bb1de; }
+  .home_about_us .whats_app i {
+    color: #25d366; }
+  .home_about_us .twitter {
+    top: 53%; }
+    .home_about_us .twitter i {
+      color: #3bb1de; }
   .home_about_us .heading .line {
     display: flex;
     justify-content: center;
@@ -1207,7 +1224,8 @@ a {
     .partners .cards_slider .slick-dots li.slick-active button::before {
       color: #00b0f3; }
 
-html[dir="rtl"] .home_about_us .headphone {
+html[dir="rtl"] .home_about_us .whats_app,
+html[dir="rtl"] .home_about_us .twitter {
   left: unset;
   right: 0;
   border-radius: 4.5rem 0 0 4.5rem; }
@@ -1263,6 +1281,8 @@ html[dir="rtl"] .our_services .grid_container .btn::before {
   content: "\f053";
   right: unset;
   left: 0.3rem; }
+html[dir="rtl"] .our_services .grid_items_container {
+  padding-bottom: 6rem; }
 html[dir="rtl"] .our_articles::after {
   right: unset;
   left: 0; }
@@ -2384,6 +2404,7 @@ html[dir="rtl"] .login_page .main_form label[for="password"] i:last-child {
 .contact_us {
   height: 100%;
   margin-top: -15rem;
+  margin-bottom: 10rem;
   z-index: 99; }
   .contact_us .contact_info,
   .contact_us .contact_form {
@@ -2578,7 +2599,7 @@ html[dir="rtl"] .main_form label[for="confrim"] i:last-child {
     .start_test_page .test_body .test_content .head.good {
       background-color: #4bb051; }
     .start_test_page .test_body .test_content .head.bad {
-      background-color: #eb4d4b; }
+      background-color: crimson; }
     .start_test_page .test_body .test_content .head h3 {
       color: #fff;
       font-weight: bold; }
@@ -2725,7 +2746,7 @@ html[dir="rtl"] .main_form label[for="confrim"] i:last-child {
     .start_test_page .start_test_bar .test_details .start_test_btn a.good {
       background: #4bb051; }
     .start_test_page .start_test_bar .test_details .start_test_btn a.bad {
-      background: #eb4d4b; }
+      background: crimson; }
   .start_test_page .start_test_bar .test_details .icons {
     display: flex;
     justify-content: center;
@@ -2765,7 +2786,7 @@ html[dir="rtl"] .main_form label[for="confrim"] i:last-child {
         .start_test_page .start_test_bar .test_details .icons li i.good {
           background-color: #4bb051; }
         .start_test_page .start_test_bar .test_details .icons li i.bad {
-          background-color: #eb4d4b; }
+          background-color: crimson; }
       @media (max-width: 575.98px) {
         .start_test_page .start_test_bar .test_details .icons li {
           font-size: 2.2rem; }
@@ -2851,6 +2872,7 @@ html[dir="rtl"] .accordion-button::after {
     position: fixed;
     bottom: 2rem;
     right: 0;
+    z-index: 3;
     background-color: rgba(19, 27, 45, 0.7); }
   .quiz_page .timer_box .counter_down {
     position: relative;
@@ -4710,10 +4732,12 @@ html[dir="rtl"] .dashboard_page .dash_nav {
         transform: translateY(0.3rem);
         box-shadow: none; }
   .compelete_profile .main_form label[for="password"] i:last-child,
-  .compelete_profile .main_form label[for="confrim"] i:last-child {
+  .compelete_profile .main_form label[for="confrim"] i:last-child,
+  .compelete_profile .main_form label[for="oldPass"] i:last-child {
     left: unset;
     right: 2rem;
-    cursor: pointer; }
+    cursor: pointer;
+    opacity: 0; }
   .compelete_profile .heading {
     margin: 4rem 0; }
     .compelete_profile .heading h2 {

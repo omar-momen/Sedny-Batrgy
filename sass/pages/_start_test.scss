@@ -43,7 +43,7 @@
           background-color: $lightGreen;
         }
         &.bad {
-          background-color: #eb4d4b;
+          background-color: crimson;
         }
         h3 {
           color: #fff;
@@ -229,7 +229,7 @@
             background: $lightGreen;
           }
           &.bad {
-            background: #eb4d4b;
+            background: crimson;
           }
         }
       }
@@ -274,7 +274,7 @@
               background-color: $lightGreen;
             }
             &.bad {
-              background-color: #eb4d4b;
+              background-color: crimson;
             }
           }
           @media (max-width: 575.98px) {

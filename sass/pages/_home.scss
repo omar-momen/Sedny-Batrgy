@@ -115,19 +115,42 @@
   background-size: cover;
   background-position: top;
   margin-bottom: 15rem;
-  .headphone {
-    position: absolute;
-    top: 2rem;
+  .whats_app,
+  .twitter {
+    position: fixed;
+    top: 47%;
     left: 0; // RTL
+    transform: translateY(-50%);
+    z-index: 99;
     width: 7rem;
     height: 5rem;
     background-color: #fff;
     box-shadow: 0 0.3rem 0.6rem #0000001f;
     border-radius: 0 4.5rem 4.5rem 0; // RTL
+    transition: 0.3s ease;
     @include flexCenter;
-    img {
-      width: 4rem;
-      max-width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    &.show {
+      opacity: 1;
+      visibility: visible;
+    }
+    i {
+      font-size: 3rem;
+      color: #3bb1de;
+      &:last-child {
+      }
+    }
+  }
+  .whats_app {
+    i {
+      color: #25d366;
+    }
+  }
+  .twitter {
+    top: 53%;
+    i {
+      color: #3bb1de;
     }
   }
   .heading {
@@ -815,7 +838,8 @@
 html[dir="rtl"] {
   // About
   .home_about_us {
-    .headphone {
+    .whats_app,
+    .twitter {
       left: unset;
       right: 0;
       border-radius: 4.5rem 0 0 4.5rem;
@@ -911,6 +935,9 @@ html[dir="rtl"] {
           left: 0.3rem;
         }
       }
+    }
+    .grid_items_container {
+      padding-bottom: 6rem;
     }
   }
 
