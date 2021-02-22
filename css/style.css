@@ -120,6 +120,10 @@ a {
   .scrollToTop i {
     color: #fff;
     font-size: 20px; }
+  @media (max-width: 992px) {
+    .scrollToTop {
+      transition: unset !important;
+      animation: unset !important; } }
 
 /****** End scrollToTop ******/
 /****** Start loading ******/
@@ -1391,6 +1395,10 @@ html[dir="rtl"] .partners .cards_slider .item .card_content .owner_img h3 {
       transform: scale(1.2); }
       .article_page .blogs .container .row .blog img:hover {
         transform: scale(1); }
+      @media (max-width: 992px) {
+        .article_page .blogs .container .row .blog img {
+          transition: unset !important;
+          animation: unset !important; } }
     .article_page .blogs .container .row .blog .text {
       width: 90%;
       background: #fff;
@@ -1485,6 +1493,10 @@ html[dir="rtl"] .partners .cards_slider .item .card_content .owner_img h3 {
           background: #6ed7ff; }
           .article_page .blogs .container .paginations ul li:hover a {
             color: #fff; }
+        @media (max-width: 992px) {
+          .article_page .blogs .container .paginations ul li {
+            transition: unset !important;
+            animation: unset !important; } }
 
 .login_page .login_img_box {
   position: relative;
@@ -1628,6 +1640,10 @@ html[dir="rtl"] .partners .cards_slider .item .card_content .owner_img h3 {
     .login_page .main_form input[type="submit"]:active {
       transform: translateY(0.3rem);
       box-shadow: none; }
+    @media (max-width: 992px) {
+      .login_page .main_form input[type="submit"] {
+        transition: unset !important;
+        animation: unset !important; } }
 .login_page .main_form label[for="password"] i:last-child {
   left: 90%;
   cursor: pointer;
@@ -1678,29 +1694,6 @@ html[dir="rtl"] .login_page .main_form label[for="password"] i:last-child {
   left: unset;
   right: 90%; }
 
-.tranining_development_page nav.nav {
-  position: absolute;
-  z-index: 1; }
-  .tranining_development_page nav.nav .main_nav .row .sign_in a {
-    color: #fff !important; }
-  .tranining_development_page nav.nav .main_nav .row form span {
-    background: #777 !important; }
-  .tranining_development_page nav.nav .main_nav .row .col:nth-child(3) .links li > a {
-    color: #fff; }
-  .tranining_development_page nav.nav .main_nav .row .col:nth-child(3) .links li.active {
-    border-bottom: 0.2rem solid #6ed7ff; }
-    .tranining_development_page nav.nav .main_nav .row .col:nth-child(3) .links li.active > a {
-      color: #6ed7ff; }
-    .tranining_development_page nav.nav .main_nav .row .col:nth-child(3) .links li.active:hover {
-      border-bottom: 0.2rem solid #6ed7ff; }
-      .tranining_development_page nav.nav .main_nav .row .col:nth-child(3) .links li.active:hover > a {
-        color: #6ed7ff; }
-  .tranining_development_page nav.nav .main_nav .row .col:nth-child(3) .links li:hover {
-    border-bottom: 0.2rem solid #fff; }
-    .tranining_development_page nav.nav .main_nav .row .col:nth-child(3) .links li:hover > a {
-      color: #fff; }
-  .tranining_development_page nav.nav .main_nav .row .logo {
-    background: transparent !important; }
 .tranining_development_page .tranining_development_header {
   position: relative;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/tranining_development_bg.png);
@@ -1790,6 +1783,10 @@ html[dir="rtl"] .login_page .main_form label[for="password"] i:last-child {
         transform: scale(1.2); }
         .tranining_development_page .services .container .row .service img:hover {
           transform: scale(1.1); }
+        @media (max-width: 992px) {
+          .tranining_development_page .services .container .row .service img {
+            transition: unset !important;
+            animation: unset !important; } }
       .tranining_development_page .services .container .row .service .text {
         width: 90%;
         background: #fff;
@@ -1971,30 +1968,11 @@ html[dir="rtl"] .login_page .main_form label[for="password"] i:last-child {
         .tranining_development_page .form_section .row > div .contact_form .main_form input[type="submit"]:active {
           transform: translateY(0.3rem);
           box-shadow: none; }
+        @media (max-width: 992px) {
+          .tranining_development_page .form_section .row > div .contact_form .main_form input[type="submit"] {
+            transition: unset !important;
+            animation: unset !important; } }
 
-.sub_article_page nav.nav {
-  position: absolute;
-  z-index: 1; }
-  .sub_article_page nav.nav .main_nav .row .sign_in a {
-    color: #fff !important; }
-  .sub_article_page nav.nav .main_nav .row form span {
-    background: #777 !important; }
-  .sub_article_page nav.nav .main_nav .row .col:nth-child(3) .links li > a {
-    color: #fff; }
-  .sub_article_page nav.nav .main_nav .row .col:nth-child(3) .links li.active {
-    border-bottom: 0.2rem solid #6ed7ff; }
-    .sub_article_page nav.nav .main_nav .row .col:nth-child(3) .links li.active > a {
-      color: #6ed7ff; }
-    .sub_article_page nav.nav .main_nav .row .col:nth-child(3) .links li.active:hover {
-      border-bottom: 0.2rem solid #6ed7ff; }
-      .sub_article_page nav.nav .main_nav .row .col:nth-child(3) .links li.active:hover > a {
-        color: #6ed7ff; }
-  .sub_article_page nav.nav .main_nav .row .col:nth-child(3) .links li:hover {
-    border-bottom: 0.2rem solid #fff; }
-    .sub_article_page nav.nav .main_nav .row .col:nth-child(3) .links li:hover > a {
-      color: #fff; }
-  .sub_article_page nav.nav .main_nav .row .logo {
-    background: transparent !important; }
 .sub_article_page .article_header {
   display: flex;
   justify-content: center;
@@ -2036,29 +2014,6 @@ html[dir="rtl"] .login_page .main_form label[for="password"] i:last-child {
       color: #131b2d;
       opacity: 0.5; }
 
-.services_page nav.nav {
-  position: absolute;
-  z-index: 1; }
-  .services_page nav.nav .main_nav .row .sign_in a {
-    color: #fff !important; }
-  .services_page nav.nav .main_nav .row form span {
-    background: #777 !important; }
-  .services_page nav.nav .main_nav .row .col:nth-child(3) .links li > a {
-    color: #fff; }
-  .services_page nav.nav .main_nav .row .col:nth-child(3) .links li.active {
-    border-bottom: 0.2rem solid #6ed7ff; }
-    .services_page nav.nav .main_nav .row .col:nth-child(3) .links li.active > a {
-      color: #6ed7ff; }
-    .services_page nav.nav .main_nav .row .col:nth-child(3) .links li.active:hover {
-      border-bottom: 0.2rem solid #6ed7ff; }
-      .services_page nav.nav .main_nav .row .col:nth-child(3) .links li.active:hover > a {
-        color: #6ed7ff; }
-  .services_page nav.nav .main_nav .row .col:nth-child(3) .links li:hover {
-    border-bottom: 0.2rem solid #fff; }
-    .services_page nav.nav .main_nav .row .col:nth-child(3) .links li:hover > a {
-      color: #fff; }
-  .services_page nav.nav .main_nav .row .logo {
-    background: transparent !important; }
 .services_page .services_header {
   display: flex;
   justify-content: center;
@@ -2401,6 +2356,10 @@ html[dir="rtl"] .login_page .main_form label[for="password"] i:last-child {
         .services_page .form_section .row > div .contact_form .main_form input[type="submit"]:active {
           transform: translateY(0.3rem);
           box-shadow: none; }
+        @media (max-width: 992px) {
+          .services_page .form_section .row > div .contact_form .main_form input[type="submit"] {
+            transition: unset !important;
+            animation: unset !important; } }
 
 #map {
   width: 100%;
@@ -2559,6 +2518,10 @@ html[dir="rtl"] .login_page .main_form label[for="password"] i:last-child {
         .contact_us .contact_form .main_form input[type="submit"]:active {
           transform: translateY(0.3rem);
           box-shadow: none; }
+        @media (max-width: 992px) {
+          .contact_us .contact_form .main_form input[type="submit"] {
+            transition: unset !important;
+            animation: unset !important; } }
 
 html[dir="rtl"] .main_form label i {
   left: unset;
@@ -2749,6 +2712,10 @@ html[dir="rtl"] .main_form label[for="confrim"] i:last-child {
     .start_test_page .start_test_bar .test_details .start_test_btn a:active {
       transform: translateY(0.3rem);
       box-shadow: none; }
+    @media (max-width: 992px) {
+      .start_test_page .start_test_bar .test_details .start_test_btn a {
+        transition: unset !important;
+        animation: unset !important; } }
     .start_test_page .start_test_bar .test_details .start_test_btn a.good {
       background: #4bb051; }
     .start_test_page .start_test_bar .test_details .start_test_btn a.bad {
@@ -2816,29 +2783,6 @@ html[dir="rtl"] .accordion-button::after {
 .swal2-html-container {
   text-align: center; }
 
-.quiz_page nav.nav {
-  position: absolute;
-  z-index: 1; }
-  .quiz_page nav.nav .main_nav .row .sign_in a {
-    color: #fff !important; }
-  .quiz_page nav.nav .main_nav .row form span {
-    background: #777 !important; }
-  .quiz_page nav.nav .main_nav .row .col:nth-child(3) .links li > a {
-    color: #fff; }
-  .quiz_page nav.nav .main_nav .row .col:nth-child(3) .links li.active {
-    border-bottom: 0.2rem solid #6ed7ff; }
-    .quiz_page nav.nav .main_nav .row .col:nth-child(3) .links li.active > a {
-      color: #6ed7ff; }
-    .quiz_page nav.nav .main_nav .row .col:nth-child(3) .links li.active:hover {
-      border-bottom: 0.2rem solid #6ed7ff; }
-      .quiz_page nav.nav .main_nav .row .col:nth-child(3) .links li.active:hover > a {
-        color: #6ed7ff; }
-  .quiz_page nav.nav .main_nav .row .col:nth-child(3) .links li:hover {
-    border-bottom: 0.2rem solid #fff; }
-    .quiz_page nav.nav .main_nav .row .col:nth-child(3) .links li:hover > a {
-      color: #fff; }
-  .quiz_page nav.nav .main_nav .row .logo {
-    background: transparent !important; }
 .quiz_page.stop_clicking {
   pointer-events: none; }
 .quiz_page .quiz_header {
@@ -2999,6 +2943,10 @@ html[dir="rtl"] .accordion-button::after {
     .quiz_page .finish_button button:active {
       transform: translateY(0.3rem);
       box-shadow: none; }
+    @media (max-width: 992px) {
+      .quiz_page .finish_button button {
+        transition: unset !important;
+        animation: unset !important; } }
 
 .swal2-container .swal2-popup .swal2-content {
   font-weight: bold; }
@@ -3015,6 +2963,10 @@ html[dir="rtl"] .accordion-button::after {
   .swal2-container .swal2-popup .swal2-actions .swal2-deny:active {
     transform: translateY(0.3rem);
     box-shadow: none; }
+  @media (max-width: 992px) {
+    .swal2-container .swal2-popup .swal2-actions .swal2-deny {
+      transition: unset !important;
+      animation: unset !important; } }
   .swal2-container .swal2-popup .swal2-actions .swal2-deny:hover {
     background-color: #ee1b1b; }
   .swal2-container .swal2-popup .swal2-actions .swal2-deny a {
@@ -3033,6 +2985,10 @@ html[dir="rtl"] .accordion-button::after {
   .swal2-container .swal2-popup .swal2-actions .swal2-confirm:active {
     transform: translateY(0.3rem);
     box-shadow: none; }
+  @media (max-width: 992px) {
+    .swal2-container .swal2-popup .swal2-actions .swal2-confirm {
+      transition: unset !important;
+      animation: unset !important; } }
   .swal2-container .swal2-popup .swal2-actions .swal2-confirm:hover {
     background-color: #6ed7ff; }
   .swal2-container .swal2-popup .swal2-actions .swal2-confirm a {
@@ -3100,6 +3056,10 @@ html[dir="rtl"] .quiz_page .question .answers_area .answer label::after {
         transition: all 0.4s ease; }
         .courses_page .courses_header .header_text .custom_search button:hover {
           background: #25b0e5d1; }
+        @media (max-width: 992px) {
+          .courses_page .courses_header .header_text .custom_search button {
+            transition: unset !important;
+            animation: unset !important; } }
     .courses_page .courses_header .header_text span {
       position: absolute;
       display: inline-block;
@@ -3148,6 +3108,10 @@ html[dir="rtl"] .quiz_page .question .answers_area .answer label::after {
       cursor: pointer; }
       .courses_page .courses_header .scroll_down a:hover .icons .fa-chevron-down {
         animation: arrow_down 1s ease-in-out infinite alternate; }
+      @media (max-width: 992px) {
+        .courses_page .courses_header .scroll_down a {
+          transition: unset !important;
+          animation: unset !important; } }
       .courses_page .courses_header .scroll_down a .icons {
         color: inherit;
         display: flex;
@@ -3248,6 +3212,10 @@ html[dir="rtl"] .quiz_page .question .answers_area .answer label::after {
         transform: scale(1.2); }
         .courses_page .courses .container .row .course img:hover {
           transform: scale(1.1); }
+        @media (max-width: 992px) {
+          .courses_page .courses .container .row .course img {
+            transition: unset !important;
+            animation: unset !important; } }
       .courses_page .courses .container .row .course .text {
         width: 90%;
         background: #fff;
@@ -3378,6 +3346,10 @@ html[dir="rtl"] .quiz_page .question .answers_area .answer label::after {
           background: #6ed7ff; }
           .courses_page .courses .container .paginations ul li:hover a {
             color: #fff; }
+        @media (max-width: 992px) {
+          .courses_page .courses .container .paginations ul li {
+            transition: unset !important;
+            animation: unset !important; } }
 
 body.fix_body {
   overflow: unset;
@@ -3718,6 +3690,10 @@ body.fix_body {
           .dashboard_page .tabs_wrapper .tabs_nav .add_new_client button:active {
             transform: translateY(0.3rem);
             box-shadow: none; }
+          @media (max-width: 992px) {
+            .dashboard_page .tabs_wrapper .tabs_nav .add_new_client button {
+              transition: unset !important;
+              animation: unset !important; } }
           .dashboard_page .tabs_wrapper .tabs_nav .add_new_client button i {
             margin: 0 0.5rem; }
   .dashboard_page .dashboard_content {
@@ -4186,6 +4162,10 @@ body.fix_body {
         .dashboard_page .dashboard_content .add_service_button button:active {
           transform: translateY(0.3rem);
           box-shadow: none; }
+        @media (max-width: 992px) {
+          .dashboard_page .dashboard_content .add_service_button button {
+            transition: unset !important;
+            animation: unset !important; } }
         .dashboard_page .dashboard_content .add_service_button button span {
           border-left: 1px solid #fff;
           padding-left: 1rem; }
@@ -4330,6 +4310,10 @@ body.fix_body {
           .add_client_modal .modal_body .modal_content .main_form input[type="submit"]:active {
             transform: translateY(0.3rem);
             box-shadow: none; }
+          @media (max-width: 992px) {
+            .add_client_modal .modal_body .modal_content .main_form input[type="submit"] {
+              transition: unset !important;
+              animation: unset !important; } }
       .add_client_modal .modal_body .modal_content .main_form label i {
         left: unset;
         right: 2rem; }
@@ -4455,6 +4439,10 @@ body.fix_body {
         .add_service_modal .modal_body form input[type="submit"]:active {
           transform: translateY(0.3rem);
           box-shadow: none; }
+        @media (max-width: 992px) {
+          .add_service_modal .modal_body form input[type="submit"] {
+            transition: unset !important;
+            animation: unset !important; } }
 
 .notify {
   position: fixed;
@@ -4737,6 +4725,10 @@ html[dir="rtl"] .dashboard_page .dash_nav {
       .compelete_profile .main_form input[type="submit"]:active {
         transform: translateY(0.3rem);
         box-shadow: none; }
+      @media (max-width: 992px) {
+        .compelete_profile .main_form input[type="submit"] {
+          transition: unset !important;
+          animation: unset !important; } }
   .compelete_profile .main_form label[for="password"] i:last-child,
   .compelete_profile .main_form label[for="confrim"] i:last-child,
   .compelete_profile .main_form label[for="oldPass"] i:last-child {
