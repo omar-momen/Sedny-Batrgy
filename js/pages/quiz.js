@@ -193,3 +193,12 @@ function count_Down(time) {
   });
 }
 count_Down(1800);
+
+// Main Nav Scroll Fixed
+$(window).scroll(function () {
+  if ($(window).scrollTop() > 350) {
+    $(".timer_box").addClass("scrolled");
+  } else {
+    $(".timer_box").removeClass("scrolled");
+  }
+});

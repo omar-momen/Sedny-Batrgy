@@ -176,7 +176,7 @@
     width: 42rem;
     max-width: 100%;
     position: relative;
-    margin: auto;
+    margin: 0 auto;
 
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
@@ -245,6 +245,17 @@
     .main_form label i {
       left: unset;
       right: 2.4rem;
+    }
+    .main_form {
+      label[for="password"],
+      label[for="confrim"] {
+        i {
+          &:last-child {
+            right: unset;
+            left: 2.4rem;
+          }
+        }
+      }
     }
   }
 }
@@ -405,6 +416,271 @@
       border-color: #6f6;
       box-shadow: 0 0 20px rgba(0, 255, 0, 0.6),
         inset 0 0 10px rgba(0, 255, 0, 0.4), 0 2px 0 #000;
+    }
+  }
+}
+
+@mixin our_clients {
+  .our_clients {
+    .heading {
+      @include underLineDotted;
+    }
+    .clients_slider {
+      margin: 3rem 0;
+      .item {
+        position: relative;
+        width: 100%;
+        height: 10rem;
+        padding: 0 2rem;
+        outline: none;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          top: 1rem;
+          right: 0;
+          width: 0.2rem;
+          height: 8rem;
+          background-color: rgba(204, 204, 204, 0.3);
+        }
+      }
+      @include slickDots;
+    }
+  }
+}
+
+@mixin our_atricles {
+  .our_articles {
+    position: relative;
+    color: #fff;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 58%;
+      height: 100%;
+      top: 0;
+      z-index: -1;
+      background: url(../img/articles_bg.png) no-repeat,
+        rgba($color: #000000, $alpha: 0.4);
+      background-blend-mode: overlay;
+      background-size: cover;
+      background-position: center;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 42%;
+      height: 100%;
+      top: 0;
+      right: 0; // RTL
+      z-index: -1;
+      background: $colorDark;
+      background-size: cover;
+      background-position: center;
+    }
+    .row {
+      align-items: center;
+      padding: 6rem 3rem;
+    }
+    .article_content {
+      padding: 0 4rem;
+    }
+    .heading {
+      @include underLineDotted;
+      user-select: none;
+      .line {
+        .sub_line {
+          &:first-child {
+            background-color: #fff;
+          }
+          &:last-child {
+            background-color: #fff;
+          }
+        }
+      }
+    }
+    .content {
+      user-select: none;
+      .slick-prev {
+        display: none !important;
+      }
+      .slick-next {
+        display: none !important;
+      }
+      .item {
+        outline: none;
+        p {
+          font-size: 2.5rem;
+        }
+      }
+    }
+
+    .articles_slider {
+      .item {
+        position: relative;
+        height: 25rem;
+        max-width: 100%;
+        margin: 10px;
+        outline: none;
+        transition: 0.3s;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            0,
+            rgba(0, 0, 0, 0.6) 30%,
+            rgba(0, 0, 0, 0) 100%
+          );
+          bottom: 0;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        a {
+          position: absolute;
+          bottom: 1rem;
+          text-decoration: none;
+          color: #fff;
+          text-align: center;
+          outline: none;
+          transition: 0.3s;
+          font-size: 1.4rem;
+          &:hover {
+            color: $colorLight;
+          }
+        }
+        &.slick-current {
+          box-shadow: 0 0 0.6rem 0.2rem #fff;
+        }
+        &:focus,
+        &:hover {
+          box-shadow: 0 0 0.6rem 0.2rem #fff;
+        }
+      }
+      @include slickDots;
+      .slick-dots {
+        li {
+          button {
+            border-color: rgba($color: #fff, $alpha: 0.5);
+            &::before {
+              color: #fff;
+            }
+            &:hover {
+              &::before {
+                color: rgba($color: #fff, $alpha: 0.4);
+              }
+            }
+          }
+          &.slick-active {
+            button {
+              &::before {
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@mixin partners {
+  .partners {
+    background: url(../icons/partners_bg.svg) no-repeat;
+    background-size: cover;
+    height: 78vh;
+    margin-bottom: 10rem;
+    @media (max-width: 767.98px) {
+      height: 60vh;
+    }
+    .heading {
+      @include underLineDotted;
+    }
+    .cards_slider {
+      margin-top: 3rem;
+      height: 34rem;
+      .slick-list {
+        height: 100% !important;
+      }
+
+      .item {
+        max-width: 100%;
+        padding: 2rem;
+        margin: 2rem 1rem 0;
+        background-color: #fff;
+        border-radius: 0.6rem;
+        box-shadow: 0px 0 0.6rem 0.3rem #0000001a;
+        outline: none;
+        &.slick-current {
+          .card_content {
+            i {
+              color: $colorLight;
+            }
+          }
+        }
+        &:hover {
+          .card_content {
+            i {
+              color: $colorLight;
+            }
+          }
+        }
+        .card_content {
+          position: relative;
+          padding: 4rem;
+          border: 0.1rem dashed $colorLight;
+          height: 100%;
+          i {
+            position: absolute;
+            font-size: 4rem;
+            color: #efefef;
+            transition: 0.3s ease;
+            &:first-of-type {
+              bottom: 2rem;
+              left: 2rem;
+            }
+            &:last-of-type {
+              top: 2rem;
+              right: 2rem;
+            }
+          }
+          .owner_img {
+            position: absolute;
+            bottom: -7rem;
+            right: 2rem;
+            @include flexCenter;
+            img {
+              width: 12rem;
+              height: 12rem;
+              object-fit: cover;
+              border: 0.2rem solid $colorLight;
+              border-radius: 50%;
+              order: 2;
+              box-shadow: 0 0 0.6rem 0.2rem rgba($color: #000000, $alpha: 0.5);
+              image-rendering: pixelated;
+            }
+            h3 {
+              color: $colorLight;
+              font-weight: bold;
+              order: 1;
+              margin: 2rem 1rem 0;
+              align-self: flex-start;
+              text-transform: capitalize;
+            }
+          }
+          p {
+            font-size: 2.2rem;
+          }
+        }
+      }
+      @include slickDots;
     }
   }
 }

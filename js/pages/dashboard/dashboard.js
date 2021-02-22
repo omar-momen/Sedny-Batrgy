@@ -8,16 +8,6 @@ dashtabs.forEach((tab) => {
   });
 });
 
-// Tabs Filter
-let tabsFilter = document.querySelectorAll(".tabs_filter input");
-
-tabsFilter.forEach((element) => {
-  element.addEventListener("click", function () {
-    tabsFilter.forEach((filter) => filter.removeAttribute("checked"));
-    this.setAttribute("checked", "");
-  });
-});
-
 // Counter Up
 $(".counter_up").countTo({
   speed: 7000,
@@ -151,6 +141,9 @@ submitButton.onclick = function (e) {
     validationElement.classList.add("show");
     emailInput.classList.add("alert");
     passwordInput.classList.add("alert");
+    document.getElementById("created").style.opacity = "0";
+  } else {
+    document.getElementById("created").style.opacity = "1";
   }
 };
 
@@ -168,6 +161,7 @@ document.addEventListener("keyup", function (e) {
       e.target.value.match(numbers)
     ) {
       e.target.classList.remove("alert");
+      document.getElementById("created").style.opacity = "1";
     }
   }
 });
@@ -197,3 +191,90 @@ modelContainer.onclick = function () {
 modelBody.onclick = function (e) {
   e.stopPropagation();
 };
+
+// Active and Inactive Button
+let statusBtn = document.querySelector(".status_btn button");
+
+statusBtn.onclick = function () {
+  this.classList.toggle("active");
+};
+
+// Start Service Content
+let serviceInfoEl = document.querySelector(".service_info");
+let serviceDropBtn = document.querySelector(".service_button");
+
+let condition = false;
+
+serviceDropBtn.onclick = function () {
+  if (!condition) {
+    condition = true;
+    serviceInfoEl.style.display = "block";
+    this.classList.add("active");
+    setTimeout(() => {
+      serviceInfoEl.classList.add("active");
+    }, 50);
+  } else if (condition) {
+    condition = false;
+    serviceInfoEl.classList.remove("active");
+    this.classList.remove("active");
+    this.style.transition = `all 0.3s ease`;
+    this.style.transform = `translateY(${serviceInfoEl.offsetHeight * -1}px)`;
+    setTimeout(() => {
+      this.style.transition = `unset`;
+      this.style.transform = `translateY(0)`;
+      serviceInfoEl.style.display = "none";
+    }, 300);
+  }
+};
+
+// Add Service Popup
+let addServiceContainer = document.querySelector(".add_service_modal");
+let addServiceButton = document.getElementById("add_service");
+let serviceModelBody = document.querySelector(".add_service_modal .modal_body");
+let serviceColoseBtn = document.querySelector(
+  ".add_service_modal .close_modal button"
+);
+let serviceFinishBtn = document.querySelector(
+  ".add_service_modal input[type='submit']"
+);
+
+addServiceButton.onclick = function () {
+  addServiceContainer.classList.add("show");
+  serviceModelBody.classList.add("show");
+};
+
+serviceColoseBtn.onclick = function () {
+  addServiceContainer.classList.remove("show");
+  serviceModelBody.classList.remove("show");
+};
+
+serviceFinishBtn.onclick = function () {
+  addServiceContainer.classList.remove("show");
+  serviceModelBody.classList.remove("show");
+};
+
+addServiceContainer.onclick = function () {
+  addServiceContainer.classList.remove("show");
+  serviceModelBody.classList.remove("show");
+};
+
+serviceModelBody.onclick = function (e) {
+  e.stopPropagation();
+};
+
+// Progress Bar
+let progressItem = document.querySelectorAll(".progress_item");
+let statusIcon = document.querySelectorAll(".status_icon");
+let progressIcon = document.querySelectorAll(".status_icon i");
+
+// progressItem.forEach((element) => {
+//   element.onclick = function () {
+//     statusIcon.forEach((stat) => {
+//       stat.classList.add("inactive");
+//     });
+//   };
+// });
+// progressItem.onclick = function () {
+//   statusIcon.classList.toggle("inactive");
+//   progressIcon.classList.toggle("fa-times");
+// };

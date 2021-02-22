@@ -40,11 +40,21 @@ $(".header_slices_carousal").slick({
     },
   ],
 });
+
 $(".header_slices_carousal .slick-slide").hover(function () {
   $(".header_fill_carousal .slick-next").click();
   $(this).addClass("slick-current").siblings().removeClass("slick-current");
 });
 /******* End Header Carousals ********/
+
+// Start Whatsapp and Twitter popup
+$(window).scroll(function () {
+  if ($(window).scrollTop() > 500) {
+    $(".whats_app, .twitter ").addClass("show");
+  } else {
+    $(".whats_app, .twitter ").removeClass("show");
+  }
+});
 
 // About US Section
 $("#videoPopup").magnificPopup({

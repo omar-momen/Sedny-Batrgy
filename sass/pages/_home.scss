@@ -18,25 +18,19 @@
     flex-direction: column;
     flex-wrap: wrap;
     background-color: #fff;
-    box-shadow: 0 0 0.8rem 0.4rem rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 0.8rem 0.4rem #0000001a;
+    width: 30rem;
     max-width: 100%;
     position: relative;
     transform: translateY(-0.3rem);
     transition: 0.3s ease;
+    border-top: 0.5rem solid;
+    border-radius: 0.7rem;
     &:hover {
       transform: translateY(0.3rem);
       box-shadow: 0 0 0.3rem 0.1rem rgba(0, 0, 0, 0.3);
     }
-    &::before {
-      content: "";
-      position: absolute;
-      top: -0.5rem;
-      left: 0;
-      width: 100%;
-      height: 0.5rem;
-      transform-origin: bottom;
-      transform: skewX(-45deg);
-    }
+
     &::after {
       content: "";
       position: absolute;
@@ -44,50 +38,42 @@
       height: 100%;
     }
     &:first-of-type {
-      &::before {
-        background-color: $lightPurple;
-      }
+      border-color: $lightPurple;
       &::after {
         background: linear-gradient(
           90deg,
           rgba(255, 255, 255, 0) 50%,
-          rgba(76, 28, 213, 0.1) 50%
+          rgba(76, 28, 213, 0.03) 50%
         );
       }
     }
     &:nth-of-type(2) {
-      &::before {
-        background-color: $lightBlue;
-      }
+      border-color: $lightBlue;
       &::after {
         background: linear-gradient(
           90deg,
           rgba(255, 255, 255, 0) 50%,
-          rgba(2, 101, 236, 0.1) 50%
+          rgba(2, 101, 236, 0.03) 50%
         );
       }
     }
     &:nth-of-type(3) {
-      &::before {
-        background-color: $lightGreen;
-      }
+      border-color: $lightGreen;
       &::after {
         background: linear-gradient(
           90deg,
           rgba(255, 255, 255, 0) 50%,
-          rgba(75, 176, 81, 0.1) 50%
+          rgba(75, 176, 81, 0.03) 50%
         );
       }
     }
     &:last-of-type {
-      &::before {
-        background-color: $lightBlack;
-      }
+      border-color: $lightBlack;
       &::after {
         background: linear-gradient(
           90deg,
           rgba(255, 255, 255, 0) 50%,
-          rgba(44, 62, 81, 0.1) 50%
+          rgba(44, 62, 81, 0.03) 50%
         );
       }
     }
@@ -129,19 +115,42 @@
   background-size: cover;
   background-position: top;
   margin-bottom: 15rem;
-  .headphone {
-    position: absolute;
-    top: 2rem;
+  .whats_app,
+  .twitter {
+    position: fixed;
+    top: 47%;
     left: 0; // RTL
+    transform: translateY(-50%);
+    z-index: 99;
     width: 7rem;
     height: 5rem;
     background-color: #fff;
     box-shadow: 0 0.3rem 0.6rem #0000001f;
     border-radius: 0 4.5rem 4.5rem 0; // RTL
+    transition: 0.3s ease;
     @include flexCenter;
-    img {
-      width: 4rem;
-      max-width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    &.show {
+      opacity: 1;
+      visibility: visible;
+    }
+    i {
+      font-size: 3rem;
+      color: #3bb1de;
+      &:last-child {
+      }
+    }
+  }
+  .whats_app {
+    i {
+      color: #25d366;
+    }
+  }
+  .twitter {
+    top: 53%;
+    i {
+      color: #3bb1de;
     }
   }
   .heading {
@@ -437,6 +446,9 @@
     grid-template-rows: auto;
     padding: 15rem 2rem;
     gap: 2rem;
+    @media (min-width: 1400px) {
+      padding: 19rem 2rem;
+    }
 
     .grid_item {
       &:first-child {
@@ -815,273 +827,19 @@
 }
 
 // Our Clients
-.our_clients {
-  .heading {
-    @include underLineDotted;
-  }
-  .clients_slider {
-    margin: 3rem 0;
-    .item {
-      position: relative;
-      width: 100%;
-      height: 10rem;
-      padding: 0 2rem;
-      outline: none;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-      }
-      &:after {
-        content: "";
-        position: absolute;
-        top: 1rem;
-        right: 0;
-        width: 0.2rem;
-        height: 8rem;
-        background-color: rgba(204, 204, 204, 0.3);
-      }
-    }
-    @include slickDots;
-  }
-}
+@include our_clients;
 
 // Our Articles
-.our_articles {
-  position: relative;
-  color: #fff;
-  &::before {
-    content: "";
-    position: absolute;
-    width: 58%;
-    height: 100%;
-    top: 0;
-    z-index: -1;
-    background: url(../img/articles_bg.png) no-repeat,
-      rgba($color: #000000, $alpha: 0.4);
-    background-blend-mode: overlay;
-    background-size: cover;
-    background-position: center;
-  }
-  &::after {
-    content: "";
-    position: absolute;
-    width: 42%;
-    height: 100%;
-    top: 0;
-    right: 0; // RTL
-    z-index: -1;
-    background: $colorDark;
-    background-size: cover;
-    background-position: center;
-  }
-  .row {
-    align-items: center;
-    padding: 6rem 3rem;
-  }
-  .article_content {
-    padding: 0 4rem;
-  }
-  .heading {
-    @include underLineDotted;
-    user-select: none;
-    .line {
-      .sub_line {
-        &:first-child {
-          background-color: #fff;
-        }
-        &:last-child {
-          background-color: #fff;
-        }
-      }
-    }
-  }
-  .content {
-    user-select: none;
-    .slick-prev {
-      display: none !important;
-    }
-    .slick-next {
-      display: none !important;
-    }
-    .item {
-      outline: none;
-      p {
-        font-size: 2.5rem;
-      }
-    }
-  }
-
-  .articles_slider {
-    .item {
-      position: relative;
-      height: 25rem;
-      max-width: 100%;
-      margin: 10px;
-      outline: none;
-      transition: 0.3s;
-      &::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          0,
-          rgba(0, 0, 0, 0.6) 30%,
-          rgba(0, 0, 0, 0) 100%
-        );
-        bottom: 0;
-      }
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-      a {
-        position: absolute;
-        bottom: 1rem;
-        text-decoration: none;
-        color: #fff;
-        text-align: center;
-        outline: none;
-        transition: 0.3s;
-        font-size: 1.4rem;
-        &:hover {
-          color: $colorLight;
-        }
-      }
-      &.slick-current {
-        box-shadow: 0 0 0.6rem 0.2rem #fff;
-      }
-      &:focus,
-      &:hover {
-        box-shadow: 0 0 0.6rem 0.2rem #fff;
-      }
-    }
-    @include slickDots;
-    .slick-dots {
-      li {
-        button {
-          border-color: rgba($color: #fff, $alpha: 0.5);
-          &::before {
-            color: #fff;
-          }
-          &:hover {
-            &::before {
-              color: rgba($color: #fff, $alpha: 0.4);
-            }
-          }
-        }
-        &.slick-active {
-          button {
-            &::before {
-              color: #fff;
-            }
-          }
-        }
-      }
-    }
-  }
-}
+@include our_atricles;
 
 // Our Partners
-.partners {
-  background: url(../icons/partners_bg.svg) no-repeat;
-  background-size: cover;
-  height: 100vh;
-  margin-bottom: 10rem;
-  @media (max-width: 767.98px) {
-    height: 60vh;
-  }
-  .heading {
-    @include underLineDotted;
-  }
-  .cards_slider {
-    margin-top: 3rem;
-    height: 34rem;
-    .slick-list {
-      height: 100% !important;
-    }
-
-    .item {
-      max-width: 100%;
-      padding: 2rem;
-      margin: 2rem 1rem 0;
-      background-color: #fff;
-      border-radius: 0.6rem;
-      box-shadow: 0px 0 0.6rem 0.3rem #0000001a;
-      outline: none;
-      &.slick-current {
-        .card_content {
-          i {
-            color: $colorLight;
-          }
-        }
-      }
-      &:hover {
-        .card_content {
-          i {
-            color: $colorLight;
-          }
-        }
-      }
-      .card_content {
-        position: relative;
-        padding: 4rem;
-        border: 0.1rem dashed $colorLight;
-        height: 100%;
-        i {
-          position: absolute;
-          font-size: 4rem;
-          color: #efefef;
-          transition: 0.3s ease;
-          &:first-of-type {
-            bottom: 2rem;
-            left: 2rem;
-          }
-          &:last-of-type {
-            top: 2rem;
-            right: 2rem;
-          }
-        }
-        .owner_img {
-          position: absolute;
-          bottom: -7rem;
-          right: 2rem;
-          @include flexCenter;
-          img {
-            width: 12rem;
-            height: 12rem;
-            object-fit: cover;
-            border: 0.2rem solid $colorLight;
-            border-radius: 50%;
-            order: 2;
-            box-shadow: 0 0 0.6rem 0.2rem rgba($color: #000000, $alpha: 0.5);
-            image-rendering: pixelated;
-          }
-          h3 {
-            color: $colorLight;
-            font-weight: bold;
-            order: 1;
-            margin: 2rem 1rem 0;
-            align-self: flex-start;
-            text-transform: capitalize;
-          }
-        }
-        p {
-          font-size: 2.2rem;
-        }
-      }
-    }
-    @include slickDots;
-  }
-}
-
+@include partners;
 // Start RTL
 html[dir="rtl"] {
   // About
   .home_about_us {
-    .headphone {
+    .whats_app,
+    .twitter {
       left: unset;
       right: 0;
       border-radius: 4.5rem 0 0 4.5rem;
@@ -1177,6 +935,9 @@ html[dir="rtl"] {
           left: 0.3rem;
         }
       }
+    }
+    .grid_items_container {
+      padding-bottom: 6rem;
     }
   }
 
