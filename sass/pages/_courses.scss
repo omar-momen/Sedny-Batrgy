@@ -53,6 +53,10 @@
           &:hover {
             background: #25b0e5d1;
           }
+          @media (max-width: 992px) {
+            transition: unset !important;
+            animation: unset !important;
+          }
         }
       }
       span {
@@ -111,6 +115,10 @@
               animation: arrow_down 1s ease-in-out infinite alternate;
             }
           }
+        }
+        @media (max-width: 992px) {
+          transition: unset !important;
+          animation: unset !important;
         }
         .icons {
           color: inherit;
@@ -224,6 +232,10 @@
             transform: scale(1.2);
             &:hover {
               transform: scale(1.1);
+            }
+            @media (max-width: 992px) {
+              transition: unset !important;
+              animation: unset !important;
             }
           }
           .text {
@@ -358,6 +370,10 @@
               a {
                 color: #fff;
               }
+            }
+            @media (max-width: 992px) {
+              transition: unset !important;
+              animation: unset !important;
             }
           }
         }

@@ -137,6 +137,10 @@
             &:hover {
               transform: scale(1);
             }
+            @media (max-width: 992px) {
+              transition: unset !important;
+              animation: unset !important;
+            }
           }
           .text {
             width: 90%;
@@ -227,6 +231,10 @@
               a {
                 color: #fff;
               }
+            }
+            @media (max-width: 992px) {
+              transition: unset !important;
+              animation: unset !important;
             }
           }
         }
