@@ -130,13 +130,13 @@
           &.sections_tow {
             .upper {
               span:first-child {
-                border: 1px solid #0365ec;
+                border: 1px solid #6ed7ff;
                 i {
-                  color: #0365ec;
+                  color: #6ed7ff;
                 }
               }
               span:nth-child(2) {
-                color: #0365ec;
+                color: #6ed7ff;
               }
             }
           }
@@ -156,26 +156,26 @@
           &.sections_four {
             .upper {
               span:first-child {
-                border: 1px solid #2d3e50;
+                border: 1px solid #2c3e51;
                 i {
-                  color: #2d3e50;
+                  color: #2c3e51;
                 }
               }
               span:nth-child(2) {
-                color: #2d3e50;
+                color: #2c3e51;
               }
             }
           }
           &.sections_five {
             .upper {
               span:first-child {
-                border: 1px solid #f8b800;
+                border: 1px solid #0265ec;
                 i {
-                  color: #f8b800;
+                  color: #0265ec;
                 }
               }
               span:nth-child(2) {
-                color: #f8b800;
+                color: #0265ec;
               }
             }
           }
@@ -241,6 +241,9 @@
                 flex-grow: 1;
                 color: #1c335b;
                 cursor: pointer;
+                a {
+                  color: #1c335b;
+                }
               }
             }
           }

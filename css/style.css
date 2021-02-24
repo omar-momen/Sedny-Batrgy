@@ -1658,10 +1658,6 @@ html[dir="rtl"] .partners .cards_slider .item .card_content .owner_img h3 {
     .login_page .main_form input:focus {
       outline: none;
       box-shadow: 0 0 6px 3px #6ed7ff; }
-    @media (max-width: 992px) {
-      .login_page .main_form input {
-        transition: unset !important;
-        animation: unset !important; } }
   .login_page .main_form input[type="email"],
   .login_page .main_form input[type="password"] {
     margin-bottom: 0; }
@@ -1669,11 +1665,6 @@ html[dir="rtl"] .partners .cards_slider .item .card_content .owner_img h3 {
     .login_page .main_form input[type="password"].alert {
       outline: none;
       box-shadow: 0 0 6px 3px #e74c3c; }
-    @media (max-width: 992px) {
-      .login_page .main_form input[type="email"],
-      .login_page .main_form input[type="password"] {
-        transition: unset !important;
-        animation: unset !important; } }
   .login_page .main_form input[type="submit"] {
     margin-top: 2rem;
     background: transparent linear-gradient(90deg, #5ad1ff 0%, #25b0e5 100%, #9d009e 100%);
@@ -1686,10 +1677,6 @@ html[dir="rtl"] .partners .cards_slider .item .card_content .owner_img h3 {
     .login_page .main_form input[type="submit"]:active {
       transform: translateY(0.3rem);
       box-shadow: none; }
-    @media (max-width: 992px) {
-      .login_page .main_form input[type="submit"] {
-        transition: unset !important;
-        animation: unset !important; } }
     @media (max-width: 992px) {
       .login_page .main_form input[type="submit"] {
         transition: unset !important;
@@ -1999,10 +1986,6 @@ html[dir="rtl"] .login_page .main_form label[for="password"] i:last-child {
         .tranining_development_page .form_section .row > div .contact_form .main_form input:focus {
           outline: none;
           box-shadow: 0 0 6px 3px #6ed7ff; }
-        @media (max-width: 992px) {
-          .tranining_development_page .form_section .row > div .contact_form .main_form input {
-            transition: unset !important;
-            animation: unset !important; } }
       .tranining_development_page .form_section .row > div .contact_form .main_form input[type="email"],
       .tranining_development_page .form_section .row > div .contact_form .main_form input[type="password"] {
         margin-bottom: 0; }
@@ -2010,11 +1993,6 @@ html[dir="rtl"] .login_page .main_form label[for="password"] i:last-child {
         .tranining_development_page .form_section .row > div .contact_form .main_form input[type="password"].alert {
           outline: none;
           box-shadow: 0 0 6px 3px #e74c3c; }
-        @media (max-width: 992px) {
-          .tranining_development_page .form_section .row > div .contact_form .main_form input[type="email"],
-          .tranining_development_page .form_section .row > div .contact_form .main_form input[type="password"] {
-            transition: unset !important;
-            animation: unset !important; } }
       .tranining_development_page .form_section .row > div .contact_form .main_form input[type="submit"] {
         margin-top: 2rem;
         background: transparent linear-gradient(90deg, #5ad1ff 0%, #25b0e5 100%, #9d009e 100%);
@@ -2027,10 +2005,6 @@ html[dir="rtl"] .login_page .main_form label[for="password"] i:last-child {
         .tranining_development_page .form_section .row > div .contact_form .main_form input[type="submit"]:active {
           transform: translateY(0.3rem);
           box-shadow: none; }
-        @media (max-width: 992px) {
-          .tranining_development_page .form_section .row > div .contact_form .main_form input[type="submit"] {
-            transition: unset !important;
-            animation: unset !important; } }
         @media (max-width: 992px) {
           .tranining_development_page .form_section .row > div .contact_form .main_form input[type="submit"] {
             transition: unset !important;
@@ -2509,11 +2483,11 @@ html[dir="rtl"] .tranining_development_page .partners .cards_slider .item .card_
       .services_page .services_filter .row .filter .filter_section.sections_one .upper span:nth-child(2) {
         color: #4cb050; }
       .services_page .services_filter .row .filter .filter_section.sections_tow .upper span:first-child {
-        border: 1px solid #0365ec; }
+        border: 1px solid #6ed7ff; }
         .services_page .services_filter .row .filter .filter_section.sections_tow .upper span:first-child i {
-          color: #0365ec; }
+          color: #6ed7ff; }
       .services_page .services_filter .row .filter .filter_section.sections_tow .upper span:nth-child(2) {
-        color: #0365ec; }
+        color: #6ed7ff; }
       .services_page .services_filter .row .filter .filter_section.sections_three .upper span:first-child {
         border: 1px solid #4d1cd5; }
         .services_page .services_filter .row .filter .filter_section.sections_three .upper span:first-child i {
@@ -2521,17 +2495,17 @@ html[dir="rtl"] .tranining_development_page .partners .cards_slider .item .card_
       .services_page .services_filter .row .filter .filter_section.sections_three .upper span:nth-child(2) {
         color: #4d1cd5; }
       .services_page .services_filter .row .filter .filter_section.sections_four .upper span:first-child {
-        border: 1px solid #2d3e50; }
+        border: 1px solid #2c3e51; }
         .services_page .services_filter .row .filter .filter_section.sections_four .upper span:first-child i {
-          color: #2d3e50; }
+          color: #2c3e51; }
       .services_page .services_filter .row .filter .filter_section.sections_four .upper span:nth-child(2) {
-        color: #2d3e50; }
+        color: #2c3e51; }
       .services_page .services_filter .row .filter .filter_section.sections_five .upper span:first-child {
-        border: 1px solid #f8b800; }
+        border: 1px solid #0265ec; }
         .services_page .services_filter .row .filter .filter_section.sections_five .upper span:first-child i {
-          color: #f8b800; }
+          color: #0265ec; }
       .services_page .services_filter .row .filter .filter_section.sections_five .upper span:nth-child(2) {
-        color: #f8b800; }
+        color: #0265ec; }
       .services_page .services_filter .row .filter .filter_section .upper {
         border: 1px solid #70707026;
         display: flex;
@@ -2582,6 +2556,8 @@ html[dir="rtl"] .tranining_development_page .partners .cards_slider .item .card_
             flex-grow: 1;
             color: #1c335b;
             cursor: pointer; }
+            .services_page .services_filter .row .filter .filter_section form .form-check_custom label a {
+              color: #1c335b; }
       .services_page .services_filter .row .filter .filter_section .link {
         padding: 1rem; }
         .services_page .services_filter .row .filter .filter_section .link a {
@@ -3000,10 +2976,6 @@ html[dir="rtl"] .tranining_development_page .partners .cards_slider .item .card_
         .services_page .form_section .row > div .contact_form .main_form input:focus {
           outline: none;
           box-shadow: 0 0 6px 3px #6ed7ff; }
-        @media (max-width: 992px) {
-          .services_page .form_section .row > div .contact_form .main_form input {
-            transition: unset !important;
-            animation: unset !important; } }
       .services_page .form_section .row > div .contact_form .main_form input[type="email"],
       .services_page .form_section .row > div .contact_form .main_form input[type="password"] {
         margin-bottom: 0; }
@@ -3011,11 +2983,6 @@ html[dir="rtl"] .tranining_development_page .partners .cards_slider .item .card_
         .services_page .form_section .row > div .contact_form .main_form input[type="password"].alert {
           outline: none;
           box-shadow: 0 0 6px 3px #e74c3c; }
-        @media (max-width: 992px) {
-          .services_page .form_section .row > div .contact_form .main_form input[type="email"],
-          .services_page .form_section .row > div .contact_form .main_form input[type="password"] {
-            transition: unset !important;
-            animation: unset !important; } }
       .services_page .form_section .row > div .contact_form .main_form input[type="submit"] {
         margin-top: 2rem;
         background: transparent linear-gradient(90deg, #5ad1ff 0%, #25b0e5 100%, #9d009e 100%);
@@ -3028,10 +2995,6 @@ html[dir="rtl"] .tranining_development_page .partners .cards_slider .item .card_
         .services_page .form_section .row > div .contact_form .main_form input[type="submit"]:active {
           transform: translateY(0.3rem);
           box-shadow: none; }
-        @media (max-width: 992px) {
-          .services_page .form_section .row > div .contact_form .main_form input[type="submit"] {
-            transition: unset !important;
-            animation: unset !important; } }
         @media (max-width: 992px) {
           .services_page .form_section .row > div .contact_form .main_form input[type="submit"] {
             transition: unset !important;
@@ -3187,10 +3150,6 @@ html[dir="rtl"] .services_page .partners .cards_slider .item .card_content .owne
         .contact_us .contact_form .main_form input:focus {
           outline: none;
           box-shadow: 0 0 6px 3px #6ed7ff; }
-        @media (max-width: 992px) {
-          .contact_us .contact_form .main_form input {
-            transition: unset !important;
-            animation: unset !important; } }
       .contact_us .contact_form .main_form input[type="email"],
       .contact_us .contact_form .main_form input[type="password"] {
         margin-bottom: 0; }
@@ -3198,11 +3157,6 @@ html[dir="rtl"] .services_page .partners .cards_slider .item .card_content .owne
         .contact_us .contact_form .main_form input[type="password"].alert {
           outline: none;
           box-shadow: 0 0 6px 3px #e74c3c; }
-        @media (max-width: 992px) {
-          .contact_us .contact_form .main_form input[type="email"],
-          .contact_us .contact_form .main_form input[type="password"] {
-            transition: unset !important;
-            animation: unset !important; } }
       .contact_us .contact_form .main_form input[type="submit"] {
         margin-top: 2rem;
         background: transparent linear-gradient(90deg, #5ad1ff 0%, #25b0e5 100%, #9d009e 100%);
@@ -3215,10 +3169,6 @@ html[dir="rtl"] .services_page .partners .cards_slider .item .card_content .owne
         .contact_us .contact_form .main_form input[type="submit"]:active {
           transform: translateY(0.3rem);
           box-shadow: none; }
-        @media (max-width: 992px) {
-          .contact_us .contact_form .main_form input[type="submit"] {
-            transition: unset !important;
-            animation: unset !important; } }
         @media (max-width: 992px) {
           .contact_us .contact_form .main_form input[type="submit"] {
             transition: unset !important;
@@ -3918,7 +3868,7 @@ html[dir="rtl"] .quiz_page .question .answers_area .answer label::after {
         height: 5rem;
         clip-path: polygon(50% 0%, 100% 0, 76% 51%, 100% 100%, 100% 100%, 50% 100%, 0 100%, 0% 70%, 0% 35%, 0 0); }
         .courses_page .courses .container .row .course .padg span {
-          font-size: 1.9rem; }
+          font-size: 1.7rem; }
       .courses_page .courses .container .row .course img {
         width: 100%;
         height: 60%;
@@ -5095,10 +5045,6 @@ body.fix_body {
           .add_client_modal .modal_body .modal_content .main_form input:focus {
             outline: none;
             box-shadow: 0 0 6px 3px #6ed7ff; }
-          @media (max-width: 992px) {
-            .add_client_modal .modal_body .modal_content .main_form input {
-              transition: unset !important;
-              animation: unset !important; } }
         .add_client_modal .modal_body .modal_content .main_form input[type="email"],
         .add_client_modal .modal_body .modal_content .main_form input[type="password"] {
           margin-bottom: 0; }
@@ -5106,11 +5052,6 @@ body.fix_body {
           .add_client_modal .modal_body .modal_content .main_form input[type="password"].alert {
             outline: none;
             box-shadow: 0 0 6px 3px #e74c3c; }
-          @media (max-width: 992px) {
-            .add_client_modal .modal_body .modal_content .main_form input[type="email"],
-            .add_client_modal .modal_body .modal_content .main_form input[type="password"] {
-              transition: unset !important;
-              animation: unset !important; } }
         .add_client_modal .modal_body .modal_content .main_form input[type="submit"] {
           margin-top: 2rem;
           background: transparent linear-gradient(90deg, #5ad1ff 0%, #25b0e5 100%, #9d009e 100%);
@@ -5123,10 +5064,6 @@ body.fix_body {
           .add_client_modal .modal_body .modal_content .main_form input[type="submit"]:active {
             transform: translateY(0.3rem);
             box-shadow: none; }
-          @media (max-width: 992px) {
-            .add_client_modal .modal_body .modal_content .main_form input[type="submit"] {
-              transition: unset !important;
-              animation: unset !important; } }
           @media (max-width: 992px) {
             .add_client_modal .modal_body .modal_content .main_form input[type="submit"] {
               transition: unset !important;
@@ -5585,10 +5522,6 @@ html[dir="rtl"] .dashboard_page .dash_nav {
       .compelete_profile .main_form input:focus {
         outline: none;
         box-shadow: 0 0 6px 3px #6ed7ff; }
-      @media (max-width: 992px) {
-        .compelete_profile .main_form input {
-          transition: unset !important;
-          animation: unset !important; } }
     .compelete_profile .main_form input[type="email"],
     .compelete_profile .main_form input[type="password"] {
       margin-bottom: 0; }
@@ -5596,11 +5529,6 @@ html[dir="rtl"] .dashboard_page .dash_nav {
       .compelete_profile .main_form input[type="password"].alert {
         outline: none;
         box-shadow: 0 0 6px 3px #e74c3c; }
-      @media (max-width: 992px) {
-        .compelete_profile .main_form input[type="email"],
-        .compelete_profile .main_form input[type="password"] {
-          transition: unset !important;
-          animation: unset !important; } }
     .compelete_profile .main_form input[type="submit"] {
       margin-top: 2rem;
       background: transparent linear-gradient(90deg, #5ad1ff 0%, #25b0e5 100%, #9d009e 100%);
@@ -5613,10 +5541,6 @@ html[dir="rtl"] .dashboard_page .dash_nav {
       .compelete_profile .main_form input[type="submit"]:active {
         transform: translateY(0.3rem);
         box-shadow: none; }
-      @media (max-width: 992px) {
-        .compelete_profile .main_form input[type="submit"] {
-          transition: unset !important;
-          animation: unset !important; } }
       @media (max-width: 992px) {
         .compelete_profile .main_form input[type="submit"] {
           transition: unset !important;
@@ -6147,7 +6071,7 @@ html[dir="rtl"] .main_form label[for="confrim"] i:last-child {
     .navbar .form_section .close_form_section:hover i {
       color: red; }
   .navbar .webdesigntuts-workshop {
-    background: #131b2d;
+    background: #333;
     height: 100%;
     position: fixed;
     top: 0;
@@ -6301,11 +6225,28 @@ header.header {
     height: 100%;
     width: 100%;
     clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 60%, 100% 100%, 49% 95%, 0 100%, 0 73%, 0 35%, 0 0); }
+    header.header .header_slices_carousal .slick-arrow {
+      z-index: 2;
+      width: 4rem;
+      height: 4rem; }
+      header.header .header_slices_carousal .slick-arrow:hover::before {
+        color: #fff;
+        opacity: 1; }
+      header.header .header_slices_carousal .slick-arrow::before {
+        color: #eee;
+        transition: all 0.3s ease;
+        font-size: 4rem;
+        opacity: 0.8; }
+      header.header .header_slices_carousal .slick-arrow.slick-prev {
+        left: 1rem; }
+      header.header .header_slices_carousal .slick-arrow.slick-next {
+        right: 1rem; }
     header.header .header_slices_carousal .slick-list {
       height: inherit; }
       header.header .header_slices_carousal .slick-list .slick-track {
         height: inherit; }
         header.header .header_slices_carousal .slick-list .slick-track .slick-slide {
+          outline: none;
           position: relative;
           transition: all 0.4s ease;
           height: inherit;

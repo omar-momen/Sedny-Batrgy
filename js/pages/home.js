@@ -11,7 +11,7 @@ $(".header_slices_carousal").slick({
   autoplay: true,
   autoplaySpeed: 5000,
   speed: 500,
-  arrows: false,
+  arrows: true,
   slidesToShow: 4,
   slidesToScroll: 1,
   asNavFor: ".header_fill_carousal",
