@@ -342,11 +342,12 @@ a {
     .home_about_us .twitter i {
       font-size: 3rem;
       color: #3bb1de; }
-  .home_about_us .whats_app i {
-    color: #25d366; }
-  .home_about_us .twitter {
-    top: 45%;
+  .home_about_us .whats_app {
     margin-top: 6rem; }
+    .home_about_us .whats_app i {
+      color: #25d366; }
+  .home_about_us .twitter {
+    top: 45%; }
     .home_about_us .twitter i {
       color: #3bb1de; }
   .home_about_us .heading .line {
