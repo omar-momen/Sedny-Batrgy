@@ -54,11 +54,35 @@ header.header {
       0 35%,
       0 0
     );
+    .slick-arrow {
+      z-index: 2;
+      width: 4rem;
+      height: 4rem;
+      &:hover {
+        &::before {
+          color: #fff;
+          opacity: 1;
+        }
+      }
+      &::before {
+        color: #eee;
+        transition: all 0.3s ease;
+        font-size: 4rem;
+        opacity: 0.8;
+      }
+      &.slick-prev {
+        left: 1rem;
+      }
+      &.slick-next {
+        right: 1rem;
+      }
+    }
     .slick-list {
       height: inherit;
       .slick-track {
         height: inherit;
         .slick-slide {
+          outline: none;
           position: relative;
           transition: all 0.4s ease;
           &.slick-current {
