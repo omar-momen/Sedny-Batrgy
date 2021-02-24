@@ -261,6 +261,10 @@ a {
     .issues_section .flex:hover {
       transform: translateY(0.3rem);
       box-shadow: 0 0 0.3rem 0.1rem rgba(0, 0, 0, 0.3); }
+    @media (max-width: 992px) {
+      .issues_section .flex {
+        transition: unset !important;
+        animation: unset !important; } }
     .issues_section .flex::after {
       content: "";
       position: absolute;
@@ -315,9 +319,9 @@ a {
   .home_about_us .whats_app,
   .home_about_us .twitter {
     position: fixed;
-    top: 47%;
+    top: 45%;
     left: 0;
-    transform: translateY(-50%);
+    transform: translateY(-45%);
     z-index: 99;
     width: 7rem;
     height: 5rem;
@@ -341,7 +345,8 @@ a {
   .home_about_us .whats_app i {
     color: #25d366; }
   .home_about_us .twitter {
-    top: 53%; }
+    top: 45%;
+    margin-top: 6rem; }
     .home_about_us .twitter i {
       color: #3bb1de; }
   .home_about_us .heading .line {
@@ -412,8 +417,16 @@ a {
         @media (max-width: 479.98px) {
           .home_about_us .about_content button i {
             animation: buttonChevronHoverSm 1s ease infinite alternate; } }
+        @media (max-width: 992px) {
+          .home_about_us .about_content button i {
+            transition: unset !important;
+            animation: unset !important; } }
       .home_about_us .about_content button:hover {
         background-color: #34c7ff; }
+      @media (max-width: 992px) {
+        .home_about_us .about_content button {
+          transition: unset !important;
+          animation: unset !important; } }
   .home_about_us .about_video {
     grid-column: 7 / span 12;
     grid-row: 1 / span 4;
@@ -487,6 +500,10 @@ a {
             width: 9rem;
             height: 9rem;
             font-size: 5rem; }
+          @media (max-width: 992px) {
+            .home_about_us .about_video .video_wrapper a span {
+              transition: unset !important;
+              animation: unset !important; } }
 
 .clients_number {
   background: url(../img/main_bg_3.png) fixed no-repeat;
@@ -524,6 +541,10 @@ a {
       transition: 0.5s; }
       .clients_number .grid_item i:hover {
         transform: rotate(360deg); }
+      @media (max-width: 992px) {
+        .clients_number .grid_item i {
+          transition: unset !important;
+          animation: unset !important; } }
     .clients_number .grid_item span:first-of-type {
       font-size: 3rem; }
     .clients_number .grid_item .type {
@@ -702,6 +723,10 @@ a {
         border: 0.1rem solid #1c335b; }
       .our_services .grid_container .btn:hover {
         background-color: #93e0fd; }
+      @media (max-width: 992px) {
+        .our_services .grid_container .btn {
+          transition: unset !important;
+          animation: unset !important; } }
   .our_services .grid_items_container {
     display: grid;
     grid: auto/repeat(auto-fit, minmax(10rem, 1fr));
@@ -714,6 +739,10 @@ a {
       cursor: pointer; }
       .our_services .grid_items_container .grid_item.active:hover img {
         filter: invert(22%) sepia(75%) saturate(2000%) hue-rotate(170deg) brightness(100%) contrast(100%); }
+      @media (max-width: 992px) {
+        .our_services .grid_items_container .grid_item.active {
+          transition: unset !important;
+          animation: unset !important; } }
       .our_services .grid_items_container .grid_item.active img {
         filter: invert(22%) sepia(75%) saturate(2000%) hue-rotate(170deg) brightness(100%) contrast(100%); }
       .our_services .grid_items_container .grid_item.active span {
@@ -722,6 +751,10 @@ a {
         filter: invert(22%) sepia(75%) saturate(150%) hue-rotate(145deg) brightness(100%) contrast(100%); }
       .our_services .grid_items_container .grid_item:hover span {
         color: #fff; }
+      @media (max-width: 992px) {
+        .our_services .grid_items_container .grid_item {
+          transition: unset !important;
+          animation: unset !important; } }
       .our_services .grid_items_container .grid_item img {
         max-width: 100%;
         grid-column: 1;
@@ -1252,6 +1285,10 @@ html[dir="rtl"] .home_about_us .about_content {
       @media (max-width: 479.98px) {
         html[dir="rtl"] .home_about_us .about_content button i {
           animation: buttonChevronHoverSm 1s ease infinite alternate; } }
+      @media (max-width: 992px) {
+        html[dir="rtl"] .home_about_us .about_content button i {
+          transition: unset !important;
+          animation: unset !important; } }
 html[dir="rtl"] .home_about_us .about_video .video_wrapper::before {
   right: unset;
   left: -1rem; }
@@ -1620,6 +1657,10 @@ html[dir="rtl"] .partners .cards_slider .item .card_content .owner_img h3 {
     .login_page .main_form input:focus {
       outline: none;
       box-shadow: 0 0 6px 3px #6ed7ff; }
+    @media (max-width: 992px) {
+      .login_page .main_form input {
+        transition: unset !important;
+        animation: unset !important; } }
   .login_page .main_form input[type="email"],
   .login_page .main_form input[type="password"] {
     margin-bottom: 0; }
@@ -1627,6 +1668,11 @@ html[dir="rtl"] .partners .cards_slider .item .card_content .owner_img h3 {
     .login_page .main_form input[type="password"].alert {
       outline: none;
       box-shadow: 0 0 6px 3px #e74c3c; }
+    @media (max-width: 992px) {
+      .login_page .main_form input[type="email"],
+      .login_page .main_form input[type="password"] {
+        transition: unset !important;
+        animation: unset !important; } }
   .login_page .main_form input[type="submit"] {
     margin-top: 2rem;
     background: transparent linear-gradient(90deg, #5ad1ff 0%, #25b0e5 100%, #9d009e 100%);
@@ -1639,6 +1685,10 @@ html[dir="rtl"] .partners .cards_slider .item .card_content .owner_img h3 {
     .login_page .main_form input[type="submit"]:active {
       transform: translateY(0.3rem);
       box-shadow: none; }
+    @media (max-width: 992px) {
+      .login_page .main_form input[type="submit"] {
+        transition: unset !important;
+        animation: unset !important; } }
     @media (max-width: 992px) {
       .login_page .main_form input[type="submit"] {
         transition: unset !important;
@@ -1948,6 +1998,10 @@ html[dir="rtl"] .login_page .main_form label[for="password"] i:last-child {
         .tranining_development_page .form_section .row > div .contact_form .main_form input:focus {
           outline: none;
           box-shadow: 0 0 6px 3px #6ed7ff; }
+        @media (max-width: 992px) {
+          .tranining_development_page .form_section .row > div .contact_form .main_form input {
+            transition: unset !important;
+            animation: unset !important; } }
       .tranining_development_page .form_section .row > div .contact_form .main_form input[type="email"],
       .tranining_development_page .form_section .row > div .contact_form .main_form input[type="password"] {
         margin-bottom: 0; }
@@ -1955,6 +2009,11 @@ html[dir="rtl"] .login_page .main_form label[for="password"] i:last-child {
         .tranining_development_page .form_section .row > div .contact_form .main_form input[type="password"].alert {
           outline: none;
           box-shadow: 0 0 6px 3px #e74c3c; }
+        @media (max-width: 992px) {
+          .tranining_development_page .form_section .row > div .contact_form .main_form input[type="email"],
+          .tranining_development_page .form_section .row > div .contact_form .main_form input[type="password"] {
+            transition: unset !important;
+            animation: unset !important; } }
       .tranining_development_page .form_section .row > div .contact_form .main_form input[type="submit"] {
         margin-top: 2rem;
         background: transparent linear-gradient(90deg, #5ad1ff 0%, #25b0e5 100%, #9d009e 100%);
@@ -1967,6 +2026,10 @@ html[dir="rtl"] .login_page .main_form label[for="password"] i:last-child {
         .tranining_development_page .form_section .row > div .contact_form .main_form input[type="submit"]:active {
           transform: translateY(0.3rem);
           box-shadow: none; }
+        @media (max-width: 992px) {
+          .tranining_development_page .form_section .row > div .contact_form .main_form input[type="submit"] {
+            transition: unset !important;
+            animation: unset !important; } }
         @media (max-width: 992px) {
           .tranining_development_page .form_section .row > div .contact_form .main_form input[type="submit"] {
             transition: unset !important;
@@ -2336,6 +2399,10 @@ html[dir="rtl"] .login_page .main_form label[for="password"] i:last-child {
         .services_page .form_section .row > div .contact_form .main_form input:focus {
           outline: none;
           box-shadow: 0 0 6px 3px #6ed7ff; }
+        @media (max-width: 992px) {
+          .services_page .form_section .row > div .contact_form .main_form input {
+            transition: unset !important;
+            animation: unset !important; } }
       .services_page .form_section .row > div .contact_form .main_form input[type="email"],
       .services_page .form_section .row > div .contact_form .main_form input[type="password"] {
         margin-bottom: 0; }
@@ -2343,6 +2410,11 @@ html[dir="rtl"] .login_page .main_form label[for="password"] i:last-child {
         .services_page .form_section .row > div .contact_form .main_form input[type="password"].alert {
           outline: none;
           box-shadow: 0 0 6px 3px #e74c3c; }
+        @media (max-width: 992px) {
+          .services_page .form_section .row > div .contact_form .main_form input[type="email"],
+          .services_page .form_section .row > div .contact_form .main_form input[type="password"] {
+            transition: unset !important;
+            animation: unset !important; } }
       .services_page .form_section .row > div .contact_form .main_form input[type="submit"] {
         margin-top: 2rem;
         background: transparent linear-gradient(90deg, #5ad1ff 0%, #25b0e5 100%, #9d009e 100%);
@@ -2355,6 +2427,10 @@ html[dir="rtl"] .login_page .main_form label[for="password"] i:last-child {
         .services_page .form_section .row > div .contact_form .main_form input[type="submit"]:active {
           transform: translateY(0.3rem);
           box-shadow: none; }
+        @media (max-width: 992px) {
+          .services_page .form_section .row > div .contact_form .main_form input[type="submit"] {
+            transition: unset !important;
+            animation: unset !important; } }
         @media (max-width: 992px) {
           .services_page .form_section .row > div .contact_form .main_form input[type="submit"] {
             transition: unset !important;
@@ -2431,6 +2507,10 @@ html[dir="rtl"] .login_page .main_form label[for="password"] i:last-child {
         .contact_us .contact_info .social_links li a:hover {
           background-color: #6ed7ff;
           color: #fff; }
+        @media (max-width: 992px) {
+          .contact_us .contact_info .social_links li a {
+            transition: unset !important;
+            animation: unset !important; } }
   .contact_us .contact_form {
     background-color: #fff;
     border-radius: 0 0.8rem 0.8rem 0; }
@@ -2498,6 +2578,10 @@ html[dir="rtl"] .login_page .main_form label[for="password"] i:last-child {
         .contact_us .contact_form .main_form input:focus {
           outline: none;
           box-shadow: 0 0 6px 3px #6ed7ff; }
+        @media (max-width: 992px) {
+          .contact_us .contact_form .main_form input {
+            transition: unset !important;
+            animation: unset !important; } }
       .contact_us .contact_form .main_form input[type="email"],
       .contact_us .contact_form .main_form input[type="password"] {
         margin-bottom: 0; }
@@ -2505,6 +2589,11 @@ html[dir="rtl"] .login_page .main_form label[for="password"] i:last-child {
         .contact_us .contact_form .main_form input[type="password"].alert {
           outline: none;
           box-shadow: 0 0 6px 3px #e74c3c; }
+        @media (max-width: 992px) {
+          .contact_us .contact_form .main_form input[type="email"],
+          .contact_us .contact_form .main_form input[type="password"] {
+            transition: unset !important;
+            animation: unset !important; } }
       .contact_us .contact_form .main_form input[type="submit"] {
         margin-top: 2rem;
         background: transparent linear-gradient(90deg, #5ad1ff 0%, #25b0e5 100%, #9d009e 100%);
@@ -2517,6 +2606,10 @@ html[dir="rtl"] .login_page .main_form label[for="password"] i:last-child {
         .contact_us .contact_form .main_form input[type="submit"]:active {
           transform: translateY(0.3rem);
           box-shadow: none; }
+        @media (max-width: 992px) {
+          .contact_us .contact_form .main_form input[type="submit"] {
+            transition: unset !important;
+            animation: unset !important; } }
         @media (max-width: 992px) {
           .contact_us .contact_form .main_form input[type="submit"] {
             transition: unset !important;
@@ -2711,6 +2804,10 @@ html[dir="rtl"] .main_form label[for="confrim"] i:last-child {
     .start_test_page .start_test_bar .test_details .start_test_btn a:active {
       transform: translateY(0.3rem);
       box-shadow: none; }
+    @media (max-width: 992px) {
+      .start_test_page .start_test_bar .test_details .start_test_btn a {
+        transition: unset !important;
+        animation: unset !important; } }
     @media (max-width: 992px) {
       .start_test_page .start_test_bar .test_details .start_test_btn a {
         transition: unset !important;
@@ -2946,6 +3043,10 @@ html[dir="rtl"] .accordion-button::after {
       .quiz_page .finish_button button {
         transition: unset !important;
         animation: unset !important; } }
+    @media (max-width: 992px) {
+      .quiz_page .finish_button button {
+        transition: unset !important;
+        animation: unset !important; } }
 
 .swal2-container .swal2-popup .swal2-content {
   font-weight: bold; }
@@ -2968,6 +3069,10 @@ html[dir="rtl"] .accordion-button::after {
       animation: unset !important; } }
   .swal2-container .swal2-popup .swal2-actions .swal2-deny:hover {
     background-color: #ee1b1b; }
+  @media (max-width: 992px) {
+    .swal2-container .swal2-popup .swal2-actions .swal2-deny {
+      transition: unset !important;
+      animation: unset !important; } }
   .swal2-container .swal2-popup .swal2-actions .swal2-deny a {
     color: #fff;
     text-decoration: none; }
@@ -2990,6 +3095,10 @@ html[dir="rtl"] .accordion-button::after {
       animation: unset !important; } }
   .swal2-container .swal2-popup .swal2-actions .swal2-confirm:hover {
     background-color: #6ed7ff; }
+  @media (max-width: 992px) {
+    .swal2-container .swal2-popup .swal2-actions .swal2-confirm {
+      transition: unset !important;
+      animation: unset !important; } }
   .swal2-container .swal2-popup .swal2-actions .swal2-confirm a {
     color: #fff;
     text-decoration: none; }
@@ -3466,6 +3575,10 @@ body.fix_body {
               justify-content: space-evenly; }
               .dashboard_page .dash_nav .notifcation_bar .user_details .profile_menu li a:hover {
                 color: #27b0e4; }
+              @media (max-width: 992px) {
+                .dashboard_page .dash_nav .notifcation_bar .user_details .profile_menu li a {
+                  transition: unset !important;
+                  animation: unset !important; } }
         .dashboard_page .dash_nav .notifcation_bar .user_details span {
           margin: 0 1rem;
           font-weight: bold;
@@ -3649,9 +3762,10 @@ body.fix_body {
         padding-left: 2rem; }
         .dashboard_page .tabs_wrapper .tabs_nav .tabs ul li {
           position: relative;
+          font-size: 1.8rem;
+          font-weight: bold;
           padding: 1.5rem;
           margin: 3rem 0;
-          text-align: center;
           user-select: none;
           transition: 0.3s;
           cursor: pointer; }
@@ -3660,8 +3774,7 @@ body.fix_body {
           .dashboard_page .tabs_wrapper .tabs_nav .tabs ul li a {
             color: #fff;
             text-decoration: none;
-            padding-bottom: 2.5rem;
-            padding-left: 2rem; }
+            padding-bottom: 2.5rem; }
           .dashboard_page .tabs_wrapper .tabs_nav .tabs ul li.active {
             position: relative;
             border: none;
@@ -3715,6 +3828,10 @@ body.fix_body {
             .dashboard_page .tabs_wrapper .tabs_nav .add_new_client button {
               transition: unset !important;
               animation: unset !important; } }
+          @media (max-width: 992px) {
+            .dashboard_page .tabs_wrapper .tabs_nav .add_new_client button {
+              transition: unset !important;
+              animation: unset !important; } }
           .dashboard_page .tabs_wrapper .tabs_nav .add_new_client button i {
             margin: 0 0.5rem; }
   .dashboard_page .dashboard_content {
@@ -3733,23 +3850,27 @@ body.fix_body {
       transition: 0.3s; }
       .dashboard_page .dashboard_content .category_item:hover {
         box-shadow: 0px 0.3rem 0.1rem 0 rgba(0, 0, 0, 0.1); }
+      @media (max-width: 992px) {
+        .dashboard_page .dashboard_content .category_item {
+          transition: unset !important;
+          animation: unset !important; } }
       .dashboard_page .dashboard_content .category_item .category {
         padding: 1rem 2rem; }
         .dashboard_page .dashboard_content .category_item .category span {
           display: block; }
           .dashboard_page .dashboard_content .category_item .category span:first-of-type {
             color: #131b2d;
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: bold;
             margin-bottom: 1rem; }
           .dashboard_page .dashboard_content .category_item .category span:nth-child(2) {
             display: inline;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: 600;
             color: #6ed7ff; }
           .dashboard_page .dashboard_content .category_item .category span:nth-child(3) {
             display: inline;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: 600;
             color: #6ed7ff; }
       .dashboard_page .dashboard_content .category_item .category_icon {
@@ -3913,287 +4034,302 @@ body.fix_body {
             .dashboard_page .dashboard_content .company_info .info_elements .company_email span:last-child {
               margin: 0 1rem;
               color: #6ed7ff; }
-    .dashboard_page .dashboard_content .service_content .service_head {
-      background-color: #fff;
-      padding: 3rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem 0; }
-      .dashboard_page .dashboard_content .service_content .service_head h3 {
-        flex-grow: 1; }
-      .dashboard_page .dashboard_content .service_content .service_head .start_date,
-      .dashboard_page .dashboard_content .service_content .service_head .expire_date,
-      .dashboard_page .dashboard_content .service_content .service_head .service_code {
-        flex: 1 0 auto;
-        display: flex;
-        align-items: center; }
-        .dashboard_page .dashboard_content .service_content .service_head .start_date i,
-        .dashboard_page .dashboard_content .service_content .service_head .expire_date i,
-        .dashboard_page .dashboard_content .service_content .service_head .service_code i {
-          color: #48cafb;
-          font-size: 1.6rem;
-          margin-left: 0.8rem; }
-        .dashboard_page .dashboard_content .service_content .service_head .start_date span,
-        .dashboard_page .dashboard_content .service_content .service_head .expire_date span,
-        .dashboard_page .dashboard_content .service_content .service_head .service_code span {
-          font-size: 1.6rem;
-          font-weight: 600; }
-          .dashboard_page .dashboard_content .service_content .service_head .start_date span:last-child,
-          .dashboard_page .dashboard_content .service_content .service_head .expire_date span:last-child,
-          .dashboard_page .dashboard_content .service_content .service_head .service_code span:last-child {
-            margin: 0 1rem;
-            color: #6ed7ff;
-            font-weight: normal; }
-    .dashboard_page .dashboard_content .service_content .service_info {
-      text-align: center;
-      background-color: #fff;
-      border-top: 1px solid rgba(0, 0, 0, 0.3);
-      padding: 4rem 3rem;
-      transition: all 0.3s ease;
-      transform: translateY(-40rem) scale(0);
-      opacity: 0;
-      visibility: hidden;
-      display: none; }
-      @media (max-width: 410px) {
-        .dashboard_page .dashboard_content .service_content .service_info {
-          padding: 4rem 0; } }
-      .dashboard_page .dashboard_content .service_content .service_info.active {
-        transform: translateY(0) scale(1);
-        opacity: 1;
-        visibility: visible;
-        display: block; }
-      .dashboard_page .dashboard_content .service_content .service_info .service_progress {
-        direction: ltr; }
-        .dashboard_page .dashboard_content .service_content .service_info .service_progress.no_click {
-          pointer-events: none; }
-        .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps {
-          display: flex;
-          justify-content: space-between;
-          align-items: center; }
-          .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li {
-            flex: 0 0 16.666666666666666667%;
-            cursor: pointer; }
-            .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li .step_status {
-              color: #89c152;
-              user-select: none; }
-              .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li .step_status span {
-                text-align: center;
-                display: block; }
-                .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li .step_status span:first-child {
-                  margin: 0.5rem 0;
-                  font-size: 1.8rem;
-                  font-weight: bold; }
-                  @media (max-width: 410px) {
-                    .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li .step_status span:first-child {
-                      font-size: 1rem; } }
-                .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li .step_status span:last-child {
-                  font-size: 1.2rem;
-                  margin: 0.5rem 0; }
-                  @media (max-width: 410px) {
-                    .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li .step_status span:last-child {
-                      font-size: 1rem; } }
-            .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li:not(:first-child) .step_shape::after {
-              content: "";
-              position: absolute;
-              z-index: 2;
-              height: 3rem;
-              left: -35%;
-              width: 70%;
-              background-color: #fff;
-              border-top: 0.2rem dashed #89c152;
-              border-bottom: 0.2rem dashed #89c152; }
-              @media (max-width: 410px) {
-                .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li:not(:first-child) .step_shape::after {
-                  left: -15%;
-                  width: 31%; } }
-              @media (min-width: 410px) {
-                .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li:not(:first-child) .step_shape::after {
-                  left: -23%;
-                  width: 45%; } }
-              @media (min-width: 480px) {
-                .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li:not(:first-child) .step_shape::after {
-                  left: -28%;
-                  width: 55%; } }
-              @media (min-width: 576px) {
-                .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li:not(:first-child) .step_shape::after {
-                  left: -32%;
-                  width: 64%; } }
-              @media (min-width: 768px) {
-                .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li:not(:first-child) .step_shape::after {
-                  left: -30%;
-                  width: 59%; } }
-              @media (min-width: 992px) {
-                .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li:not(:first-child) .step_shape::after {
-                  left: -29%;
-                  width: 58%; } }
-              @media (min-width: 1200px) {
-                .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li:not(:first-child) .step_shape::after {
-                  left: -33%;
-                  width: 66%; } }
-              @media (min-width: 1400px) {
-                .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li:not(:first-child) .step_shape::after {
-                  left: -38%;
-                  width: 76%; } }
-            .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li .step_shape {
-              position: relative;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              padding: 2rem;
-              border-radius: 50%;
-              cursor: pointer; }
-              .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li .step_shape::before {
-                content: "";
-                position: absolute;
-                width: 7rem;
-                height: 7rem;
-                border-radius: 50%;
-                background-color: transparent;
-                border: 0.2rem dashed #89c152; }
-              .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li .step_shape .step_icon {
-                position: relative;
-                width: 5rem;
-                height: 5rem;
-                background-color: #e4e4e4;
-                border-radius: 50%;
-                filter: drop-shadow(0px 0px 0.2rem rgba(0, 0, 0, 0.5));
-                display: flex;
-                justify-content: center;
-                align-items: center; }
-                .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li .step_shape .step_icon::before {
-                  content: "\f111";
-                  position: absolute;
-                  font-family: "Font Awesome 5 Free";
-                  font-weight: 900;
-                  font-size: 2.5rem;
-                  color: #89c152; }
-            .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li.active .step_status {
-              color: #1a3673; }
-            .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li.active .step_shape {
-              z-index: 6; }
-              .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li.active .step_shape::before {
-                background-color: #89c152; }
-              .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li.active .step_shape::after {
-                background-color: #89c152; }
-              .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li.active .step_shape .step_icon::before {
-                content: "\f00c"; }
-    .dashboard_page .dashboard_content .service_content .payments {
-      margin-top: 5rem; }
-      .dashboard_page .dashboard_content .service_content .payments .head {
-        background-color: #27394c;
-        color: #fff;
-        padding: 2rem;
-        border-radius: 0.4rem;
-        box-shadow: 0 0 0.6rem 0.3rem #0000001a; }
-        .dashboard_page .dashboard_content .service_content .payments .head h3 {
-          display: flex;
-          justify-content: space-around; }
-      .dashboard_page .dashboard_content .service_content .payments .batch {
-        font-size: 1.6rem;
+    .dashboard_page .dashboard_content .service_content {
+      border-radius: 0.4rem; }
+      .dashboard_page .dashboard_content .service_content .service_head {
+        background-color: #fff;
+        padding: 3rem;
         display: flex;
         flex-wrap: wrap;
         gap: 2rem 0;
-        border: 1px solid #27394c;
-        margin-top: 1rem;
-        padding: 2rem;
-        justify-content: space-between;
-        border-radius: 0.4rem;
-        box-shadow: 0 0 0.6rem 0.3rem #0000001a; }
-        .dashboard_page .dashboard_content .service_content .payments .batch .batch_budget,
-        .dashboard_page .dashboard_content .service_content .payments .batch .batch_status,
-        .dashboard_page .dashboard_content .service_content .payments .batch .batch_code {
+        border-radius: 0.4rem 0.4rem 0 0; }
+        .dashboard_page .dashboard_content .service_content .service_head h3 {
+          flex-grow: 1; }
+        .dashboard_page .dashboard_content .service_content .service_head .start_date,
+        .dashboard_page .dashboard_content .service_content .service_head .expire_date,
+        .dashboard_page .dashboard_content .service_content .service_head .service_code {
           flex: 1 0 auto;
-          font-weight: bold; }
-          .dashboard_page .dashboard_content .service_content .payments .batch .batch_budget span:first-child,
-          .dashboard_page .dashboard_content .service_content .payments .batch .batch_status span:first-child,
-          .dashboard_page .dashboard_content .service_content .payments .batch .batch_code span:first-child {
-            font-weight: bold;
-            color: #131b2d; }
-          .dashboard_page .dashboard_content .service_content .payments .batch .batch_budget span:last-child,
-          .dashboard_page .dashboard_content .service_content .payments .batch .batch_status span:last-child,
-          .dashboard_page .dashboard_content .service_content .payments .batch .batch_code span:last-child {
-            font-weight: normal;
-            color: #6ed7ff;
-            margin: 0 1.5rem; }
-        .dashboard_page .dashboard_content .service_content .payments .batch .batch_status span:last-child {
-          color: #4bb051; }
-        .dashboard_page .dashboard_content .service_content .payments .batch.inactive {
-          color: #777;
-          border-color: #777; }
-          .dashboard_page .dashboard_content .service_content .payments .batch.inactive span {
-            color: #777 !important; }
-    .dashboard_page .dashboard_content .service_content .reports {
-      margin-top: 5rem;
-      box-shadow: 0 0 0.6rem 0.3rem #0000001a; }
-      .dashboard_page .dashboard_content .service_content .reports .head {
-        background-color: #131b2d;
-        color: #fff;
-        padding: 2rem;
-        display: flex;
-        justify-content: space-between;
-        border-radius: 0.4rem; }
-        .dashboard_page .dashboard_content .service_content .reports .head form input[type="button"] {
-          font-size: 1.4rem;
-          background-color: #fff;
-          color: #777;
-          padding: 0.5rem 2rem;
-          border: none;
-          outline: none;
-          border-radius: 0.3rem; }
-        .dashboard_page .dashboard_content .service_content .reports .head form label[for="upload"] {
-          font-size: 1.4rem;
-          padding: 0.5rem 1rem;
-          margin: 0 1.5rem;
-          border: 1px solid #fff;
-          border-radius: 0.3rem;
-          cursor: pointer; }
-          .dashboard_page .dashboard_content .service_content .reports .head form label[for="upload"] i {
-            margin: 0 1rem; }
-        .dashboard_page .dashboard_content .service_content .reports .head form input[type="file"] {
-          display: none; }
-      .dashboard_page .dashboard_content .service_content .reports .report_files {
-        margin-top: 1rem;
-        padding: 2rem; }
-        .dashboard_page .dashboard_content .service_content .reports .report_files .file {
           display: flex;
-          align-items: center;
-          justify-content: space-between; }
-          .dashboard_page .dashboard_content .service_content .reports .report_files .file:not(:last-child) {
-            border-bottom: 1px solid #d6d6d6;
-            margin-bottom: 3rem; }
-          .dashboard_page .dashboard_content .service_content .reports .report_files .file .report_title img {
-            width: 4rem;
-            max-width: 100%; }
-          .dashboard_page .dashboard_content .service_content .reports .report_files .file .report_title span {
+          align-items: center; }
+          .dashboard_page .dashboard_content .service_content .service_head .start_date i,
+          .dashboard_page .dashboard_content .service_content .service_head .expire_date i,
+          .dashboard_page .dashboard_content .service_content .service_head .service_code i {
+            color: #48cafb;
             font-size: 1.6rem;
-            margin: 0 1rem; }
-          .dashboard_page .dashboard_content .service_content .reports .report_files .file .file_data span {
+            margin-left: 0.8rem; }
+          .dashboard_page .dashboard_content .service_content .service_head .start_date span,
+          .dashboard_page .dashboard_content .service_content .service_head .expire_date span,
+          .dashboard_page .dashboard_content .service_content .service_head .service_code span {
             font-size: 1.6rem;
-            padding: 0 1rem;
-            border-left: 1px solid #777; }
-          .dashboard_page .dashboard_content .service_content .reports .report_files .file .file_data a {
-            padding-right: 1rem; }
-            .dashboard_page .dashboard_content .service_content .reports .report_files .file .file_data a img {
+            font-weight: 600; }
+            .dashboard_page .dashboard_content .service_content .service_head .start_date span:last-child,
+            .dashboard_page .dashboard_content .service_content .service_head .expire_date span:last-child,
+            .dashboard_page .dashboard_content .service_content .service_head .service_code span:last-child {
+              margin: 0 1rem;
+              color: #6ed7ff;
+              font-weight: normal; }
+      .dashboard_page .dashboard_content .service_content .service_info {
+        text-align: center;
+        background-color: #fff;
+        border-top: 1px solid rgba(0, 0, 0, 0.3);
+        padding: 4rem 3rem;
+        transition: all 0.3s ease;
+        transform: translateY(-40rem) scale(0);
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+        box-shadow: 0 0 0.6rem 0.3rem #0000001a; }
+        @media (max-width: 410px) {
+          .dashboard_page .dashboard_content .service_content .service_info {
+            padding: 4rem 0; } }
+        .dashboard_page .dashboard_content .service_content .service_info.active {
+          transform: translateY(0) scale(1);
+          opacity: 1;
+          visibility: visible;
+          display: block; }
+        .dashboard_page .dashboard_content .service_content .service_info .service_progress {
+          direction: ltr; }
+          .dashboard_page .dashboard_content .service_content .service_info .service_progress.no_click {
+            pointer-events: none; }
+          .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; }
+            .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li {
+              flex: 0 0 16.666666666666666667%;
+              cursor: pointer; }
+              .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li .step_status {
+                color: #89c152;
+                user-select: none; }
+                .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li .step_status span {
+                  text-align: center;
+                  display: block; }
+                  .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li .step_status span:first-child {
+                    margin: 0.5rem 0;
+                    font-size: 1.8rem;
+                    font-weight: bold; }
+                    @media (max-width: 410px) {
+                      .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li .step_status span:first-child {
+                        font-size: 1rem; } }
+                  .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li .step_status span:last-child {
+                    font-size: 1.2rem;
+                    margin: 0.5rem 0; }
+                    @media (max-width: 410px) {
+                      .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li .step_status span:last-child {
+                        font-size: 1rem; } }
+              .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li:not(:first-child) .step_shape::after {
+                content: "";
+                position: absolute;
+                z-index: 2;
+                height: 3rem;
+                left: -35%;
+                width: 70%;
+                background-color: #fff;
+                border-top: 0.2rem dashed #89c152;
+                border-bottom: 0.2rem dashed #89c152; }
+                @media (max-width: 410px) {
+                  .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li:not(:first-child) .step_shape::after {
+                    left: -15%;
+                    width: 31%; } }
+                @media (min-width: 410px) {
+                  .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li:not(:first-child) .step_shape::after {
+                    left: -23%;
+                    width: 45%; } }
+                @media (min-width: 480px) {
+                  .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li:not(:first-child) .step_shape::after {
+                    left: -28%;
+                    width: 55%; } }
+                @media (min-width: 576px) {
+                  .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li:not(:first-child) .step_shape::after {
+                    left: -32%;
+                    width: 64%; } }
+                @media (min-width: 768px) {
+                  .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li:not(:first-child) .step_shape::after {
+                    left: -30%;
+                    width: 59%; } }
+                @media (min-width: 992px) {
+                  .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li:not(:first-child) .step_shape::after {
+                    left: -29%;
+                    width: 58%; } }
+                @media (min-width: 1200px) {
+                  .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li:not(:first-child) .step_shape::after {
+                    left: -33%;
+                    width: 66%; } }
+                @media (min-width: 1400px) {
+                  .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li:not(:first-child) .step_shape::after {
+                    left: -38%;
+                    width: 76%; } }
+              .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li .step_shape {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 2rem;
+                border-radius: 50%;
+                cursor: pointer; }
+                .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li .step_shape::before {
+                  content: "";
+                  position: absolute;
+                  width: 7rem;
+                  height: 7rem;
+                  border-radius: 50%;
+                  background-color: transparent;
+                  border: 0.2rem dashed #89c152; }
+                .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li .step_shape .step_icon {
+                  position: relative;
+                  width: 5rem;
+                  height: 5rem;
+                  background-color: #e4e4e4;
+                  border-radius: 50%;
+                  filter: drop-shadow(0px 0px 0.2rem rgba(0, 0, 0, 0.5));
+                  display: flex;
+                  justify-content: center;
+                  align-items: center; }
+                  .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li .step_shape .step_icon::before {
+                    content: "\f111";
+                    position: absolute;
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 900;
+                    font-size: 2.5rem;
+                    color: #89c152; }
+              .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li.active .step_status {
+                color: #1a3673; }
+              .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li.active .step_shape {
+                z-index: 6; }
+                .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li.active .step_shape::before {
+                  background-color: #89c152; }
+                .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li.active .step_shape::after {
+                  background-color: #89c152; }
+                .dashboard_page .dashboard_content .service_content .service_info .service_progress .steps li.active .step_shape .step_icon::before {
+                  content: "\f00c"; }
+      .dashboard_page .dashboard_content .service_content .payments {
+        margin-top: 5rem; }
+        .dashboard_page .dashboard_content .service_content .payments .head {
+          background-color: #27394c;
+          color: #fff;
+          padding: 2rem 3rem;
+          border-radius: 0.4rem;
+          box-shadow: 0 0 0.6rem 0.3rem #0000001a; }
+          .dashboard_page .dashboard_content .service_content .payments .head h3 {
+            display: flex;
+            justify-content: space-between;
+            font-size: 2rem;
+            font-weight: bold; }
+        .dashboard_page .dashboard_content .service_content .payments .batch {
+          font-size: 1.6rem;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 2rem 0;
+          border: 1px solid #27394c;
+          margin-top: 1rem;
+          padding: 2rem;
+          justify-content: space-between;
+          border-radius: 0.4rem;
+          box-shadow: 0 0 0.6rem 0.3rem #0000001a; }
+          .dashboard_page .dashboard_content .service_content .payments .batch .batch_budget,
+          .dashboard_page .dashboard_content .service_content .payments .batch .batch_status,
+          .dashboard_page .dashboard_content .service_content .payments .batch .batch_code {
+            flex: 1 0 auto;
+            font-weight: bold; }
+            .dashboard_page .dashboard_content .service_content .payments .batch .batch_budget span:first-child,
+            .dashboard_page .dashboard_content .service_content .payments .batch .batch_status span:first-child,
+            .dashboard_page .dashboard_content .service_content .payments .batch .batch_code span:first-child {
+              font-weight: bold;
+              color: #131b2d; }
+            .dashboard_page .dashboard_content .service_content .payments .batch .batch_budget span:last-child,
+            .dashboard_page .dashboard_content .service_content .payments .batch .batch_status span:last-child,
+            .dashboard_page .dashboard_content .service_content .payments .batch .batch_code span:last-child {
+              font-weight: normal;
+              color: #6ed7ff;
+              margin: 0 1.5rem; }
+          .dashboard_page .dashboard_content .service_content .payments .batch .batch_status span:last-child {
+            color: #4bb051; }
+          .dashboard_page .dashboard_content .service_content .payments .batch.inactive {
+            color: #777;
+            border-color: #777; }
+            .dashboard_page .dashboard_content .service_content .payments .batch.inactive span {
+              color: #777 !important; }
+      .dashboard_page .dashboard_content .service_content .reports {
+        margin-top: 5rem;
+        box-shadow: 0 0 0.6rem 0.3rem #0000001a; }
+        .dashboard_page .dashboard_content .service_content .reports .head {
+          background-color: #131b2d;
+          color: #fff;
+          padding: 3rem;
+          display: flex;
+          justify-content: space-between;
+          border-radius: 0.4rem; }
+          .dashboard_page .dashboard_content .service_content .reports .head h3 {
+            font-size: 2rem;
+            font-weight: bold; }
+          .dashboard_page .dashboard_content .service_content .reports .head form input[type="button"] {
+            font-size: 1.4rem;
+            background-color: #fff;
+            color: #777;
+            padding: 0.5rem 2rem;
+            border: none;
+            outline: none;
+            border-radius: 0.3rem; }
+          .dashboard_page .dashboard_content .service_content .reports .head form label[for="upload"] {
+            font-size: 1.4rem;
+            padding: 0.5rem 1rem;
+            margin: 0 1.5rem;
+            border: 1px solid #fff;
+            border-radius: 0.3rem;
+            cursor: pointer; }
+            .dashboard_page .dashboard_content .service_content .reports .head form label[for="upload"] i {
+              margin: 0 1rem; }
+          .dashboard_page .dashboard_content .service_content .reports .head form input[type="file"] {
+            display: none; }
+        .dashboard_page .dashboard_content .service_content .reports .report_files {
+          margin-top: 1rem;
+          padding: 2rem; }
+          .dashboard_page .dashboard_content .service_content .reports .report_files .file {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; }
+            .dashboard_page .dashboard_content .service_content .reports .report_files .file:not(:last-child) {
+              border-bottom: 1px solid #d6d6d6;
+              margin-bottom: 2rem; }
+            .dashboard_page .dashboard_content .service_content .reports .report_files .file .report_title img {
               width: 4rem;
               max-width: 100%; }
-    .dashboard_page .dashboard_content .service_content .service_button {
-      background-color: #1b91bd;
-      border: none;
-      outline: none;
-      width: 100%;
-      height: 2.5rem;
-      font-size: 2.5rem;
-      color: #fff;
-      text-align: center;
-      line-height: 2.5rem;
-      transition: all 0.3s ease; }
-      .dashboard_page .dashboard_content .service_content .service_button i {
-        transition: all 0.3s ease;
-        transform: rotate(0); }
-      .dashboard_page .dashboard_content .service_content .service_button.active i {
-        transform: rotate(180deg); }
-      .dashboard_page .dashboard_content .service_content .service_button:hover {
-        background-color: #41c8fb; }
+            .dashboard_page .dashboard_content .service_content .reports .report_files .file .report_title span {
+              font-size: 1.6rem;
+              margin: 0 1rem; }
+            .dashboard_page .dashboard_content .service_content .reports .report_files .file .file_data span {
+              font-size: 1.6rem;
+              padding: 0 1rem;
+              border-left: 1px solid #777; }
+            .dashboard_page .dashboard_content .service_content .reports .report_files .file .file_data a {
+              padding-right: 1rem; }
+              .dashboard_page .dashboard_content .service_content .reports .report_files .file .file_data a img {
+                width: 4rem;
+                max-width: 100%; }
+      .dashboard_page .dashboard_content .service_content .service_button {
+        background-color: #1b91bd;
+        box-shadow: 0 0 0.6rem 0.3rem #0000001a;
+        border: none;
+        outline: none;
+        border-radius: 0 0 0.4rem 0.4rem;
+        width: 100%;
+        height: 2.5rem;
+        font-size: 2.5rem;
+        color: #fff;
+        text-align: center;
+        line-height: 2.5rem;
+        transition: all 0.3s ease; }
+        .dashboard_page .dashboard_content .service_content .service_button i {
+          transition: all 0.3s ease;
+          transform: rotate(0); }
+        .dashboard_page .dashboard_content .service_content .service_button.active i {
+          transform: rotate(180deg); }
+        .dashboard_page .dashboard_content .service_content .service_button:hover {
+          background-color: #41c8fb; }
+        @media (max-width: 992px) {
+          .dashboard_page .dashboard_content .service_content .service_button {
+            transition: unset !important;
+            animation: unset !important; } }
     .dashboard_page .dashboard_content .add_service_button {
       text-align: center;
       padding-bottom: 3rem;
@@ -4213,6 +4349,10 @@ body.fix_body {
         .dashboard_page .dashboard_content .add_service_button button:active {
           transform: translateY(0.3rem);
           box-shadow: none; }
+        @media (max-width: 992px) {
+          .dashboard_page .dashboard_content .add_service_button button {
+            transition: unset !important;
+            animation: unset !important; } }
         @media (max-width: 992px) {
           .dashboard_page .dashboard_content .add_service_button button {
             transition: unset !important;
@@ -4300,6 +4440,10 @@ body.fix_body {
             transition: 0.3s ease; }
           .add_client_modal .modal_body .modal_content .close_modal button:hover i {
             color: #d63031; }
+          @media (max-width: 992px) {
+            .add_client_modal .modal_body .modal_content .close_modal button {
+              transition: unset !important;
+              animation: unset !important; } }
       .add_client_modal .modal_body .modal_content .main_form {
         display: flex;
         justify-content: center;
@@ -4342,6 +4486,10 @@ body.fix_body {
           .add_client_modal .modal_body .modal_content .main_form input:focus {
             outline: none;
             box-shadow: 0 0 6px 3px #6ed7ff; }
+          @media (max-width: 992px) {
+            .add_client_modal .modal_body .modal_content .main_form input {
+              transition: unset !important;
+              animation: unset !important; } }
         .add_client_modal .modal_body .modal_content .main_form input[type="email"],
         .add_client_modal .modal_body .modal_content .main_form input[type="password"] {
           margin-bottom: 0; }
@@ -4349,6 +4497,11 @@ body.fix_body {
           .add_client_modal .modal_body .modal_content .main_form input[type="password"].alert {
             outline: none;
             box-shadow: 0 0 6px 3px #e74c3c; }
+          @media (max-width: 992px) {
+            .add_client_modal .modal_body .modal_content .main_form input[type="email"],
+            .add_client_modal .modal_body .modal_content .main_form input[type="password"] {
+              transition: unset !important;
+              animation: unset !important; } }
         .add_client_modal .modal_body .modal_content .main_form input[type="submit"] {
           margin-top: 2rem;
           background: transparent linear-gradient(90deg, #5ad1ff 0%, #25b0e5 100%, #9d009e 100%);
@@ -4361,6 +4514,10 @@ body.fix_body {
           .add_client_modal .modal_body .modal_content .main_form input[type="submit"]:active {
             transform: translateY(0.3rem);
             box-shadow: none; }
+          @media (max-width: 992px) {
+            .add_client_modal .modal_body .modal_content .main_form input[type="submit"] {
+              transition: unset !important;
+              animation: unset !important; } }
           @media (max-width: 992px) {
             .add_client_modal .modal_body .modal_content .main_form input[type="submit"] {
               transition: unset !important;
@@ -4478,6 +4635,10 @@ body.fix_body {
           transition: 0.3s ease; }
         .add_service_modal .modal_body .close_modal button:hover i {
           color: #d63031; }
+        @media (max-width: 992px) {
+          .add_service_modal .modal_body .close_modal button {
+            transition: unset !important;
+            animation: unset !important; } }
     .add_service_modal .modal_body form {
       display: flex;
       flex-direction: column;
@@ -4518,6 +4679,10 @@ body.fix_body {
         .add_service_modal .modal_body form input[type="submit"]:active {
           transform: translateY(0.3rem);
           box-shadow: none; }
+        @media (max-width: 992px) {
+          .add_service_modal .modal_body form input[type="submit"] {
+            transition: unset !important;
+            animation: unset !important; } }
         @media (max-width: 992px) {
           .add_service_modal .modal_body form input[type="submit"] {
             transition: unset !important;
@@ -4593,7 +4758,7 @@ html[dir="rtl"] .dashboard_page .dash_nav {
 .dashboard_page.dash_second .tabs_wrapper .tabs_nav .logo {
   margin-bottom: 8rem; }
 .dashboard_page.dash_second .tabs_wrapper .tabs_nav .tabs ul li.active {
-  padding: 0; }
+  padding: 0.5rem 0; }
 .dashboard_page.dash_second .fix-p {
   padding-top: 12rem; }
 .dashboard_page.dash_second .align {
@@ -4654,6 +4819,7 @@ html[dir="rtl"] .dashboard_page .dash_nav {
       color: #fff; }
     .dashboard_page.dash_second .money_filter .form_control input {
       background-color: #d7e5ec;
+      color: #2d3e50;
       width: 100%;
       max-width: 100%;
       border: 1px solid rgba(0, 0, 0, 0.6);
@@ -4713,7 +4879,7 @@ html[dir="rtl"] .dashboard_page .dash_nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem; }
+  margin: 2rem 0; }
   .dashboard_page.dash_second .pagination .prev,
   .dashboard_page.dash_second .pagination .next {
     position: relative;
@@ -4810,6 +4976,10 @@ html[dir="rtl"] .dashboard_page .dash_nav {
       .compelete_profile .main_form input:focus {
         outline: none;
         box-shadow: 0 0 6px 3px #6ed7ff; }
+      @media (max-width: 992px) {
+        .compelete_profile .main_form input {
+          transition: unset !important;
+          animation: unset !important; } }
     .compelete_profile .main_form input[type="email"],
     .compelete_profile .main_form input[type="password"] {
       margin-bottom: 0; }
@@ -4817,6 +4987,11 @@ html[dir="rtl"] .dashboard_page .dash_nav {
       .compelete_profile .main_form input[type="password"].alert {
         outline: none;
         box-shadow: 0 0 6px 3px #e74c3c; }
+      @media (max-width: 992px) {
+        .compelete_profile .main_form input[type="email"],
+        .compelete_profile .main_form input[type="password"] {
+          transition: unset !important;
+          animation: unset !important; } }
     .compelete_profile .main_form input[type="submit"] {
       margin-top: 2rem;
       background: transparent linear-gradient(90deg, #5ad1ff 0%, #25b0e5 100%, #9d009e 100%);
@@ -4829,6 +5004,10 @@ html[dir="rtl"] .dashboard_page .dash_nav {
       .compelete_profile .main_form input[type="submit"]:active {
         transform: translateY(0.3rem);
         box-shadow: none; }
+      @media (max-width: 992px) {
+        .compelete_profile .main_form input[type="submit"] {
+          transition: unset !important;
+          animation: unset !important; } }
       @media (max-width: 992px) {
         .compelete_profile .main_form input[type="submit"] {
           transition: unset !important;

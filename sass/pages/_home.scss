@@ -30,6 +30,10 @@
       transform: translateY(0.3rem);
       box-shadow: 0 0 0.3rem 0.1rem rgba(0, 0, 0, 0.3);
     }
+    @media (max-width: 992px) {
+      transition: unset !important;
+      animation: unset !important;
+    }
 
     &::after {
       content: "";
@@ -118,9 +122,9 @@
   .whats_app,
   .twitter {
     position: fixed;
-    top: 47%;
+    top: 45%;
     left: 0; // RTL
-    transform: translateY(-50%);
+    transform: translateY(-45%);
     z-index: 99;
     width: 7rem;
     height: 5rem;
@@ -148,7 +152,8 @@
     }
   }
   .twitter {
-    top: 53%;
+    top: 45%;
+    margin-top: 6rem;
     i {
       color: #3bb1de;
     }
@@ -211,10 +216,18 @@
         @media (max-width: 479.98px) {
           animation: buttonChevronHoverSm 1s ease infinite alternate;
         }
+        @media (max-width: 992px) {
+          transition: unset !important;
+          animation: unset !important;
+        }
       }
 
       &:hover {
         background-color: #34c7ff;
+      }
+      @media (max-width: 992px) {
+        transition: unset !important;
+        animation: unset !important;
       }
     }
   }
@@ -293,6 +306,10 @@
             height: 9rem;
             font-size: 5rem;
           }
+          @media (max-width: 992px) {
+            transition: unset !important;
+            animation: unset !important;
+          }
         }
       }
     }
@@ -338,6 +355,10 @@
       transition: 0.5s;
       &:hover {
         transform: rotate(360deg);
+      }
+      @media (max-width: 992px) {
+        transition: unset !important;
+        animation: unset !important;
       }
     }
     span {
@@ -531,6 +552,10 @@
       &:hover {
         background-color: #93e0fd;
       }
+      @media (max-width: 992px) {
+        transition: unset !important;
+        animation: unset !important;
+      }
     }
   }
 
@@ -551,6 +576,10 @@
               brightness(100%) contrast(100%);
           }
         }
+        @media (max-width: 992px) {
+          transition: unset !important;
+          animation: unset !important;
+        }
         img {
           filter: invert(22%) sepia(75%) saturate(2000%) hue-rotate(170deg)
             brightness(100%) contrast(100%);
@@ -567,6 +596,10 @@
         span {
           color: #fff;
         }
+      }
+      @media (max-width: 992px) {
+        transition: unset !important;
+        animation: unset !important;
       }
       img {
         max-width: 100%;
@@ -862,6 +895,10 @@ html[dir="rtl"] {
           animation: buttonChevronHoverRtl 1s ease infinite alternate;
           @media (max-width: 479.98px) {
             animation: buttonChevronHoverSm 1s ease infinite alternate;
+          }
+          @media (max-width: 992px) {
+            transition: unset !important;
+            animation: unset !important;
           }
         }
       }

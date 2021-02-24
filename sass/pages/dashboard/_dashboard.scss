@@ -139,6 +139,10 @@ body {
               &:hover {
                 color: #27b0e4;
               }
+              @media (max-width: 992px) {
+                transition: unset !important;
+                animation: unset !important;
+              }
             }
           }
         }
@@ -362,9 +366,10 @@ body {
         ul {
           li {
             position: relative;
+            font-size: 1.8rem;
+            font-weight: bold;
             padding: 1.5rem;
             margin: 3rem 0;
-            text-align: center;
             user-select: none;
             transition: 0.3s;
             cursor: pointer;
@@ -375,7 +380,6 @@ body {
               color: #fff;
               text-decoration: none;
               padding-bottom: 2.5rem;
-              padding-left: 2rem;
             }
             &.active {
               position: relative;
@@ -430,6 +434,10 @@ body {
           transition: 0.3s;
           @include flexCenter;
           @include buttonHover;
+          @media (max-width: 992px) {
+            transition: unset !important;
+            animation: unset !important;
+          }
           i {
             margin: 0 0.5rem;
           }
@@ -455,25 +463,29 @@ body {
       &:hover {
         box-shadow: 0px 0.3rem 0.1rem 0 rgba($color: #000000, $alpha: 0.1);
       }
+      @media (max-width: 992px) {
+        transition: unset !important;
+        animation: unset !important;
+      }
       .category {
         padding: 1rem 2rem;
         span {
           display: block;
           &:first-of-type {
             color: $colorDark;
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: bold;
             margin-bottom: 1rem;
           }
           &:nth-child(2) {
             display: inline;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: 600;
             color: $colorLight;
           }
           &:nth-child(3) {
             display: inline;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: 600;
             color: $colorLight;
           }
@@ -637,12 +649,14 @@ body {
       }
     }
     .service_content {
+      border-radius: 0.4rem;
       .service_head {
         background-color: #fff;
         padding: 3rem;
         display: flex;
         flex-wrap: wrap;
         gap: 2rem 0;
+        border-radius: 0.4rem 0.4rem 0 0;
         h3 {
           flex-grow: 1;
         }
@@ -679,6 +693,7 @@ body {
         opacity: 0;
         visibility: hidden;
         display: none;
+        box-shadow: 0 0 0.6rem 0.3rem #0000001a;
         @media (max-width: 410px) {
           padding: 4rem 0;
         }
@@ -832,12 +847,14 @@ body {
         .head {
           background-color: #27394c;
           color: #fff;
-          padding: 2rem;
+          padding: 2rem 3rem;
           border-radius: 0.4rem;
           box-shadow: 0 0 0.6rem 0.3rem #0000001a;
           h3 {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
+            font-size: 2rem;
+            font-weight: bold;
           }
         }
         .batch {
@@ -891,10 +908,14 @@ body {
         .head {
           background-color: $colorDark;
           color: #fff;
-          padding: 2rem;
+          padding: 3rem;
           display: flex;
           justify-content: space-between;
           border-radius: 0.4rem;
+          h3 {
+            font-size: 2rem;
+            font-weight: bold;
+          }
           form {
             input[type="button"] {
               font-size: 1.4rem;
@@ -930,7 +951,7 @@ body {
             justify-content: space-between;
             &:not(:last-child) {
               border-bottom: 1px solid #d6d6d6;
-              margin-bottom: 3rem;
+              margin-bottom: 2rem;
             }
             .report_title {
               img {
@@ -962,9 +983,10 @@ body {
 
       .service_button {
         background-color: #1b91bd;
-        // box-shadow: 0 0 0.6rem 0.3rem #0000001a;
+        box-shadow: 0 0 0.6rem 0.3rem #0000001a;
         border: none;
         outline: none;
+        border-radius: 0 0 0.4rem 0.4rem;
         width: 100%;
         height: 2.5rem;
         font-size: 2.5rem;
@@ -984,6 +1006,10 @@ body {
         &:hover {
           background-color: #41c8fb;
         }
+        @media (max-width: 992px) {
+          transition: unset !important;
+          animation: unset !important;
+        }
       }
     }
     .add_service_button {
@@ -1000,6 +1026,10 @@ body {
         padding: 1rem 2rem;
         transition: 0.3s ease;
         @include buttonHover;
+        @media (max-width: 992px) {
+          transition: unset !important;
+          animation: unset !important;
+        }
         span {
           border-left: 1px solid #fff;
           padding-left: 1rem;
@@ -1104,6 +1134,10 @@ body {
             i {
               color: #d63031;
             }
+          }
+          @media (max-width: 992px) {
+            transition: unset !important;
+            animation: unset !important;
           }
         }
       }
@@ -1263,6 +1297,10 @@ body {
             color: #d63031;
           }
         }
+        @media (max-width: 992px) {
+          transition: unset !important;
+          animation: unset !important;
+        }
       }
     }
     form {
@@ -1306,6 +1344,10 @@ body {
         box-shadow: 0 0.3rem 0.6rem #00000029;
         border-radius: 4.4rem;
         @include buttonHover;
+        @media (max-width: 992px) {
+          transition: unset !important;
+          animation: unset !important;
+        }
       }
     }
   }
