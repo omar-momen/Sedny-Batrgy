@@ -73,9 +73,9 @@ let lowerCaseLetters = /[a-z]/g,
   capitalLetters = /[A-Z]/g,
   numbers = /[0-9]/g;
 
-passwordInput.onkeyup = function () {
+function checkInput(input) {
   validationElement.classList.add("show");
-  if (this.value.match(lowerCaseLetters)) {
+  if (input.value.match(lowerCaseLetters)) {
     lowerCase.classList.remove("invalid");
     lowerCase.classList.add("valid");
     setTimeout(() => {
@@ -88,7 +88,7 @@ passwordInput.onkeyup = function () {
     passwordInput.classList.add("alert");
   }
 
-  if (this.value.match(capitalLetters)) {
+  if (input.value.match(capitalLetters)) {
     capital.classList.remove("invalid");
     capital.classList.add("valid");
     setTimeout(() => {
@@ -101,7 +101,7 @@ passwordInput.onkeyup = function () {
     passwordInput.classList.add("alert");
   }
 
-  if (this.value.match(numbers)) {
+  if (input.value.match(numbers)) {
     number.classList.remove("invalid");
     number.classList.add("valid");
     setTimeout(() => {
@@ -114,7 +114,7 @@ passwordInput.onkeyup = function () {
     passwordInput.classList.add("alert");
   }
 
-  if (this.value.length >= 8) {
+  if (input.value.length >= 8) {
     Letterslength.classList.remove("invalid");
     Letterslength.classList.add("valid");
     setTimeout(() => {
@@ -126,44 +126,44 @@ passwordInput.onkeyup = function () {
     Letterslength.style.display = "block";
     passwordInput.classList.add("alert");
   }
-};
 
-// Add red Color on input if input is empty
-submitButton.onclick = function (e) {
   if (
-    !passwordInput.value.match(lowerCaseLetters) ||
-    !passwordInput.value.match(capitalLetters) ||
-    !passwordInput.value.match(numbers) ||
-    !passwordInput.value >= 8 ||
-    emailInput.value === ""
+    input.value.length >= 8 &&
+    input.value.match(lowerCaseLetters) &&
+    input.value.match(capitalLetters) &&
+    input.value.match(numbers)
   ) {
-    e.preventDefault();
-    validationElement.classList.add("show");
-    emailInput.classList.add("alert");
-    passwordInput.classList.add("alert");
-    document.getElementById("created").style.opacity = "0";
-  } else {
-    document.getElementById("created").style.opacity = "1";
+    input.classList.remove("alert");
+  }
+}
+passwordInput.onkeyup = function () {
+  checkInput(this);
+};
+// Add red Color on input if input is empty
+let resultsBody = document.querySelector(".add_client_form");
+let createdAccount = document.querySelector(".created");
+let emailField = document.querySelector(".results .email");
+let passwordField = document.querySelector(".results .password");
+
+submitButton.onclick = function (e) {
+  checkInput(passwordInput);
+  if (
+    passwordInput.value.length >= 8 &&
+    passwordInput.value.match(lowerCaseLetters) &&
+    passwordInput.value.match(capitalLetters) &&
+    passwordInput.value.match(numbers) &&
+    emailInput.value !== ""
+  ) {
+    resultsBody.classList.remove("show");
+    resultsBody.classList.add("hide");
+    createdAccount.classList.remove("hide");
+    createdAccount.classList.add("show");
+    emailField.textContent = `Email: ${emailInput.value}`;
+    passwordField.textContent = `Password: ${passwordInput.value}`;
   }
 };
-
-let loginInputs = document.querySelectorAll(".login_form input");
-
-document.addEventListener("keyup", function (e) {
-  if (e.target.getAttribute("type") == "email") {
-    e.target.classList.remove("alert");
-  }
-  if (e.target.getAttribute("type") == "password") {
-    if (
-      e.target.value.length >= 8 &&
-      e.target.value.match(lowerCaseLetters) &&
-      e.target.value.match(capitalLetters) &&
-      e.target.value.match(numbers)
-    ) {
-      e.target.classList.remove("alert");
-      document.getElementById("created").style.opacity = "1";
-    }
-  }
+document.addEventListener("onload", function () {
+  checkInput(passwordInput);
 });
 
 // Show and Hide popup
@@ -175,7 +175,15 @@ let coloseBtn = document.querySelector(".close_modal button");
 addButton.onclick = function () {
   modelContainer.classList.add("show_model");
   modelBody.classList.add("show_body");
+  resultsBody.classList.remove("hide");
+  resultsBody.classList.add("show");
+  createdAccount.classList.remove("show");
+  createdAccount.classList.add("hide");
+  emailInput.value = "";
+  emailField.innerHTML = "";
+  passwordField.innerHTML = "";
   generateRandomPassword();
+  checkInput(passwordInput);
 };
 
 coloseBtn.onclick = function () {
@@ -194,9 +202,16 @@ modelBody.onclick = function (e) {
 
 // Active and Inactive Button
 let statusBtn = document.querySelector(".status_btn button");
+let statusText = document.querySelector(".status_btn button span");
 
-statusBtn.onclick = function () {
+statusBtn.onclick = function (e) {
   this.classList.toggle("active");
+  e.preventDefault();
+  if (this.classList.contains("active")) {
+    statusText.textContent = "نشط";
+  } else {
+    statusText.textContent = "غير نشط";
+  }
 };
 
 // Start Service Content
@@ -263,18 +278,52 @@ serviceModelBody.onclick = function (e) {
 };
 
 // Progress Bar
-let progressItem = document.querySelectorAll(".progress_item");
-let statusIcon = document.querySelectorAll(".status_icon");
-let progressIcon = document.querySelectorAll(".status_icon i");
+let firstStep = $("#step_one");
+let secondtStep = $("#step_two");
+let thirdStep = $("#step_three");
+let fourthStep = $("#step_four");
+let fifthStep = $("#step_five");
+let sixStep = $("#step_six");
+let shape = $(".step_shape");
+let stepStatus = $(".step_status");
 
-// progressItem.forEach((element) => {
-//   element.onclick = function () {
-//     statusIcon.forEach((stat) => {
-//       stat.classList.add("inactive");
-//     });
-//   };
-// });
-// progressItem.onclick = function () {
-//   statusIcon.classList.toggle("inactive");
-//   progressIcon.classList.toggle("fa-times");
-// };
+function toggleActive() {
+  $(".steps li").click(function () {
+    $(this).addClass("active");
+  });
+  firstStep.click(function () {
+    $(this).siblings().removeClass("active");
+  });
+  secondtStep.click(function () {
+    firstStep.addClass("active");
+    thirdStep.removeClass("active");
+    fourthStep.removeClass("active");
+    fifthStep.removeClass("active");
+    sixStep.removeClass("active");
+  });
+  thirdStep.click(function () {
+    firstStep.addClass("active");
+    secondtStep.addClass("active");
+    fourthStep.removeClass("active");
+    fifthStep.removeClass("active");
+    sixStep.removeClass("active");
+  });
+  fourthStep.click(function () {
+    firstStep.addClass("active");
+    secondtStep.addClass("active");
+    thirdStep.addClass("active");
+    fifthStep.removeClass("active");
+    sixStep.removeClass("active");
+  });
+  fifthStep.click(function () {
+    firstStep.addClass("active");
+    secondtStep.addClass("active");
+    thirdStep.addClass("active");
+    fourthStep.addClass("active");
+    sixStep.removeClass("active");
+  });
+  sixStep.click(function () {
+    $(this).siblings().addClass("active");
+  });
+}
+toggleActive();

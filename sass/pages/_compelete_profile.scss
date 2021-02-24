@@ -1,9 +1,12 @@
 .compelete_profile {
   overflow: hidden;
   @include main_form;
+  .form_control {
+    width: 100%;
+  }
   .main_form {
     label[for="password"],
-    label[for="confrim"],
+    label[for="confirm"],
     label[for="oldPass"] {
       i {
         &:last-child {
@@ -11,8 +14,12 @@
           right: 2rem;
           cursor: pointer;
           opacity: 0;
+          top: 2.7rem;
         }
       }
+    }
+    input {
+      margin-bottom: 0;
     }
   }
   .heading {

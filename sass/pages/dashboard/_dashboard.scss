@@ -5,7 +5,6 @@ body {
   }
 }
 .dashboard_page {
-  font-family: "Poppins", sans-serif;
   background-color: #ebeef6;
   @media (min-width: 992px) {
     overflow-x: hidden;
@@ -99,7 +98,7 @@ body {
           top: 8rem;
           left: 0;
           font-size: 1.6rem;
-          width: 18rem;
+          width: 20rem;
           padding: 2rem;
           background-color: #fff;
           border-radius: 0.5rem;
@@ -128,14 +127,15 @@ body {
           }
           li {
             margin: 1rem 0;
+            width: 100%;
             a {
               color: #000;
               text-decoration: none;
               transition: 0.3s ease;
               font-weight: 600;
-              i {
-                margin: 0 1rem;
-              }
+              display: flex;
+              align-items: center;
+              justify-content: space-evenly;
               &:hover {
                 color: #27b0e4;
               }
@@ -363,7 +363,7 @@ body {
           li {
             position: relative;
             padding: 1.5rem;
-            margin: 2rem 0;
+            margin: 3rem 0;
             text-align: center;
             user-select: none;
             transition: 0.3s;
@@ -375,6 +375,7 @@ body {
               color: #fff;
               text-decoration: none;
               padding-bottom: 2.5rem;
+              padding-left: 2rem;
             }
             &.active {
               position: relative;
@@ -384,6 +385,32 @@ body {
               a {
                 color: #000;
                 border-bottom: none;
+              }
+              &::before {
+                content: "";
+                position: absolute;
+                top: -3rem;
+                left: 0;
+                background: url(../icons/dashboard/arrow_down.svg);
+                width: 5rem;
+                height: 3rem;
+                background-repeat: no-repeat;
+                filter: drop-shadow(
+                  -0.1rem 0.1rem 0.1rem rgba(119, 119, 119, 0.1)
+                );
+              }
+              &::after {
+                content: "";
+                position: absolute;
+                bottom: -3rem;
+                left: 0;
+                background: url(../icons/dashboard/arrow_up.svg);
+                width: 5rem;
+                height: 3rem;
+                background-repeat: no-repeat;
+                filter: drop-shadow(
+                  -0.1rem -0.1rem 0.1rem rgba(119, 119, 119, 0.1)
+                );
               }
             }
           }
@@ -423,7 +450,6 @@ body {
       justify-content: space-between;
       border-radius: 0.5rem;
       padding-bottom: 2rem;
-      font-family: "Cairo", sans-serif;
       position: relative;
       transition: 0.3s;
       &:hover {
@@ -473,6 +499,8 @@ body {
         font-size: 1.6rem;
         font-weight: bold;
         margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
         button {
           position: relative;
           border: none;
@@ -485,6 +513,11 @@ body {
           font-weight: bold;
           z-index: 1;
           transition: all 0.3s ease;
+          width: 12rem;
+          height: 3.5rem;
+          span {
+            font-size: 1.4rem;
+          }
           .icon {
             position: absolute;
             right: 0;
@@ -501,7 +534,8 @@ body {
             i {
               position: absolute;
               transition: all 0.3s ease;
-              transform: translateX(-0.3rem);
+              transform: translateX(-0.2rem);
+              font-size: 3rem;
             }
           }
           &.active {
@@ -510,7 +544,7 @@ body {
               border-radius: 4.4rem;
               i {
                 position: absolute;
-                transform: translateX(-7.28rem);
+                transform: translateX(-8.8rem);
               }
             }
           }
@@ -645,6 +679,9 @@ body {
         opacity: 0;
         visibility: hidden;
         display: none;
+        @media (max-width: 410px) {
+          padding: 4rem 0;
+        }
         &.active {
           transform: translateY(0) scale(1);
           opacity: 1;
@@ -652,119 +689,138 @@ body {
           display: block;
         }
         .service_progress {
-          .items {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 2rem 0;
-            .progress_item {
-              flex: 1 1 auto;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              gap: 1.5rem 0;
-              cursor: pointer;
-              .status_icon {
-                background-color: $colorLight;
-                color: #fff;
-                border-radius: 50%;
-                width: 5rem;
-                height: 5rem;
-                @include flexCenter;
-                i {
-                  font-size: 2.5rem;
-                }
-                &.inactive {
-                  background-color: #fd393a;
-                }
-              }
-              .progress_status {
-                span {
-                  font-size: 1.6rem;
-                  font-weight: 600;
-                  display: block;
-                  text-align: center;
-                  &:last-child {
-                    color: $colorLight;
-                    margin-top: 1rem;
-                  }
-                  &:first-child {
-                    color: #000;
-                  }
-                }
-              }
-            }
+          direction: ltr;
+          &.no_click {
+            pointer-events: none;
           }
-          .progress_bar {
+          .steps {
             display: flex;
             justify-content: space-between;
-            gap: 2rem 0;
-            margin-top: 5rem;
-            padding: 0 5rem;
-            .bullet {
-              display: flex;
-              @include flexCenter;
-              color: $lightGreen;
-              i {
-                font-size: 1.3rem;
-                position: relative;
-                &::after {
-                  content: "";
-                  position: absolute;
-                  width: 1.8rem;
-                  height: 1.8rem;
-                  border-radius: 50%;
-                  background-color: transparent;
-                  border: 1px solid rgba(75, 176, 81, 0.5);
-                  top: 46%;
-                  left: 50%;
-                  transform: translate(-50%, -50%);
+            align-items: center;
+            li {
+              flex: 0 0 16.666666666666666667%;
+              cursor: pointer;
+              .step_status {
+                color: #89c152;
+                user-select: none;
+                span {
+                  text-align: center;
+                  display: block;
+                  &:first-child {
+                    margin: 0.5rem 0;
+                    font-size: 1.8rem;
+                    font-weight: bold;
+                    @media (max-width: 410px) {
+                      font-size: 1rem;
+                    }
+                  }
+                  &:last-child {
+                    font-size: 1.2rem;
+                    margin: 0.5rem 0;
+                    @media (max-width: 410px) {
+                      font-size: 1rem;
+                    }
+                  }
                 }
               }
               &:not(:first-child) {
-                flex: 1 1 auto;
-                &::before {
-                  content: "";
-                  background-color: $lightGreen;
-                  width: 100%;
-                  height: 2px;
-                }
-              }
-              &.inactive {
-                color: #fd393a;
-                i {
+                .step_shape {
                   &::after {
-                    border-color: rgba(253, 57, 58, 1);
+                    content: "";
+                    position: absolute;
+                    z-index: 2;
+                    height: 3rem;
+                    left: -35%;
+                    width: 70%;
+                    background-color: #fff;
+                    border-top: 0.2rem dashed #89c152;
+                    border-bottom: 0.2rem dashed #89c152;
+                    @media (max-width: 410px) {
+                      left: -15%;
+                      width: 31%;
+                    }
+                    @media (min-width: 410px) {
+                      left: -23%;
+                      width: 45%;
+                    }
+                    @media (min-width: 480px) {
+                      left: -28%;
+                      width: 55%;
+                    }
+                    @media (min-width: 576px) {
+                      left: -32%;
+                      width: 64%;
+                    }
+                    @media (min-width: 768px) {
+                      left: -30%;
+                      width: 59%;
+                    }
+                    @media (min-width: 992px) {
+                      left: -29%;
+                      width: 58%;
+                    }
+                    @media (min-width: 1200px) {
+                      left: -33%;
+                      width: 66%;
+                    }
+                    @media (min-width: 1400px) {
+                      left: -38%;
+                      width: 76%;
+                    }
                   }
                 }
               }
-              &.inactive + .inactive {
+              .step_shape {
+                position: relative;
+                @include flexCenter;
+                padding: 2rem;
+                border-radius: 50%;
+                cursor: pointer;
                 &::before {
                   content: "";
-                  background-color: #fd393a;
+                  position: absolute;
+                  width: 7rem;
+                  height: 7rem;
+                  border-radius: 50%;
+                  background-color: transparent;
+                  border: 0.2rem dashed #89c152;
+                }
+                .step_icon {
+                  position: relative;
+                  width: 5rem;
+                  height: 5rem;
+                  background-color: #e4e4e4;
+                  border-radius: 50%;
+                  filter: drop-shadow(0px 0px 0.2rem rgba(0, 0, 0, 0.5));
+                  @include flexCenter;
+                  &::before {
+                    content: "\f111";
+                    position: absolute;
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 900;
+                    font-size: 2.5rem;
+                    color: #89c152;
+                  }
                 }
               }
-            }
-          }
-          .progress_date {
-            display: flex;
-            justify-content: space-between;
-            padding: 0 3rem;
-            margin-top: 1rem;
-            .date_item {
-              display: flex;
-              @include flexCenter;
-              flex-direction: column;
-              span {
-                display: block;
-                text-align: center;
-              }
-              .date {
-                font-size: 1.4rem;
-              }
-              .clock {
-                font-size: 1.2rem;
-                margin-top: 1rem;
+              &.active {
+                .step_status {
+                  color: #1a3673;
+                }
+                .step_shape {
+                  z-index: 6;
+                  &::before {
+                    background-color: #89c152;
+                  }
+                  &::after {
+                    background-color: #89c152;
+                  }
+                  .step_icon {
+                    &::before {
+                      content: "\f00c";
+                    }
+                  }
+                }
               }
             }
           }
@@ -1080,42 +1136,81 @@ body {
             font-size: 1.6rem;
           }
         }
-      }
-      .validation {
-        align-self: flex-start;
-        margin-top: 2rem;
-        font-size: 1.4rem;
-        transition: all 0.3s ease;
-        opacity: 0;
-        visibility: hidden;
-        height: 0;
-        &.show {
-          opacity: 1;
-          visibility: visible;
-          height: auto;
-        }
-        p {
-          transition: all 1s ease;
-          margin-bottom: 0.3rem;
-          &.valid {
-            color: $colorLight;
-            opacity: 0;
-            &::before {
-              content: "\f00c";
-              font-family: "Font Awesome 5 Free";
-              font-weight: 900;
-              margin: 0 1rem;
+        .validation {
+          align-self: flex-start;
+          margin-top: 2rem;
+          font-size: 1.4rem;
+          transition: all 0.3s ease;
+          opacity: 0;
+          visibility: hidden;
+          height: 0;
+          &.show {
+            opacity: 1;
+            visibility: visible;
+            height: auto;
+          }
+          p {
+            transition: all 1s ease;
+            margin-bottom: 0.3rem;
+            &.valid {
+              color: $colorLight;
+              opacity: 0;
+              &::before {
+                content: "\f00c";
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                margin: 0 1rem;
+              }
+            }
+            &.invalid {
+              color: #e74c3c;
+              opacity: 1;
+              display: block;
+              &::before {
+                content: "\f00d";
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                margin: 0 1rem;
+              }
             }
           }
-          &.invalid {
-            color: #e74c3c;
-            opacity: 1;
+        }
+        &.hide {
+          display: none;
+        }
+      }
+      .created {
+        &.hide {
+          display: none;
+        }
+        &.show {
+          display: block;
+        }
+        .created_icon {
+          text-align: center;
+          @include flexCenter;
+          flex-direction: column;
+          margin-bottom: 3rem;
+          i {
+            font-size: 15rem;
+            color: $colorLight;
+          }
+          p {
+            color: #000;
+            font-weight: 600;
+            font-size: 2rem;
+          }
+        }
+        .results {
+          text-align: center;
+          span {
             display: block;
-            &::before {
-              content: "\f00d";
-              font-family: "Font Awesome 5 Free";
-              font-weight: 900;
-              margin: 0 1rem;
+            font-size: 2rem;
+            direction: ltr;
+            &.email {
+            }
+            &.password {
+              margin-top: 1rem;
             }
           }
         }
@@ -1191,7 +1286,7 @@ body {
       input {
         border: none;
         outline: none;
-        background-color: $colorLight;
+        background-color: #2d3e50;
         color: #fff;
         font-size: 2rem;
         padding: 1rem 2rem;

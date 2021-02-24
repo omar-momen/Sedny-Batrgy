@@ -118,9 +118,15 @@
               <form action="#">
                 <div class="row align">
                   <div class="money_filter col-lg-4 col-12">
-                    <label for="text">تصفية حسب المبلغ</label>
-                    <input type="text" name="from" id="from" placeholder="من" />
-                    <input type="text" name="to" id="to" placeholder="الى" />
+                    <span>تصفية حسب المبلغ</span>
+                    <div class="form_control">
+                      <label for="from">من</label>
+                      <input type="text" name="from" id="from" />
+                    </div>
+                    <div class="form_control">
+                      <label for="to">الي</label>
+                      <input type="text" name="to" id="to" />
+                    </div>
                   </div>
                   <div
                     class="branch_filter col-lg-4 col-12 mt-4 mb-4 mt-lg-0 mb-lg-0"
@@ -168,13 +174,13 @@
                       type="search"
                       id="search"
                       class="form-control"
-                      placeholder="اسم العميل"
+                      placeholder="يحث باسم الشركة"
                     />
                   </div>
                 </div>
               </form>
 
-              <table class="table">
+              <table class="table table-striped">
                 <thead>
                   <tr>
                     <th scope="col">#</th>

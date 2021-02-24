@@ -20,7 +20,7 @@
       padding-top: 12rem;
     }
     .align {
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
     }
     .money_filter,
@@ -30,40 +30,61 @@
       display: flex;
       align-items: center;
       label {
-        font-size: 1.3rem;
+        font-size: 1.6rem;
         font-weight: 600;
-        color: $colorDark;
+        color: #fff;
       }
       input {
-        background-color: #fff;
+        background-color: #2d3e50;
         font-size: 1.6rem;
         padding: 1rem 0;
-        color: $colorDark;
+        color: #fff;
         font-weight: 600;
-        border-radius: 0.4rem;
         outline: none;
+        border: none;
         box-shadow: 0px 0.3rem 0.6rem 0 rgba(0, 0, 0, 0.3);
         &::placeholder {
-          color: $colorDark;
+          color: #fff;
         }
       }
     }
     .money_filter {
-      label {
-        margin-left: 1rem;
-      }
-      input {
-        width: 30%;
-        max-width: 100%;
-        border: 1px solid rgba($color: #000000, $alpha: 0.6);
-        outline: none;
-        text-align: center;
-        &:first-of-type {
-          border-radius: 0 0.4rem 0.4rem 0;
-          border-left: none;
+      flex-direction: column;
+      width: 20%;
+      gap: 2rem;
+      @media (max-width: 991.98px) {
+        width: 100%;
+        span {
+          width: 100%;
         }
-        &:last-of-type {
-          border-radius: 0.4rem 0 0 0.4rem;
+      }
+      span {
+        width: 100%;
+        font-size: 1.6rem;
+        font-weight: 600;
+        background-color: #2d3e50;
+        color: #fff;
+        padding: 1rem;
+        box-shadow: 0px 0.3rem 0.6rem 0 rgba(0, 0, 0, 0.3);
+      }
+      .form_control {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        label {
+          background-color: #2d3e50;
+          padding: 1.2rem 2rem;
+          color: #fff;
+        }
+        input {
+          background-color: #d7e5ec;
+          width: 100%;
+          max-width: 100%;
+          border: 1px solid rgba($color: #000000, $alpha: 0.6);
+          outline: none;
+          text-align: center;
+          border: none;
         }
       }
     }
@@ -88,17 +109,21 @@
       margin: 2rem;
       label {
         position: absolute;
-        right: 2rem;
+        left: 2rem;
         top: 50%;
         transform: translateY(-50%);
+        font-size: 1.6rem;
+        color: #fff;
       }
       input {
+        background-color: #2d3e50;
+        color: #fff;
         padding: 1rem 3rem;
         font-size: 1.4rem;
         border: none;
-        border-radius: 0.4rem;
+        border-radius: 4.4rem;
         &::placeholder {
-          color: #1baae1;
+          color: #fff;
           font-weight: 600;
         }
       }

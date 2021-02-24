@@ -30,67 +30,80 @@
             </form>
           </div>
           <form action="#" class="main_form">
-            <label for="company"><i class="far fa-building"></i></label>
-            <input
-              type="text"
-              name=""
-              id="company"
-              placeholder="Company Name"
-            />
-            <label for="companyBranch"><i class="far fa-building"></i></label>
-            <input
-              type="text"
-              name=""
-              id="companyBranch"
-              placeholder="Company Branch"
-            />
-            <label for="oldPass">
-              <i class="fas fa-lock"></i>
-              <i class="fas fa-eye"></i>
-            </label>
-            <input
-              type="password"
-              title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
-              required
-              id="oldPass"
-              placeholder="Old Password"
-            />
-            <label for="password">
-              <i class="fas fa-lock"></i>
-              <i class="fas fa-eye"></i>
-            </label>
-            <input
-              type="password"
-              title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
-              required
-              id="password"
-              placeholder="Password"
-            />
-            <label for="confrim">
-              <i class="fas fa-lock"></i>
-              <i class="fas fa-eye confrim"></i>
-            </label>
-            <input
-              type="password"
-              title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
-              required
-              id="confrim"
-              placeholder="Confrim Password"
-            />
-            <label for="email"><i class="fas fa-envelope"></i></label>
-            <input
-              type="email"
-              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-              required
-              placeholder="Email"
-            />
-            <label for="owner"><i class="fas fa-user"></i></label>
+            <div class="form_control">
+              <label for="company"><i class="far fa-building"></i></label>
+              <input
+                type="text"
+                name=""
+                id="company"
+                placeholder="Company Name"
+              />
+            </div>
+            <div class="form_control">
+              <label for="companyBranch"><i class="far fa-building"></i></label>
+              <input
+                type="text"
+                name=""
+                id="companyBranch"
+                placeholder="Company Branch"
+              />
+            </div>
+            <div class="form_control">
+              <label for="oldPass">
+                <i class="fas fa-lock"></i>
+                <i class="fas fa-eye oldPass"></i>
+              </label>
+              <input
+                type="password"
+                required
+                id="oldPass"
+                placeholder="Old Password"
+              />
+            </div>
+            <div class="form_control">
+              <label for="password">
+                <i class="fas fa-lock"></i>
+                <i class="fas fa-eye password"></i>
+              </label>
+              <input
+                type="password"
+                required
+                id="password"
+                placeholder="Password"
+              />
+            </div>
+            <div class="form_control">
+              <label for="confirm">
+                <i class="fas fa-lock"></i>
+                <i class="fas fa-eye confirm"></i>
+              </label>
+              <input
+                type="password"
+                required
+                id="confirm"
+                placeholder="Confrim Password"
+
+
+              />
+            </div>
+            <div class="form_control">
+              <label for="email"><i class="fas fa-envelope"></i></label>
+              <input
+                type="email"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                required
+                placeholder="Email"
+              />
+            </div>
+            <div class="form_control">
+              <label for="owner"><i class="fas fa-user"></i></label>
               <input
                 type="text"
                 name=""
                 id="owner"
                 placeholder="Representative"
               />
+            </div>
             <input type="submit" class="text-center" value="submit" />
 
             <div class="validation">

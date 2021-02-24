@@ -1,30 +1,49 @@
-let showPasswordEye = document.querySelector(".fa-eye");
-let showPasswordEyeConfrim = document.querySelector(".fa-eye.confrim");
-let emailInput = document.querySelector("input[type='email']");
-let passwordInput = document.querySelector("input[type='password']");
-
 // Toggle Eye
-showPasswordEye.onclick = function () {
-  "use strict";
-  if (showPasswordEye.classList.contains("fa-eye")) {
-    this.classList.remove("fa-eye");
-    this.classList.add("fa-eye-slash");
-    passwordInput.type = "text";
-  } else {
-    this.classList.remove("fa-eye-slash");
-    this.classList.add("fa-eye");
-    passwordInput.type = "password";
-  }
-};
+$("#oldPass").keyup(function () {
+  $("label[for='oldPass'] .fa-eye").css("opacity", "1");
+});
+$("#password").keyup(function () {
+  $("label[for='password'] .fa-eye").css("opacity", "1");
+});
 
-passwordInput.oninput = function () {
-  "use strict";
-  if (this.value.length > 0) {
-    showPasswordEye.style.opacity = "1";
-  } else {
-    showPasswordEye.style.opacity = "0";
-  }
-};
+$("#confirm").keyup(function () {
+  $("label[for='confirm'] .fa-eye").css("opacity", "1");
+});
+
+$(".fa-eye.oldPass").each(function () {
+  $(this).click(function () {
+    $(this).toggleClass("fa-eye-slash");
+    if ($(this).hasClass("fa-eye-slash")) {
+      $("#oldPass").attr("type", "text");
+    } else {
+      $("#oldPass").attr("type", "password");
+    }
+  });
+});
+$(".fa-eye.password").each(function () {
+  $(this).click(function () {
+    $(this).toggleClass("fa-eye-slash");
+    if ($(this).hasClass("fa-eye-slash")) {
+      $("#password").attr("type", "text");
+    } else {
+      $("#password").attr("type", "password");
+    }
+  });
+});
+$(".fa-eye.confirm").each(function () {
+  $(this).click(function () {
+    $(this).toggleClass("fa-eye-slash");
+    if ($(this).hasClass("fa-eye-slash")) {
+      $("#confirm").attr("type", "text");
+    } else {
+      $("#confirm").attr("type", "password");
+    }
+  });
+});
+
+let showPasswordEye = document.querySelector(".fa-eye");
+let emailInput = document.querySelector("input[type='email']");
+let passwordInput = document.querySelector("#password");
 
 // Change Input Placeholder
 let pageDirection = document.documentElement.getAttribute("dir");
