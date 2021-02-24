@@ -72,6 +72,10 @@
             background-color: $colorLight;
             color: #fff;
           }
+          @media (max-width: 992px) {
+            transition: unset !important;
+            animation: unset !important;
+          }
         }
       }
     }

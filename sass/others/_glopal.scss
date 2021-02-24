@@ -29,11 +29,6 @@ body {
   box-sizing: inherit;
   text-align: start;
   backface-visibility: hidden;
-  // Remove Animation and transition sm screens
-  // @media (max-width: 767.98px) {
-  //   animation: unset !important;
-  //   transition: unset !important;
-  // }
 }
 ul {
   padding: 0;

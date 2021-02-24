@@ -186,6 +186,10 @@
       color: #fff;
       transition: all 0.4s ease;
       @include buttonHover;
+      @media (max-width: 992px) {
+        transition: unset !important;
+        animation: unset !important;
+      }
       font-size: 1.8rem;
       border-radius: 4.4rem;
     }
@@ -209,6 +213,10 @@
         &:hover {
           background-color: #ee1b1b;
         }
+        @media (max-width: 992px) {
+          transition: unset !important;
+          animation: unset !important;
+        }
         a {
           color: #fff;
           text-decoration: none;
@@ -225,6 +233,10 @@
         @include buttonHover;
         &:hover {
           background-color: $colorLight;
+        }
+        @media (max-width: 992px) {
+          transition: unset !important;
+          animation: unset !important;
         }
         a {
           color: #fff;
