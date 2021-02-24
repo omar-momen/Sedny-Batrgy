@@ -168,4 +168,41 @@
       }
     }
   }
+  // Our Clients
+  @include our_clients;
+
+  // Our Articles
+  @include our_atricles;
+
+  // Our Partners
+  @include partners;
+}
+html[dir="rtl"] {
+  .tranining_development_page {
+    // Our Articles
+    .our_articles {
+      &::after {
+        right: unset;
+        left: 0;
+      }
+    }
+
+    // Partners
+    .partners {
+      .cards_slider {
+        .item {
+          .card_content {
+            .owner_img {
+              img {
+                order: 1;
+              }
+              h3 {
+                order: 2;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
