@@ -255,6 +255,16 @@
       }
     }
   }
+
+  // Our Clients
+  @include our_clients;
+
+  // Our Articles
+  @include our_atricles;
+
+  // Our Partners
+  @include partners;
+
   .form_section {
     margin: 10rem 0;
     @media (max-width: 767px) {
@@ -302,6 +312,36 @@
             @include underLineDotted;
           }
           @include main_form;
+        }
+      }
+    }
+  }
+}
+
+html[dir="rtl"] {
+  .services_page {
+    // Our Articles
+    .our_articles {
+      &::after {
+        right: unset;
+        left: 0;
+      }
+    }
+
+    // Partners
+    .partners {
+      .cards_slider {
+        .item {
+          .card_content {
+            .owner_img {
+              img {
+                order: 1;
+              }
+              h3 {
+                order: 2;
+              }
+            }
+          }
         }
       }
     }
