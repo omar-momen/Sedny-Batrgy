@@ -35,6 +35,10 @@
       span {
         color: rgba($color: #fff, $alpha: 0.8);
         margin: 0 1rem;
+        font-size: 2rem;
+        @media (max-width: 500px) {
+          font-size: 3rem;
+        }
       }
       i {
         color: $colorLight;

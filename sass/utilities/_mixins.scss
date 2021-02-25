@@ -122,6 +122,7 @@
 
 @mixin search_form {
   .webdesigntuts-workshop {
+    margin: 0;
     background: $colorDark;
     height: 100%;
     position: fixed;
@@ -284,7 +285,7 @@
     @include flexCenter;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 42rem;
+    width: 100%;
     max-width: 100%;
     position: relative;
     margin: 0 auto;

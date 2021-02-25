@@ -184,3 +184,19 @@ header.header {
     }
   }
 }
+html[dir="rtl"] {
+  header.header {
+    .header_slices_carousal {
+      .slick-arrow {
+        &.slick-prev {
+          left: unset;
+          right: 1rem;
+        }
+        &.slick-next {
+          right: unset;
+          left: 1rem;
+        }
+      }
+    }
+  }
+}
