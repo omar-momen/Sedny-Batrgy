@@ -112,8 +112,8 @@
           margin-top: 2rem;
         }
         li.nav-item {
-          padding: 1.6rem 0;
-          margin: 0 1.5rem;
+          padding: 1.6rem;
+          // margin: 0 1.5rem;
           transition: all 0.3s ease;
           border-bottom: 2px solid transparent;
           &.services {
