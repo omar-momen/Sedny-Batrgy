@@ -5817,6 +5817,8 @@ html[dir="rtl"] .dash_link {
       margin: 0 1.5rem;
       transition: all 0.3s ease;
       border-bottom: 2px solid transparent; }
+      .navbar .container-fluid .navbar-collapse ul.navbar-nav li.nav-item.services.pointer_none {
+        pointer-events: none; }
       .navbar .container-fluid .navbar-collapse ul.navbar-nav li.nav-item.services > a {
         position: relative; }
         .navbar .container-fluid .navbar-collapse ul.navbar-nav li.nav-item.services > a .arrow_parent {

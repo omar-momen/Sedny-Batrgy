@@ -117,6 +117,9 @@
           transition: all 0.3s ease;
           border-bottom: 2px solid transparent;
           &.services {
+            &.pointer_none {
+              pointer-events: none;
+            }
             & > a {
               position: relative;
               .arrow_parent {
