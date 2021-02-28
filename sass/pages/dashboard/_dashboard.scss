@@ -1085,6 +1085,15 @@ body {
   }
 }
 
+@media (max-width: 479.98px) {
+  .dashboard_page {
+    .tabs_wrapper {
+      .tabs_nav {
+        width: 50%;
+      }
+    }
+  }
+}
 .add_client_modal {
   position: fixed;
   width: 100%;
@@ -1411,6 +1420,10 @@ html[dir="rtl"] {
       .toggler {
         left: unset;
         right: 25%;
+        @media (max-width: 479.98px) {
+          left: unset;
+          right: 37%;
+        }
       }
     }
     .tabs_wrapper {

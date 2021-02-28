@@ -5,7 +5,7 @@
       display: flex;
       align-items: center;
       label {
-        font-size: 1.3rem;
+        font-size: 1.6rem;
         font-weight: 600;
         color: $colorDark;
         i {
@@ -13,6 +13,7 @@
           top: 50%;
           left: 2.5rem;
           transform: translateY(-50%);
+          color: #fff;
         }
       }
       input {

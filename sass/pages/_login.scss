@@ -1,5 +1,18 @@
 // 0 0 25px 5px rgb(0 0 0 / 30%)
 .login_page {
+  .home_link {
+    display: none;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: 3rem;
+    a {
+      color: $colorLight;
+    }
+    @media (max-width: 991.98px) {
+      display: block;
+    }
+  }
   .login_img_box {
     position: relative;
     background: url(../img/main_bg_5.png) no-repeat;
@@ -143,5 +156,9 @@ html[dir="rtl"] {
   .login_page .main_form label[for="password"] i:last-child {
     left: unset;
     right: 90%;
+  }
+  .home_link {
+    left: unset;
+    right: 1rem;
   }
 }
