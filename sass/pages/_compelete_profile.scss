@@ -5,6 +5,10 @@
     width: 100%;
   }
   .main_form {
+    width: 50%;
+    @media (max-width: 575.98px) {
+      width: 95%;
+    }
     label[for="password"],
     label[for="confirm"],
     label[for="oldPass"] {
@@ -128,6 +132,27 @@
       }
     }
   }
+
+  .dash_link {
+    display: none;
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    font-size: 3rem;
+    a {
+      color: $colorLight;
+    }
+    @media (max-width: 991.98px) {
+      display: block;
+    }
+  }
 }
 
 @include main_form_rtl;
+
+html[dir="rtl"] {
+  .dash_link {
+    left: unset;
+    right: 1rem;
+  }
+}
