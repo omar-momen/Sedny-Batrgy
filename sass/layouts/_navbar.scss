@@ -68,7 +68,7 @@
         cursor: pointer;
         transition: all 0.3s ease;
         &:hover {
-          color: #333;
+          color: #6ed7ff;
         }
         &:not(:last-child) {
           border-right: 1px solid #131b2d;
@@ -89,11 +89,12 @@
       }
       .sign_in {
         a {
+          transition: all 0.3s ease;
           color: #131b2d;
         }
         &:hover {
           a {
-            color: #333;
+            color: #6ed7ff;
           }
         }
       }
@@ -112,7 +113,8 @@
           margin-top: 2rem;
         }
         li.nav-item {
-          padding: 1.6rem 0;
+          padding: 1.6rem;
+          // margin: 0 1.5rem;
           transition: all 0.3s ease;
           border-bottom: 2px solid transparent;
           &:not(:first-of-type) {
@@ -396,10 +398,10 @@
                         }
                         .blog {
                           background: #e5e5e533;
-                          box-shadow: 0.4rem 0.5rem 2rem 0px rgba(0, 0, 0, 0.4);
+                          box-shadow: 0.2rem 0.2rem 2rem rgba(0, 0, 0, 0.2);
                           width: 50%;
                           margin: 0 auto;
-                          border-radius: 2rem;
+                          border-radius: 1rem;
                           overflow: hidden;
                           a {
                             width: 100%;
@@ -468,7 +470,6 @@
             li.drop_down_link {
               cursor: pointer;
               & > a {
-                color: #131b2d;
                 position: relative;
                 width: fit-content;
                 padding: 1rem;
@@ -490,11 +491,6 @@
                   }
                 }
               }
-              &:hover {
-                a {
-                  color: #6ed7ff;
-                }
-              }
               ul.sub_drop_down {
                 padding: 0 2rem;
                 display: none;
@@ -502,13 +498,77 @@
                   padding: 0.5rem;
                   cursor: pointer;
                   & > a {
-                    color: #131b2d;
                     font-size: 2.5rem;
                     transition: all 0.3s ease;
                   }
-                  &:hover {
-                    a {
-                      color: #6ed7ff;
+                }
+              }
+              &.one {
+                a {
+                  color: #4cb050;
+                }
+                ul.sub_drop_down {
+                  & > li {
+                    & > a {
+                      &:hover {
+                        color: #4cb050;
+                      }
+                    }
+                  }
+                }
+              }
+              &.tow {
+                a {
+                  color: #6ed7ff;
+                }
+                ul.sub_drop_down {
+                  & > li {
+                    & > a {
+                      &:hover {
+                        color: #6ed7ff;
+                      }
+                    }
+                  }
+                }
+              }
+              &.three {
+                a {
+                  color: #4c1cd5;
+                }
+                ul.sub_drop_down {
+                  & > li {
+                    & > a {
+                      &:hover {
+                        color: #4c1cd5;
+                      }
+                    }
+                  }
+                }
+              }
+              &.four {
+                a {
+                  color: #2c3e51;
+                }
+                ul.sub_drop_down {
+                  & > li {
+                    & > a {
+                      &:hover {
+                        color: #2c3e51;
+                      }
+                    }
+                  }
+                }
+              }
+              &.five {
+                a {
+                  color: #0265ec;
+                }
+                ul.sub_drop_down {
+                  & > li {
+                    & > a {
+                      &:hover {
+                        color: #0265ec;
+                      }
                     }
                   }
                 }
