@@ -310,6 +310,10 @@
         left: 2rem; // RTL
         font-size: 2.5rem;
         color: $colorLight;
+        @media (max-width: 767.98px) {
+          font-size: 3.5rem;
+          top: 3.4rem;
+        }
       }
     }
     input {
@@ -320,7 +324,7 @@
       width: 100%;
       padding: 1.5rem 6rem 1.5rem;
       margin-top: 1rem;
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       transition: 0.3s ease-out;
       &::placeholder {
         color: $colorDark;
@@ -329,6 +333,10 @@
       &:focus {
         outline: none;
         box-shadow: 0 0 6px 3px $colorLight;
+      }
+      @media (max-width: 767.98px) {
+        padding: 2.5rem 6rem 1.5rem;
+        font-size: 2.5rem;
       }
     }
 

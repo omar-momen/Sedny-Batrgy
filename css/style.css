@@ -319,7 +319,7 @@ a {
   .home_about_us .whats_app,
   .home_about_us .twitter {
     position: fixed;
-    top: 45%;
+    top: 80%;
     left: 0;
     transform: translateY(-45%);
     z-index: 99;
@@ -346,10 +346,8 @@ a {
     margin-top: 6rem; }
     .home_about_us .whats_app i {
       color: #25d366; }
-  .home_about_us .twitter {
-    top: 45%; }
-    .home_about_us .twitter i {
-      color: #3bb1de; }
+  .home_about_us .twitter i {
+    color: #3bb1de; }
   .home_about_us .heading .line {
     display: flex;
     justify-content: center;
@@ -1653,6 +1651,10 @@ html[dir="rtl"] .partners .cards_slider .item .card_content .owner_img h3 {
       left: 2rem;
       font-size: 2.5rem;
       color: #6ed7ff; }
+      @media (max-width: 767.98px) {
+        .login_page .main_form label i {
+          font-size: 3.5rem;
+          top: 3.4rem; } }
   .login_page .main_form input {
     position: relative;
     border: 1px solid rgba(0, 0, 0, 0.25);
@@ -1661,7 +1663,7 @@ html[dir="rtl"] .partners .cards_slider .item .card_content .owner_img h3 {
     width: 100%;
     padding: 1.5rem 6rem 1.5rem;
     margin-top: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     transition: 0.3s ease-out; }
     .login_page .main_form input::placeholder {
       color: #131b2d;
@@ -1669,6 +1671,10 @@ html[dir="rtl"] .partners .cards_slider .item .card_content .owner_img h3 {
     .login_page .main_form input:focus {
       outline: none;
       box-shadow: 0 0 6px 3px #6ed7ff; }
+    @media (max-width: 767.98px) {
+      .login_page .main_form input {
+        padding: 2.5rem 6rem 1.5rem;
+        font-size: 2.5rem; } }
   .login_page .main_form input[type="email"],
   .login_page .main_form input[type="password"] {
     margin-bottom: 0; }
@@ -1984,6 +1990,10 @@ html[dir="rtl"] .home_link {
           left: 2rem;
           font-size: 2.5rem;
           color: #6ed7ff; }
+          @media (max-width: 767.98px) {
+            .tranining_development_page .form_section .row > div .contact_form .main_form label i {
+              font-size: 3.5rem;
+              top: 3.4rem; } }
       .tranining_development_page .form_section .row > div .contact_form .main_form input {
         position: relative;
         border: 1px solid rgba(0, 0, 0, 0.25);
@@ -1992,7 +2002,7 @@ html[dir="rtl"] .home_link {
         width: 100%;
         padding: 1.5rem 6rem 1.5rem;
         margin-top: 1rem;
-        font-size: 1.5rem;
+        font-size: 1.6rem;
         transition: 0.3s ease-out; }
         .tranining_development_page .form_section .row > div .contact_form .main_form input::placeholder {
           color: #131b2d;
@@ -2000,6 +2010,10 @@ html[dir="rtl"] .home_link {
         .tranining_development_page .form_section .row > div .contact_form .main_form input:focus {
           outline: none;
           box-shadow: 0 0 6px 3px #6ed7ff; }
+        @media (max-width: 767.98px) {
+          .tranining_development_page .form_section .row > div .contact_form .main_form input {
+            padding: 2.5rem 6rem 1.5rem;
+            font-size: 2.5rem; } }
       .tranining_development_page .form_section .row > div .contact_form .main_form input[type="email"],
       .tranining_development_page .form_section .row > div .contact_form .main_form input[type="password"] {
         margin-bottom: 0; }
@@ -2975,6 +2989,10 @@ html[dir="rtl"] .tranining_development_page .partners .cards_slider .item .card_
           left: 2rem;
           font-size: 2.5rem;
           color: #6ed7ff; }
+          @media (max-width: 767.98px) {
+            .services_page .form_section .row > div .contact_form .main_form label i {
+              font-size: 3.5rem;
+              top: 3.4rem; } }
       .services_page .form_section .row > div .contact_form .main_form input {
         position: relative;
         border: 1px solid rgba(0, 0, 0, 0.25);
@@ -2983,7 +3001,7 @@ html[dir="rtl"] .tranining_development_page .partners .cards_slider .item .card_
         width: 100%;
         padding: 1.5rem 6rem 1.5rem;
         margin-top: 1rem;
-        font-size: 1.5rem;
+        font-size: 1.6rem;
         transition: 0.3s ease-out; }
         .services_page .form_section .row > div .contact_form .main_form input::placeholder {
           color: #131b2d;
@@ -2991,6 +3009,10 @@ html[dir="rtl"] .tranining_development_page .partners .cards_slider .item .card_
         .services_page .form_section .row > div .contact_form .main_form input:focus {
           outline: none;
           box-shadow: 0 0 6px 3px #6ed7ff; }
+        @media (max-width: 767.98px) {
+          .services_page .form_section .row > div .contact_form .main_form input {
+            padding: 2.5rem 6rem 1.5rem;
+            font-size: 2.5rem; } }
       .services_page .form_section .row > div .contact_form .main_form input[type="email"],
       .services_page .form_section .row > div .contact_form .main_form input[type="password"] {
         margin-bottom: 0; }
@@ -3154,6 +3176,10 @@ html[dir="rtl"] .services_page .partners .cards_slider .item .card_content .owne
           left: 2rem;
           font-size: 2.5rem;
           color: #6ed7ff; }
+          @media (max-width: 767.98px) {
+            .contact_us .contact_form .main_form label i {
+              font-size: 3.5rem;
+              top: 3.4rem; } }
       .contact_us .contact_form .main_form input {
         position: relative;
         border: 1px solid rgba(0, 0, 0, 0.25);
@@ -3162,7 +3188,7 @@ html[dir="rtl"] .services_page .partners .cards_slider .item .card_content .owne
         width: 100%;
         padding: 1.5rem 6rem 1.5rem;
         margin-top: 1rem;
-        font-size: 1.5rem;
+        font-size: 1.6rem;
         transition: 0.3s ease-out; }
         .contact_us .contact_form .main_form input::placeholder {
           color: #131b2d;
@@ -3170,6 +3196,10 @@ html[dir="rtl"] .services_page .partners .cards_slider .item .card_content .owne
         .contact_us .contact_form .main_form input:focus {
           outline: none;
           box-shadow: 0 0 6px 3px #6ed7ff; }
+        @media (max-width: 767.98px) {
+          .contact_us .contact_form .main_form input {
+            padding: 2.5rem 6rem 1.5rem;
+            font-size: 2.5rem; } }
       .contact_us .contact_form .main_form input[type="email"],
       .contact_us .contact_form .main_form input[type="password"] {
         margin-bottom: 0; }
@@ -5052,6 +5082,10 @@ body.fix_body {
             left: 2rem;
             font-size: 2.5rem;
             color: #6ed7ff; }
+            @media (max-width: 767.98px) {
+              .add_client_modal .modal_body .modal_content .main_form label i {
+                font-size: 3.5rem;
+                top: 3.4rem; } }
         .add_client_modal .modal_body .modal_content .main_form input {
           position: relative;
           border: 1px solid rgba(0, 0, 0, 0.25);
@@ -5060,7 +5094,7 @@ body.fix_body {
           width: 100%;
           padding: 1.5rem 6rem 1.5rem;
           margin-top: 1rem;
-          font-size: 1.5rem;
+          font-size: 1.6rem;
           transition: 0.3s ease-out; }
           .add_client_modal .modal_body .modal_content .main_form input::placeholder {
             color: #131b2d;
@@ -5068,6 +5102,10 @@ body.fix_body {
           .add_client_modal .modal_body .modal_content .main_form input:focus {
             outline: none;
             box-shadow: 0 0 6px 3px #6ed7ff; }
+          @media (max-width: 767.98px) {
+            .add_client_modal .modal_body .modal_content .main_form input {
+              padding: 2.5rem 6rem 1.5rem;
+              font-size: 2.5rem; } }
         .add_client_modal .modal_body .modal_content .main_form input[type="email"],
         .add_client_modal .modal_body .modal_content .main_form input[type="password"] {
           margin-bottom: 0; }
@@ -5534,6 +5572,10 @@ html[dir="rtl"] .dashboard_page .dash_nav {
         left: 2rem;
         font-size: 2.5rem;
         color: #6ed7ff; }
+        @media (max-width: 767.98px) {
+          .compelete_profile .main_form label i {
+            font-size: 3.5rem;
+            top: 3.4rem; } }
     .compelete_profile .main_form input {
       position: relative;
       border: 1px solid rgba(0, 0, 0, 0.25);
@@ -5542,7 +5584,7 @@ html[dir="rtl"] .dashboard_page .dash_nav {
       width: 100%;
       padding: 1.5rem 6rem 1.5rem;
       margin-top: 1rem;
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       transition: 0.3s ease-out; }
       .compelete_profile .main_form input::placeholder {
         color: #131b2d;
@@ -5550,6 +5592,10 @@ html[dir="rtl"] .dashboard_page .dash_nav {
       .compelete_profile .main_form input:focus {
         outline: none;
         box-shadow: 0 0 6px 3px #6ed7ff; }
+      @media (max-width: 767.98px) {
+        .compelete_profile .main_form input {
+          padding: 2.5rem 6rem 1.5rem;
+          font-size: 2.5rem; } }
     .compelete_profile .main_form input[type="email"],
     .compelete_profile .main_form input[type="password"] {
       margin-bottom: 0; }
@@ -5814,9 +5860,10 @@ html[dir="rtl"] .dash_link {
         margin-top: 2rem; } }
     .navbar .container-fluid .navbar-collapse ul.navbar-nav li.nav-item {
       padding: 1.6rem 0;
-      margin: 0 1.5rem;
       transition: all 0.3s ease;
       border-bottom: 2px solid transparent; }
+      .navbar .container-fluid .navbar-collapse ul.navbar-nav li.nav-item:not(:first-of-type) {
+        padding: 1.6rem; }
       .navbar .container-fluid .navbar-collapse ul.navbar-nav li.nav-item.services.pointer_none {
         pointer-events: none; }
       .navbar .container-fluid .navbar-collapse ul.navbar-nav li.nav-item.services > a {

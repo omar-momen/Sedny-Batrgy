@@ -113,9 +113,11 @@
         }
         li.nav-item {
           padding: 1.6rem 0;
-          margin: 0 1.5rem;
           transition: all 0.3s ease;
           border-bottom: 2px solid transparent;
+          &:not(:first-of-type) {
+            padding: 1.6rem;
+          }
           &.services {
             &.pointer_none {
               pointer-events: none;
