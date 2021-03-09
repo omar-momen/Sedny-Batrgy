@@ -112,6 +112,59 @@ if (window.innerWidth >= 992) {
   });
 }
 
+$(window).resize(function () {
+  if (window.innerWidth >= 992) {
+    $("nav.navbar ul.links li.services").hover(
+      function () {
+        services_hover.style.height = "500px";
+        $("nav.navbar ul.links .services .services_hover").slideDown(200);
+        setTimeout(() => {
+          $("nav.navbar ul.links .services .services_hover").addClass("active");
+        }, 201);
+      },
+      function () {
+        $("nav.navbar ul.links .services .services_hover").removeClass(
+          "active"
+        );
+        $("nav.navbar ul.links .services .services_hover").slideUp(200);
+        // Pointer None
+        $("nav.navbar ul.links .services").addClass("pointer_none");
+        setTimeout(() => {
+          $("nav.navbar ul.links .services").removeClass("pointer_none");
+        }, 500);
+      }
+    );
+    $("span.arrow_up").hover(function () {
+      $("nav.navbar ul.links .services .services_hover").removeClass("active");
+      $("nav.navbar ul.links .services .services_hover").slideUp();
+    });
+  } else {
+    $("nav.navbar ul.links li.services").click(function () {
+      $(
+        "nav.navbar ul.links .services .services_drop_down.small_screen_only"
+      ).slideToggle(500);
+      $("nav.navbar ul.links .services .arrow_parent").toggleClass("active");
+    });
+    $(
+      "nav.navbar ul.links .services .services_drop_down.small_screen_only"
+    ).click(function (e) {
+      e.stopPropagation();
+    });
+    // #######################
+    $(
+      "nav.navbar ul.links .services .services_drop_down.small_screen_only li.drop_down_link"
+    ).click(function () {
+      $(this).find(".sub_drop_down").slideToggle();
+      $(this).find(".arrow").toggleClass("active");
+    });
+    $(
+      "nav.navbar ul.links .services .services_drop_down.small_screen_only li.drop_down_link .sub_drop_down"
+    ).click(function (e) {
+      e.stopPropagation();
+    });
+  }
+});
+
 // childs
 $("nav.navbar ul.links .services .services_hover ul.tabs li").hover(
   function () {
