@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>اكمل ملفك الشخصي</title>
+    <link rel="shortcut icon" href="../../icons/icon.svg" />
+    <link rel="stylesheet" href="../../css/libs/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../css/libs/all.min.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+  </head>
+  <body>
+    <section class="compelete_profile">
+      <div class="container">
+        <div class="wrapper">
+          <div class="heading">
+            <h2>اكمل ملفك الشخصي</h2>
+            <div class="line">
+              <span class="sub_line"></span>
+              <span class="sub_line"></span>
+              <span class="sub_line"></span>
+            </div>
+          </div>
+          <div class="profile_image">
+            <form action="#">
+              <label for="upload"><i class="fas fa-camera"></i></label>
+              <input type="file" id="upload" />
+              <img src="../../img/default_user_picture.png" alt="" />
+            </form>
+          </div>
+          <form action="#" class="main_form">
+            <div class="form_control">
+              <label for="company"><i class="far fa-building"></i></label>
+              <input
+                type="text"
+                name=""
+                id="company"
+                placeholder="اسم الشركة"
+              />
+            </div>
+            <div class="form_control">
+              <label for="companyBranch"><i class="far fa-building"></i></label>
+              <input
+                type="text"
+                name=""
+                id="companyBranch"
+                placeholder="فرع الشركة"
+              />
+            </div>
+            <div class="form_control">
+              <label for="oldPass">
+                <i class="fas fa-lock"></i>
+                <i class="fas fa-eye oldPass"></i>
+              </label>
+              <input
+                type="password"
+                required
+                id="oldPass"
+                placeholder="كلمة المرور القيدمة"
+              />
+            </div>
+            <div class="form_control">
+              <label for="password">
+                <i class="fas fa-lock"></i>
+                <i class="fas fa-eye password"></i>
+              </label>
+              <input
+                type="password"
+                required
+                id="password"
+                placeholder="كلمة المرور"
+              />
+            </div>
+            <div class="form_control">
+              <label for="confirm">
+                <i class="fas fa-lock"></i>
+                <i class="fas fa-eye confirm"></i>
+              </label>
+              <input
+                type="password"
+                required
+                id="confirm"
+                placeholder="تأكيد كلمة المرور"
+              />
+            </div>
+            <div class="form_control">
+              <label for="email"><i class="fas fa-envelope"></i></label>
+              <input
+                type="email"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                required
+                placeholder="البريد الالكتروني"
+              />
+            </div>
+            <div class="form_control">
+              <label for="owner"><i class="fas fa-user"></i></label>
+              <input type="text" name="" id="owner" placeholder="ممثل الشركة" />
+            </div>
+            <input type="submit" class="text-center" value="إرسال" />
+
+            <div class="validation">
+              <p id="small" class="invalid">حرف صغير</p>
+              <p id="capital" class="invalid">حرف كبير</p>
+              <p id="number" class="invalid">رقم</p>
+              <p id="characters" class="invalid">حروف</p>
+            </div>
+          </form>
+        </div>
+        <div class="dash_link">
+          <a href="dashboard/dashboard.html">العودة للبروفيل</a>
+        </div>
+      </div>
+    </section>
+    <script src="../../js/libs/jquery-3.4.1.min.js"></script>
+    <script src="../../js/pages/compelete_profile.js"></script>
+  </body>
+</html>

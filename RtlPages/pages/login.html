@@ -1,49 +1,52 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>تسجيل الدخول</title>
-    <link rel="shortcut icon" href="../icons/icon.svg" />
-    <link rel="stylesheet" href="../css/libs/bootstrap.min.css" />
-    <link rel="stylesheet" href="../css/libs/all.min.css" />
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="shortcut icon" href="../../icons/icon.svg" />
+    <link rel="stylesheet" href="../../css/libs/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../css/libs/all.min.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
   </head>
   <body>
     <section class="login_page">
       <div class="container-fluid">
         <div class="home_link">
-          <a href="../index.html">Home</a>
+          <a href="../index.html">الرئيسية</a>
         </div>
         <div class="row">
           <div class="col-lg-5 col-md-6 p-0">
             <div class="wrapper">
               <div class="heading">
-                <h2>Login</h2>
+                <h2>تسجيل الدخول</h2>
                 <div class="line">
                   <span class="sub_line"></span>
                   <span class="sub_line"></span>
                   <span class="sub_line"></span>
                 </div>
-                <img src="../icons/icon.svg" alt="Icon" />
+                <img src="../../icons/icon.svg" alt="Icon" />
               </div>
               <div class="attention mt-3 mb-5">
-                <p>Please login if you are a member from Sedny and Batargy</p>
+                <p>
+                  من فضلك قم بإدخال البريد الالكتروني وكلمة المرور إذا كنت من
+                  فريق سندي وبترجي
+                </p>
               </div>
               <form action="#" class="main_form">
                 <label for="email"><i class="fas fa-envelope"></i></label>
                 <input
                   type="email"
                   pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                  placeholder="Email adress"
+                  placeholder="البريد الالكتروني"
                   required
                 />
                 <label for="password">
                   <i class="fas fa-lock"></i>
                   <i class="fas fa-eye"></i>
                 </label>
-                <input type="password" placeholder="Password" required />
+                <input type="password" required placeholder="كلمة المرور" />
                 <input type="submit" class="text-center" value="submit" />
 
                 <div class="validation">
@@ -58,14 +61,12 @@
 
           <div class="col-lg-7 col-md-6 p-0">
             <div class="login_img_box">
-              <a href="../index.html"
-                ><img src="../icons/no_mask_logo.svg" alt="Logo"
+              <a href="../../index.html"
+                ><img src="../../icons/no_mask_logo.svg" alt="Logo"
               /></a>
               <p class="content text-center">
-                The process of improving measure of an enterpprise's . Business
-                growth can be aLorem ipsum dolor sit amet, consectetur adipis
-                elit sed do eiusmod tempor incidunt labore et dolore magna
-                aliqua. .
+                في عام 1970م واجهت شركة CCC مشاكل مالية مما دفعها لإغلاق أبوابها
+                في شهر مارس من ذلك العام.
               </p>
             </div>
           </div>
@@ -73,6 +74,6 @@
       </div>
     </section>
 
-    <script src="../js/pages/login.js"></script>
+    <script src="../../js/pages/login.js"></script>
   </body>
 </html>

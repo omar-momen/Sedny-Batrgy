@@ -78,8 +78,8 @@ if (window.innerWidth <= 480) {
   more_btn_icon.classList.remove("fa-arrow-left");
   more_btn_icon.classList.add("fa-arrow-down");
 } else {
-  more_btn_icon.classList.remove("fa-arrow-down");
-  more_btn_icon.classList.add("fa-arrow-right");
+  // more_btn_icon.classList.remove("fa-arrow-down");
+  // more_btn_icon.classList.add("fa-arrow-right");
 }
 
 // Clients Number

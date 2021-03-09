@@ -25,17 +25,6 @@ passwordInput.oninput = function () {
   }
 };
 
-// Change Input Placeholder
-let pageDirection = document.documentElement.getAttribute("dir");
-
-if (pageDirection === "ltr") {
-  emailInput.placeholder = "Email address";
-  passwordInput.placeholder = "Password";
-} else if (pageDirection == "rtl") {
-  emailInput.placeholder = "البريد الالكتروني";
-  passwordInput.placeholder = "كلمة المرور";
-}
-
 // Validation
 let validationElement = document.querySelector(".validation"),
   submitButton = document.querySelector("input[type='submit']"),
@@ -48,13 +37,6 @@ lowerCase.textContent = "A lower letter";
 capital.textContent = "A capital letter";
 number.textContent = "A number";
 Letterslength.textContent = "Minimum 8 letter";
-
-if (pageDirection === "rtl") {
-  lowerCase.textContent = "حرف صغير";
-  capital.textContent = "حرف كبير";
-  number.textContent = "رقم";
-  Letterslength.textContent = "ثمانية حروف على الاقل";
-}
 
 // Lowercase, Uppercase, A number, Minimun 8 characters
 let lowerCaseLetters = /[a-z]/g,
