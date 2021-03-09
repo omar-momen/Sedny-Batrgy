@@ -4,18 +4,6 @@ $(window).on("load", function () {
 });
 /********** End loading **********/
 
-/********** Start Switch Dom (right To left) (left To right) **********/
-let language_button = document.querySelector("nav.navbar .glope");
-let siwtch_lang = () => {
-  if (document.documentElement.getAttribute("dir") == "ltr") {
-    document.documentElement.setAttribute("dir", "rtl");
-  } else if (document.documentElement.getAttribute("dir") == "rtl") {
-    document.documentElement.setAttribute("dir", "ltr");
-  }
-};
-language_button.addEventListener("click", siwtch_lang);
-/********** End Switch Dom (right To left) (left To right) **********/
-
 // Adjust main Header_height
 const main_header = document.querySelector("header.header");
 const nav = document.querySelector("nav.navbar");
@@ -63,106 +51,65 @@ const services_hover = document.querySelector(
 );
 services_hover.style.top = main_nav_height + "px";
 // parent
-if (window.innerWidth >= 992) {
-  $("nav.navbar ul.links li.services").hover(
-    function () {
+$("nav.navbar ul.links li.services").hover(
+  function () {
+    if (window.innerWidth >= 992) {
       services_hover.style.height = "500px";
       $("nav.navbar ul.links .services .services_hover").slideDown(200);
       setTimeout(() => {
         $("nav.navbar ul.links .services .services_hover").addClass("active");
       }, 201);
-    },
-    function () {
-      $("nav.navbar ul.links .services .services_hover").removeClass("active");
-      $("nav.navbar ul.links .services .services_hover").slideUp(200);
-      // Pointer None
-      $("nav.navbar ul.links .services").addClass("pointer_none");
-      setTimeout(() => {
-        $("nav.navbar ul.links .services").removeClass("pointer_none");
-      }, 500);
     }
-  );
-  $("span.arrow_up").hover(function () {
+  },
+  function () {
     $("nav.navbar ul.links .services .services_hover").removeClass("active");
-    $("nav.navbar ul.links .services .services_hover").slideUp();
-  });
-} else {
-  $("nav.navbar ul.links li.services").click(function () {
+    $("nav.navbar ul.links .services .services_hover").slideUp(200);
+    // Pointer None
+    $("nav.navbar ul.links .services").addClass("pointer_none");
+    setTimeout(() => {
+      $("nav.navbar ul.links .services").removeClass("pointer_none");
+    }, 500);
+  }
+);
+
+$("span.arrow_up").hover(function () {
+  $("nav.navbar ul.links .services .services_hover").removeClass("active");
+  $("nav.navbar ul.links .services .services_hover").slideUp();
+});
+
+$(window).resize(function () {
+  if (window.innerWidth >= 992) {
+    $(
+      "nav.navbar ul.links .services .services_drop_down.small_screen_only"
+    ).slideUp(500);
+  }
+});
+
+$("nav.navbar ul.links li.services").click(function () {
+  if (window.innerWidth < 992) {
     $(
       "nav.navbar ul.links .services .services_drop_down.small_screen_only"
     ).slideToggle(500);
     $("nav.navbar ul.links .services .arrow_parent").toggleClass("active");
-  });
-  $(
-    "nav.navbar ul.links .services .services_drop_down.small_screen_only"
-  ).click(function (e) {
-    e.stopPropagation();
-  });
-  // #######################
-  $(
-    "nav.navbar ul.links .services .services_drop_down.small_screen_only li.drop_down_link"
-  ).click(function () {
-    $(this).find(".sub_drop_down").slideToggle();
-    $(this).find(".arrow").toggleClass("active");
-  });
-  $(
-    "nav.navbar ul.links .services .services_drop_down.small_screen_only li.drop_down_link .sub_drop_down"
-  ).click(function (e) {
-    e.stopPropagation();
-  });
-}
-
-$(window).resize(function () {
-  if (window.innerWidth >= 992) {
-    $("nav.navbar ul.links li.services").hover(
-      function () {
-        services_hover.style.height = "500px";
-        $("nav.navbar ul.links .services .services_hover").slideDown(200);
-        setTimeout(() => {
-          $("nav.navbar ul.links .services .services_hover").addClass("active");
-        }, 201);
-      },
-      function () {
-        $("nav.navbar ul.links .services .services_hover").removeClass(
-          "active"
-        );
-        $("nav.navbar ul.links .services .services_hover").slideUp(200);
-        // Pointer None
-        $("nav.navbar ul.links .services").addClass("pointer_none");
-        setTimeout(() => {
-          $("nav.navbar ul.links .services").removeClass("pointer_none");
-        }, 500);
-      }
-    );
-    $("span.arrow_up").hover(function () {
-      $("nav.navbar ul.links .services .services_hover").removeClass("active");
-      $("nav.navbar ul.links .services .services_hover").slideUp();
-    });
-  } else {
-    $("nav.navbar ul.links li.services").click(function () {
-      $(
-        "nav.navbar ul.links .services .services_drop_down.small_screen_only"
-      ).slideToggle(500);
-      $("nav.navbar ul.links .services .arrow_parent").toggleClass("active");
-    });
-    $(
-      "nav.navbar ul.links .services .services_drop_down.small_screen_only"
-    ).click(function (e) {
-      e.stopPropagation();
-    });
-    // #######################
-    $(
-      "nav.navbar ul.links .services .services_drop_down.small_screen_only li.drop_down_link"
-    ).click(function () {
-      $(this).find(".sub_drop_down").slideToggle();
-      $(this).find(".arrow").toggleClass("active");
-    });
-    $(
-      "nav.navbar ul.links .services .services_drop_down.small_screen_only li.drop_down_link .sub_drop_down"
-    ).click(function (e) {
-      e.stopPropagation();
-    });
   }
+});
+
+$("nav.navbar ul.links .services .services_drop_down.small_screen_only").click(
+  function (e) {
+    e.stopPropagation();
+  }
+);
+// #######################
+$(
+  "nav.navbar ul.links .services .services_drop_down.small_screen_only li.drop_down_link"
+).click(function () {
+  $(this).find(".sub_drop_down").slideToggle();
+  $(this).find(".arrow").toggleClass("active");
+});
+$(
+  "nav.navbar ul.links .services .services_drop_down.small_screen_only li.drop_down_link .sub_drop_down"
+).click(function (e) {
+  e.stopPropagation();
 });
 
 // childs
